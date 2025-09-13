@@ -1,0 +1,142 @@
+ body { font-family: system-ui, sans-serif; margin: 0; }
+
+header, footer { padding: 12px 16px; background: #f6f6f6; }
+
+#app { padding: 16px; max-width: 960px; margin: auto; }
+
+.nav { display: flex; gap: 8px; align-items: center; }
+
+button { padding: 8px 12px; cursor: pointer; }
+
+
+.subtitle { 
+    margin: 0.2rem 0 0.6rem;
+    font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+    color: #444;
+    font-weight: 600;
+}
+
+.bubble-layer { position: relative; min-height: 300px; }
+
+.bubble {
+  /* base visuelle */
+  display: grid;
+  place-items: center;
+  background: #f55f63;
+  color: #fff;
+  font-family: "Georgia", serif;   /* proche du rendu de ta capture */
+  font-size: clamp(14px, 0.9rem + 0.2vw, 18px);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+
+  /* Bourrelet interne pour respirer */
+  padding: 1.1em;
+
+  /* Bornes de taille pour harmoniser les bulles */
+  width: clamp(120px, 16ch, 220px);   /* min 120px, cible ~16ch, max 220px */
+
+  /* Hexagone régulier (H = W * √3/2 ≈ 0.866W) */
+  aspect-ratio: 1.732 / 2;
+
+  /* Forme */
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+
+  /* Wrap propre */
+  white-space: normal;        /* autorise le retour à la ligne */
+  overflow-wrap: anywhere;    /* casse si mot trop long */
+  text-wrap: balance;         /* équilibre les lignes quand dispo */
+  line-height: 1.25;
+
+  transition: transform .2s ease, background .2s ease;
+}
+
+.bubble:hover {
+  transform: scale(1.05);
+  background: #e04c50;
+}
+
+.bubble.clickable {
+  cursor: pointer;
+}
+
+.bubble:not(.clickable) {
+  cursor: auto;
+}
+
+
+
+.bubble.secondary {
+  display: grid;
+  place-items: center;
+  background: #f5c842;   /* jaune */
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+
+  /* Taille fixe */
+  width: 60px;
+  aspect-ratio: 1.732 / 2;  /* garde le bon hexagone */
+  padding: 0;               /* pas besoin de marge interne */
+
+  /* Hexagone */
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.bubble.secondary:hover {
+  transform: scale(1.1);
+  background: #e5b732;
+}
+
+
+.tooltip {
+    position: absolute; left: 50%; transform: translateX(-50%);
+    bottom: calc(100% + 8px); background: #111; color: #fff; font-size: 13px;
+    padding: 8px 10px; border-radius: 6px; white-space: nowrap; z-index: 10;
+    opacity: 0; pointer-events: none; transition: opacity .15s ease;
+}
+
+.bubble:hover .tooltip { opacity: 1; }
+
+.modal-backdrop {
+    position: fixed; inset: 0; background: rgba(0,0,0,.4);
+    display: flex; align-items: center; justify-content: center; z-index: 1000;
+}
+
+.modal {
+    background: #fff; border-radius: 12px; max-width: 820px; width: min(92vw, 820px);
+    max-height: 90vh; overflow: auto; padding: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.2);
+}
+
+.modal header { display:flex; justify-content: space-between; align-items:center; gap: 8px; }
+
+.modal h3 { margin: 0; font-size: 20px; }
+
+.modal .close { border: none; background: transparent; font-size: 24px; cursor: pointer; }
+
+.media img, .media video { max-width: 100%; height: auto; border-radius: 8px; }
+
+.media figure { margin: 10px 0; }
+
+.media figcaption { font-size: 12px; color: #666; }

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy"
+    content="
+        default-src 'self';
+        img-src
+        'self'
+        https://i.pinimg.com
+        https://fastly.picsum.photos/
+        https://picsum.photos/800/300
+        https://images.unsplash.com
+        https://cdn.example.com
+        data:
+        blob:;
+        style-src 'self' 'unsafe-inline';
+        script-src 'self';
+    ">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Slides JSON · TS Vanilla</title>
+    <style type="text/css">
+      @import url("./styles.css");
+    </style>
+
+  </head>
+  <body>
+    <header class="nav">
+      <button id="prevBtn" aria-label="Slide précédente">⟵</button>
+      <div id="pos" aria-live="polite"></div>
+      <button id="nextBtn" aria-label="Slide suivante">⟶</button>
+    </header>
+
+    <main id="app" role="region" aria-label="Contenu de la slide"></main>
+
+    <footer>
+      JSON-Slides · TS Vanilla
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

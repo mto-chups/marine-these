@@ -1,0 +1,106 @@
+{
+  "title": "Démo Bulles",
+  "slides": [
+    {
+      "id": "slide-1", 
+      "blocks": [
+        { "type": "title", "text": "Première Slide" },
+        {
+          "type": "bubble-block",
+          "bubbles": [
+            {
+              "kind": "primary",
+              "id": "p1",
+              "title": "Multiples transitions : 1 parcours  unique pour chacun.e",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<p>Il n’existe <u> pas une transition type </u> mais une multitude de parcours de transition possibles. <b>Chaque personne possède des souhaits différents</b> avec une chronologie et une temporalité qui lui sont propres. Certain·es ne réaliseront qu’une transition sociale tandis que d’autres choisiront d’y ajouter une hormonothérapie substitutive. La chirurgie d’affirmation de genre est loin d’être un objectif à atteindre pour tous·tes.</p>" },
+                { "kind": "image", "src": "https://picsum.photos/800/300", "alt": "Océan", "caption": "Photo illustrative" },
+                { "kind": "video", "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4", "controls": true }
+              ],
+              "secondaries": [
+                {
+                  "kind": "secondary",
+                  "id": "s1",
+                  "parentId": "p1",
+                  "title": "Salinité",
+                  "clickable": true,
+                  "tooltip": { "text": "Plus d’infos sur la salinité" },
+                  "modalContent": [
+                    { "kind": "text", "html": "<p>La salinité moyenne est d’environ 35 g/L.</p>" }
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s2",
+                  "parentId": "p1",
+                  "title": "Courants",
+                  "clickable": false,
+                  "tooltip": { "text": "Courts courants de surface..." }
+                }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p2",
+              "title": "Biodiversité",
+              "clickable": false,
+              "tooltip": { "text": "Vie marine, récifs, etc." }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bubbles-2",
+      "blocks": [
+        { "type": "title", "text": "Bulles & modales" },
+        {
+          "type": "bubble-block",
+          "bubbles": [
+            {
+              "kind": "primary",
+              "id": "p1",
+              "title": "Qu’est-ce qu’un océan ?",
+              "clickable": true,
+              "tooltip": { "text": "Définition courte" },
+              "modalContent": [
+                { "kind": "text", "html": "<p>Un océan est une vaste étendue d’eau salée...</p>" },
+                { "kind": "image", "src": "https://picsum.photos/800/300", "alt": "Océan", "caption": "Photo illustrative" },
+                { "kind": "video", "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4", "controls": true }
+              ],
+              "secondaries": [
+                {
+                  "kind": "secondary",
+                  "id": "s1",
+                  "parentId": "p1",
+                  "title": "Salinité",
+                  "clickable": true,
+                  "tooltip": { "text": "Plus d’infos sur la salinité" },
+                  "modalContent": [
+                    { "kind": "text", "html": "<p>La salinité moyenne est d’environ 35 g/L.</p>" }
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s2",
+                  "parentId": "p1",
+                  "title": "Courants",
+                  "clickable": false,
+                  "tooltip": { "text": "Courts courants de surface..." }
+                }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p2",
+              "title": "Biodiversité",
+              "clickable": false,
+              "tooltip": { "text": "Vie marine, récifs, etc." }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

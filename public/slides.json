@@ -1,0 +1,253 @@
+{
+  "title": "Démo Bulles",
+  "slides": [
+    {
+      "id": "slide-1",
+      "blocks": [
+        { "type": "title", "text": "Accompagner les personnes transgenres à l'officine" },
+        { "type": "subtitle", "text": "Formation interactive à destination des pharmacien.nes et préparateur.rices en pharmacie" },
+        {
+          "type": "bubble-block",
+          "bubbles": [{
+                "kind": "primary",
+                "id": "p1",
+                "title": "Accueil",
+                "clickable": true,
+                "modalContent": [
+                  { "kind": "title", "text": "Accueil"},
+                  { "kind": "text", "html": "<p>Un accueil bienveillant et respectueux est essentiel</p>" }
+                ],
+                "gridPos": { "c": 2, "r": 2 },
+                "secondaries":[
+                    {
+                        "kind": "secondary",
+                        "id": "s1",
+                        "parentId": "p1",
+                        "clickable": false,
+                        "tooltip": { "text": "Bonnes pratiques" }
+                    },
+                    {
+                        "kind": "secondary",
+                        "id": "s2",
+                        "parentId": "p3",
+                        "clickable": false,
+                        "tooltip": { "text": "Mauvaises pratiques" }
+                    }
+                ]
+            },
+            {
+              "kind": "primary",
+              "id": "p2",
+              "title": "Lexique",
+              "clickable": false,
+              "tooltip": { "text": "Connaître le vocabulaire des transidentités permet de créer un climat de confiance et d’éviter toute maladresse susceptible de blesser les personnes transgenres." },
+              "gridPos": { "c": 4, "r": 2 },
+              "secondaries":[
+                {
+                    "kind": "secondary",
+                    "id": "s3",
+                    "parentId": "p2",
+                    "clickable": true,
+                    "tooltip": { "text": "Vocabulaire" },
+                    "title": "Vocabulaire",
+                    "modalContent": [
+                        { "kind": "title", "text": "Quelques mots de vocabulaire"},
+                        { "kind": "text", "html": "<p>Homme transgenre : homme qui a été assigné fille à la naissance. On utilise généralement le pronom « il ». Personne transmasculine : englobe les hommes trans mais aussi les personnes non-binaires qui s’engagent dans un parcours de masculinisation.<br>Femme transgenre : femme qui a été assignée garçon à la naissance. On utilise généralement le pronom « elle ».<br>Personne transféminine : englobe les femmes trans mais aussi les personnes non-binaires qui s’engagent dans un parcours de féminisation.<br>On les regroupe sous le terme : Transidentités.</p>" },
+                        { "kind": "text", "html": "<p>Personne non binaire : personne qui ne s’inscrit pas dans la norme binaire, c'est à dire qui n’est ni exclusivement un homme, ni exclusivement une femme. Ses pronoms sont à sa décision, même si le pronom neutre « iel » est couramment utilisé en France. Cisgenre : personne qui vit dans le genre qui leur a été assigné à la naissance. Mot contraire de transgenre.  Dysphorie de genre : sensation d’inconfort et de détresse résultant de son assignation de genre à la naissance. Incongruence de genre : désalignement entre le genre ressenti et le sexe assigné à la naissance sans souffrance</p>" }
+                    ]
+                },
+                {
+                    "kind": "secondary",
+                    "id": "s4",
+                    "parentId": "p2",
+                    "title": "Termes à bannir",
+                    "clickable": true,
+                    "modalContent":[
+                        { "kind": "title", "text": "Termes à bannir"},
+                        { "kind": "text", "html": "<p>Transsexuel·le / Transsexualité / Transsexualisme : termes inadaptés, confondant identité de genre et sexualité, et fortement pathologisants. Utiliser le terme « transgenre » Travesti·e / travelo : personne portant des vêtements du genre opposé, sans lien avec l’identité de genre ; « travelo » est un terme péjoratif à éviter. « Vrai homme / vraie femme » : à éviter, car elle dévalorise l’identité de genre des personnes trans. Utiliser simplement « homme » ou « femme » « Femme qui devient homme » : formulation à éviter, car elle réduit l’identité de la personne à son sexe assigné à la naissance. Préférer « homme trans » ou « personne transmasculine» . « Vous êtes bien réussi » : formulation à éviter, car elle réduit l’identité de la personne à son apparence ou à une conformité aux normes de genre.</p>" }
+                    ]
+                }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p3",
+              "title": "Quelques chiffres",
+              "clickable": false,
+              "tooltip": { "text": "Ces chiffres rappellent que la population trans fait partie intégrante de la société. Pourtant, la transphobie reste omniprésente et leur santé mentale en pâtit, d’autant que les lieux de soins ne sont pas toujours adaptés." },
+                "secondaries":[
+                    {
+                        "kind":"secondary",
+                        "id":"s5",
+                        "parentId":"p3",
+                        "title":"Transphobie et santé mentale",
+                        "clickable": true,
+                        "modalContent":[
+                            { "kind": "title", "text": "Transphobie et santé mentale"},
+                            { "kind": "text", "html": "<p>8 personnes trans sur 10 déclarent avoir été victimes de transphobie. (1) Le taux de tentatives de suicide est 7,7 fois plus élevé chez les personnes transgenres que chez les personnes cisgenres. (2) Plus d'une personne sur 2 est victime de transphobie dans des lieux de soins. Conséquence : 35 à 45% déclarent avoir renoncé à un soin ou avoir évité un établissement de santé au cours de l’année écoulée. (3)</p>"}
+                        ]
+                    },
+                    {
+                        "kind":"secondary",
+                        "id":"s6",
+                        "parentId":"p3",
+                        "clickable":false,
+                        "tooltip":{"text":"En 2023, 22 550 personnes en France étaient titulaires d’une ALD pour transidentité. Toutes les personnes trans n’ont pas d’ALD, et les chiffres précis ne sont pas connus."}
+                    }
+                ]
+            },
+            {
+              "kind": "primary",
+              "id": "p4",
+              "title": "Multiples transitions : \n 1 parcours  unique pour chacun.e",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "title", "text": "Un parcours unique"},
+                { "kind": "text", "html": "<p>Il n’existe <u> pas une transition type </u> mais une multitude de parcours de transition possibles. <b>Chaque personne possède des souhaits différents</b> avec une chronologie et une temporalité qui lui sont propres. Certain·es ne réaliseront qu’une transition sociale tandis que d’autres choisiront d’y ajouter une hormonothérapie substitutive. La chirurgie d’affirmation de genre est loin d’être un objectif à atteindre pour tous·tes.</p>" }
+              ],
+              "secondaries": [
+                {
+                  "kind": "secondary",
+                  "id": "s7",
+                  "parentId": "p4",
+                  "title": "Salinité",
+                  "clickable": true,
+                  "tooltip": { "text": "Plus d’infos sur la salinité" },
+                  "modalContent": [
+                    { "kind": "text", "html": "<p>La salinité moyenne est d’environ 35 g/L.</p>" }
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s8",
+                  "parentId": "p4",
+                  "clickable": false,
+                  "tooltip": { "text": "Courts courants de surface..." }
+                }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p5",
+              "title": "Transition sociale",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "title", "text": "Transition sociale"},
+                { "kind": "text", "html": "<p>La transition sociale consiste à vivre selon son genre ressenti plutôt que celui assigné à la naissance. Elle commence souvent par un coming out auprès de l’entourage et peut inclure des ajustements de l’expression de genre : style vestimentaire, coiffure, maquillage, accessoires comme binder (brassière comprimant la poitrine) ou prothèse mammaire, ainsi que le changement de prénom et de pronoms dans la vie personnelle, scolaire ou professionnelle.</p>" }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p6",
+              "title": "Transition chirurgicale",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "title", "text": "Transition chirurgicale"},
+                { "kind": "text", "html": "<p>Text à définir</p>" }
+              ],
+              "secondaries": [
+                {
+                    "kind": "secondary",
+                    "id": "s9",
+                    "parentId": "p6",
+                    "clickable": false,
+                    "tooltip": { "text": "A définir" }
+                },
+                {
+                    "kind": "secondary",
+                    "id": "s10",
+                    "parentId": "p6",
+                    "clickable": false,
+                    "tooltip": { "text": "A définir" }
+                }
+              ]
+            },
+            {
+                "kind": "primary",
+                "id": "p7",
+                "title": "Transition administrative et juridique",
+                "clickable": true,
+                "modalContent":[
+                    { "kind":"title", "text":"Transition administrative et juridique"},
+                    { "kind":"text", "html":"<p>Il est possible de changer son prénom directement à la mairie. Pour modifier la mention de genre à l’état civil, il faut passer par le tribunal judiciaire, qui émettra un nouvel acte de naissance. Les documents officiels, tels que la carte nationale d’identité ou le passeport, peuvent ensuite être refaits.</p>"}
+                ],
+                "secondaries":[
+                    {
+                        "kind":"secondary",
+                        "id":"s11",
+                        "parentId":"p7",
+                        "title":"Et la carte vitale ?",
+                        "clickable": true,
+                        "modalContent":[
+                            { "kind":"title", "text":"Et la carte vitale ?"},
+                            { "kind":"text", "html":"<p>Après un changement de sexe à l’état civil, deux cas sont possibles pour le numéro de sécurité sociale : soit le tribunal transmet directement la modification à l’INSEE, qui ajuste automatiquement le NIR (numéro d’inscription au répertoire), soit la personne doit en faire la demande elle-même. Dans les deux cas, un nouveau compte Ameli est créé et une nouvelle carte Vitale peut être demandée. Un nouveau numéro est crée en remplaçant le premier chiffre (inversion entre le 1 et le 2)</p>"}
+                        ]
+                    },
+                    {
+                        "kind":"secondary",
+                        "id":"s12",
+                        "parentId":"p7",
+                        "clickable": false,
+                        "tooltip": { "text": "A définir" }
+                    }
+                ]
+            }
+
+            
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bubbles-2",
+      "blocks": [
+        { "type": "title", "text": "Bulles & modales" },
+        {
+          "type": "bubble-block",
+          "bubbles": [
+            {
+              "kind": "primary",
+              "id": "p1",
+              "title": "Qu’est-ce qu’un océan ?",
+              "clickable": true,
+              "tooltip": { "text": "Définition courte" },
+              "modalContent": [
+                { "kind": "text", "html": "<p>Un océan est une vaste étendue d’eau salée...</p>" },
+                { "kind": "image", "src": "https://picsum.photos/800/300", "alt": "Océan", "caption": "Photo illustrative" },
+                { "kind": "video", "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4", "controls": true }
+              ],
+              "secondaries": [
+                {
+                  "kind": "secondary",
+                  "id": "s1",
+                  "parentId": "p1",
+                  "title": "Salinité",
+                  "clickable": true,
+                  "tooltip": { "text": "Plus d’infos sur la salinité" },
+                  "modalContent": [
+                    { "kind": "text", "html": "<p>La salinité moyenne est d’environ 35 g/L.</p>" }
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s2",
+                  "parentId": "p1",
+                  "title": "Courants",
+                  "clickable": false,
+                  "tooltip": { "text": "Courts courants de surface..." }
+                }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p2",
+              "title": "Biodiversité",
+              "clickable": false,
+              "tooltip": { "text": "Vie marine, récifs, etc." }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
