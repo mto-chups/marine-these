@@ -15,7 +15,7 @@
               "title": "Multiples transitions : \n 1 parcours  unique pour chacun.e",
               "clickable": true,
               "modalContent": [
-                { "kind": "title", "text": "Un parcours unique"},
+                { "kind": "text", "html": "<h2>Un parcours unique</h2>"},
                 { "kind": "text", "html": "<p>Il n’existe <u> pas une transition type</u> mais une multitude de parcours de transition possibles. <b>Chaque personne possède des souhaits différents</b> avec une chronologie et une temporalité qui lui sont propres. Certain·es ne réaliseront qu’une transition sociale tandis que d’autres choisiront d’y ajouter une hormonothérapie substitutive. La chirurgie d’affirmation de genre est loin d’être un objectif à atteindre pour tous·tes.</p>" }
               ],
               "secondaries": [
@@ -63,16 +63,12 @@
                     "clickable": true,
                     "modalContent":[
                         { "kind": "title", "text": "Termes à bannir"},
-                        { "kind": "text", "html": "<p><b><u>Transsexuel·le / Transsexualité / Transsexualisme</b></u> : termes inadaptés, confondant identité de genre et sexualité, et fortement pathologisants. Utiliser le terme « transgenre »</br></br> Travesti·e / travelo : personne portant des vêtements du genre opposé, sans lien avec l’identité de genre ; « travelo » est un terme péjoratif à éviter. « Vrai homme / vraie femme » : à éviter, car elle dévalorise l’identité de genre des personnes trans. Utiliser simplement « homme » ou « femme » « Femme qui devient homme » : formulation à éviter, car elle réduit l’identité de la personne à son sexe assigné à la naissance. Préférer « homme trans » ou « personne transmasculine» . « Vous êtes bien réussi » : formulation à éviter, car elle réduit l’identité de la personne à son apparence ou à une conformité aux normes de genre.</p>" }
-                    ]
-                },
-                {
-                    "kind": "secondary",
-                    "id": "s21",
-                    "parentId": "p2",
-                    "title": "3 ème secondaire",
-                    "clickable": false,
-                    "tooltip": { "text": "Voici une 3ème tooltip en tant qu'exemple" }
+                        { "kind": "text", "html": "<p><b><u>Transsexuel·le / Transsexualité / Transsexualisme</b></u> : termes inadaptés, confondant identité de genre et sexualité, et fortement pathologisants. Utiliser le terme « transgenre »</br></p>" },
+                        { "kind": "text", "html": "<p><b><u>Travesti·e / travelo :</b></u> personne portant des vêtements du genre opposé, sans lien avec l’identité de genre ; « travelo » est un terme péjoratif à éviter.</br></p>"},
+                         { "kind": "text", "html":"<p><b><u>« Vrai homme / vraie femme » :</b></u> à éviter, car elle dévalorise l’identité de genre des personnes trans. Utiliser simplement « homme » ou « femme ».</br></p>"},
+                         { "kind": "text", "html":"<p><b><u>« Femme qui devient homme » :</b></u> formulation à éviter, car elle réduit l’identité de la personne à son sexe assigné à la naissance. Préférer « homme trans » ou « personne transmasculine».</br></p>"},
+                         { "kind": "text", "html":"<p><b><u>« Vous êtes bien réussi » :</b></u> formulation à éviter, car elle réduit l’identité de la personne à son apparence ou à une conformité aux normes de genre.</br></p>"}
+                      ]
                 }
               ]
             },{
@@ -106,7 +102,7 @@
               "id": "p3",
               "title": "Quelques chiffres",
               "clickable": false,
-              "tooltip": { "text": "Ces chiffres rappellent que la population trans fait partie intégrante de la société. Pourtant, la transphobie reste omniprésente et leur santé mentale en pâtit, d’autant que les lieux de soins ne sont pas toujours adaptés." },
+              "tooltip": { "text": "Ces chiffres rappellent que la population trans fait <b>partie intégrante de la société.</b> Pourtant, la transphobie reste omniprésente et leur santé mentale en pâtit, d’autant que les lieux de soins ne sont pas toujours adaptés." },
                 "secondaries":[
                     {
                         "kind":"secondary",
@@ -115,9 +111,11 @@
                         "title":"Transphobie et santé mentale",
                         "clickable": true,
                         "modalContent":[
-                            { "kind": "title", "text": "Transphobie et santé mentale"},
-                            { "kind": "text", "html": "<p>8 personnes trans sur 10 déclarent avoir été victimes de transphobie. (1) Le taux de tentatives de suicide est 7,7 fois plus élevé chez les personnes transgenres que chez les personnes cisgenres. (2) Plus d'une personne sur 2 est victime de transphobie dans des lieux de soins. Conséquence : 35 à 45% déclarent avoir renoncé à un soin ou avoir évité un établissement de santé au cours de l’année écoulée. (3)</p>"}
-                        ]
+                            { "kind": "text", "html": "<h2>Transphobie et santé mentale</h2>"},
+                            { "kind": "text", "html": "<p><b>8 personnes trans sur 10</b> déclarent avoir été victimes de transphobie. (1)</p>"},
+                            { "kind": "text", "html":"<p>Le taux de tentatives de <b>suicide est 7,7 fois plus élevé</b> chez les personnes transgenres que chez les personnes cisgenres. (2)</p>"},
+                            { "kind": "text", "html":"<p>Plus <b>d'une personne sur 2 est victime de transphobie dans des lieux de soins.</b> Conséquence : 35 à 45% déclarent avoir renoncé à un soin ou avoir évité un établissement de santé au cours de l’année écoulée. (3)</p></b"}
+                          ]
                     },
                     {
                         "kind":"secondary",
@@ -135,7 +133,7 @@
               "color": "#1aafd0",
               "clickable": true,
               "modalContent": [
-                { "kind": "title", "text": "Transition sociale"},
+                { "kind": "text", "html": "<h2>Transition sociale</h2>"},
                 { "kind": "text", "html": "<p>La transition sociale consiste à vivre selon son genre ressenti plutôt que celui assigné à la naissance. Elle commence souvent par un coming out auprès de l’entourage et peut inclure des ajustements de l’expression de genre : style vestimentaire, coiffure, maquillage, accessoires comme binder (brassière comprimant la poitrine) ou prothèse mammaire, ainsi que le changement de prénom et de pronoms dans la vie personnelle, scolaire ou professionnelle.</p>" }
               ]
             },
@@ -146,24 +144,8 @@
               "title": "Transition chirurgicale",
               "clickable": true,
               "modalContent": [
-                { "kind": "title", "text": "Transition chirurgicale"},
-                { "kind": "text", "html": "<p>Text à définir</p>" }
-              ],
-              "secondaries": [
-                {
-                    "kind": "secondary",
-                    "id": "s9",
-                    "parentId": "p6",
-                    "clickable": false,
-                    "tooltip": { "text": "A définir" }
-                },
-                {
-                    "kind": "secondary",
-                    "id": "s10",
-                    "parentId": "p6",
-                    "clickable": false,
-                    "tooltip": { "text": "A définir" }
-                }
+                { "kind": "text", "html": "<h2>Transition chirurgicale</h2>"},
+                { "kind": "text", "html": "<p>On distingue trois types de chirurgies : faciales, thoraciques et génitales. </br> </br>Après ces interventions, les patient·es peuvent se présenter en pharmacie avec une ordonnance pour les soins post-opératoires.</p>" }
               ]
             },
             {
@@ -173,8 +155,8 @@
                 "title": "Transition administrative et juridique",
                 "clickable": true,
                 "modalContent":[
-                    { "kind":"title", "text":"Transition administrative et juridique"},
-                    { "kind":"text", "html":"<p>Il est possible de changer son prénom directement à la mairie. Pour modifier la mention de genre à l’état civil, il faut passer par le tribunal judiciaire, qui émettra un nouvel acte de naissance. Les documents officiels, tels que la carte nationale d’identité ou le passeport, peuvent ensuite être refaits.</p>"}
+                    { "kind":"text", "html":"<h2>Transition administrative et juridique</h2>"},
+                    { "kind":"text", "html":"<p>Il est possible de <b>changer son prénom</b> directement à la mairie. Pour <b>modifier la mention de genre</b> à l’état civil, il faut passer par le tribunal judiciaire, qui émettra un <b>nouvel acte de naissance.</b> Les documents officiels, tels que <b>la carte nationale d’identité</b> ou le <b>passeport</b>, peuvent ensuite être refaits.</p>"}
                 ],
                 "secondaries":[
                     {
@@ -199,7 +181,7 @@
       ]
     },
     {
-      "id": "bubbles-2",
+      "id": "slide-2 Staggered",
       "blocks": [
         { "type": "title", "text": "Bulles & modales" },
         {
@@ -247,6 +229,19 @@
             }
           ]
         }
+      ]
+    },
+    {
+      "id": "slide-3 NoBubbles",
+      "blocks": [
+        { "type": "title", "text": "Quiz" },
+        { 
+          "type": "quiz",
+          "question": "Quelle est la couleur du ciel ?",
+          "choices": ["Bleu", "Vert", "Rouge"],
+          "answerIndex": 0
+        },
+        { "type": "text", "html": "<p style=\"text-align:center\">Cliquez sur la bonne réponse</p>" }
       ]
     }
   ]
