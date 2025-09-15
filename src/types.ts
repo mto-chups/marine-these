@@ -69,15 +69,17 @@ export type GridPos = z.infer<typeof GridPosSchema>;
 const PositionSchema = z.object({ x: z.number(), y: z.number() });
 
 const TooltipSchema = z.object({
-  text: z.string().trim().min(1, "tooltip.text requis quand non cliquable"),
-}).partial().refine(t => t.text === undefined || t.text.length > 0, {
-  message: "tooltip.text doit être une chaîne non vide",
+  text: z.string().optional(),
+  html: z.string().optional(), 
+}).refine(obj => obj.text || obj.html, {
+  message: "Un tooltip doit avoir soit `text`, soit `html`",
 });
 
 const BubbleBaseRaw = z.object({
   id: z.string().trim().min(1),
   title: z.string().trim().min(1).optional(),
   clickable: z.boolean(),
+  color: z.string().optional(),// couleur CSS (ex: "#f5c842")
   position: PositionSchema.optional(),
   gridPos: GridPosSchema.optional(), 
   tooltip: TooltipSchema.optional(),
@@ -97,7 +99,7 @@ const bubbleBusinessRules = (b: BubbleBaseRaw, ctx: z.RefinementCtx) => {
       });
     }
   } else {
-    const hasTooltipText = Boolean(b.tooltip?.text && b.tooltip.text.trim().length > 0);
+    const hasTooltipText = Boolean(b.tooltip?.text && b.tooltip.text.trim().length > 0 || b.tooltip?.html && b.tooltip.html.trim().length > 0);
     if (!hasTooltipText) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,

@@ -1,142 +1,246 @@
- body { font-family: system-ui, sans-serif; margin: 0; }
+/* ===== Base ===== */
+body { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin: 0; }
 
-header, footer { padding: 12px 16px; background: #f6f6f6; }
-
-#app { padding: 16px; max-width: 960px; margin: auto; }
-
+#app {
+  flex: 1 1 auto;         /* prend tout l'espace restant */
+  min-height: 0;          /* important pour que l'enfant puisse scaler */
+  display: grid;
+  grid-template-rows: auto auto 1fr; /* h1, h2, scène */
+  gap: 8px;
+  padding: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+}
 .nav { display: flex; gap: 8px; align-items: center; }
-
 button { padding: 8px 12px; cursor: pointer; }
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* 🚫 empêche les barres de scroll */
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.command{
+   margin-top: 10%;
+    justify-content: space-between;
+    align-items:center;
+    margin: auto;
+    display: flex;
+    gap: 8px; 
 
-
-.subtitle { 
-    margin: 0.2rem 0 0.6rem;
-    font-size: clamp(1.1rem, 2.2vw, 1.5rem);
-    color: #444;
-    font-weight: 600;
+}
+h1,h2 {
+  text-align: center;
+}
+h1{
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+h2{
+  font-size: medium;
+  font-weight: 500;
 }
 
-.bubble-layer { position: relative; min-height: 300px; }
+.media h2{
+  font-size: x-large;
+  font-weight: 800;
+  margin-top: 0;
+}
 
+/* La scène (stage) centrée et scalable */
+.bubble-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;     /* centre la .bubble-layer */
+  overflow: visible;       /* on gère l’ajustement par scale si besoin */
+}
+
+/* ===== Bulles (hexagones) ===== */
 .bubble {
-  /* base visuelle */
   display: grid;
   place-items: center;
-  background: #f55f63;
+  background: var(--bubble-bg, #f55f63);
   color: #fff;
-  font-family: "Georgia", serif;   /* proche du rendu de ta capture */
   font-size: clamp(14px, 0.9rem + 0.2vw, 18px);
   border: none;
-  cursor: pointer;
   text-align: center;
-
-  /* Bourrelet interne pour respirer */
   padding: 1.1em;
-
-  /* Bornes de taille pour harmoniser les bulles */
-  width: clamp(120px, 16ch, 220px);   /* min 120px, cible ~16ch, max 220px */
-
-  /* Hexagone régulier (H = W * √3/2 ≈ 0.866W) */
-  aspect-ratio: 1.732 / 2;
-
-  /* Forme */
-  clip-path: polygon(
-    50% 0%,
-    100% 25%,
-    100% 75%,
-    50% 100%,
-    0% 75%,
-    0% 25%
-  );
-
-  /* Wrap propre */
-  white-space: normal;        /* autorise le retour à la ligne */
-  overflow-wrap: anywhere;    /* casse si mot trop long */
-  text-wrap: balance;         /* équilibre les lignes quand dispo */
+  width: clamp(120px, 16ch, 150px);
+  aspect-ratio: 2 / 2; /* ≈ h = 0.866 * w (hex pointe en haut) */
+  clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
   line-height: 1.25;
-
-  transition: transform .2s ease, background .2s ease;
+  transition: all .2s ease;
 }
 
-.bubble:hover {
-  transform: scale(1.05);
-  background: #e04c50;
-}
+.bubble.clickable { cursor: pointer; }
+.bubble:not(.clickable) { cursor: default; }
 
-.bubble.clickable {
-  cursor: pointer;
-}
-
-.bubble:not(.clickable) {
-  cursor: auto;
-}
-
-
-
+/* Bulles secondaires (+) */
 .bubble.secondary {
-  display: grid;
-  place-items: center;
-  background: #f5c842;   /* jaune */
-  color: #fff;
-  font-family: sans-serif;
+  --bubble-bg: #f5c842;
   font-size: 20px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-
-  /* Taille fixe */
-  width: 60px;
-  aspect-ratio: 1.732 / 2;  /* garde le bon hexagone */
-  padding: 0;               /* pas besoin de marge interne */
-
-  /* Hexagone */
-  clip-path: polygon(
-    50% 0%,
-    100% 25%,
-    100% 75%,
-    50% 100%,
-    0% 75%,
-    0% 25%
-  );
-
-  transition: transform 0.2s ease, background 0.2s ease;
+  font-weight: 700;
+  width: 50px;       /* fixe */
+  padding: 0;        /* pas de bourrelet interne */
+  transition: all .3s ease;
 }
 
-.bubble.secondary:hover {
-  transform: scale(1.1);
-  background: #e5b732;
+/* ===== Plan & positions ===== */
+/* Le calque réel rendu par ton JS (inchangé) */
+.bubble-layer {
+  position: relative;
+  transform-origin: center center; /* utile si tu scalles */
+}
+/* -------- Bulles -------- */
+.bubble-holder {
+  position: absolute;
+  transform: translate(-50%, -50%); /* centre via JS */
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.bubble-holder:hover { z-index: 980; } /* passe devant les autres holders */
+
+/* Repère local centré sur la primaire */
+.bubble-node { position: relative; width: 0; height: 0; }
+
+/* Tout élément positionné par JS au point (x,y) du repère local */
+.bubble-abs { position: absolute; z-index: 850; left: 0; top: 0; transform: translate(-50%, -50%); }
+
+/* ===== Tooltips PRIMAIRES (hors clip-path) ===== */
+.bubble-wrap {
+  position: absolute;
+  left: 0; top: 0;
+  transform: translate(-50%, -50%);
+}
+.bubble-wrap:hover .tooltip-pop { opacity: 1; z-index: 990; }
+
+/* Tooltip primaire centré au-dessus par défaut */
+.tooltip-pop {
+  position: absolute;
+  background: #111;
+  color: #fff;
+  font-size: large;
+  line-height: 1.4;
+  padding: 8px 10px;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s ease;
+  text-align: left;
+  justify-content: end;
+  /* largeur “naturelle” du contenu, mais bornée si texte long */
+  display: inline-block;
+  min-width: 250px;                  /* borne inférieure */
+  max-width: min(90vw, 360px);        /* borne supérieure, responsive */
+
+  /* wrap propre */
+  white-space: normal;                /* retour à la ligne autorisé */
+  overflow-wrap: anywhere;            /* casse si mot trop long */
+  word-break: normal;                 /* ne coupe pas chaque lettre */
+
+  z-index: 970;                    /* dans le holder, au-dessus de la bulle */
+}
+
+/* ===== Tooltips SECONDAIRES (polaire) ===== */
+.sec-wrap {
+  position: absolute;
+  left: 0; top: 0;
+  transform: translate(-50%, -50%);
+  z-index: 850;
+}
+.sec-wrap:hover { z-index: 990;}     /* monte au-dessus du holder courant */
+.sec-wrap:hover .tooltip-abs { opacity: 1; }
+
+/* Tooltip secondaire : JS pose left/top (tdx/tdy) RELATIFS au sec-wrap */
+.tooltip-abs {
+  position: absolute;
+  left: 0; top: 0;
+  transform: translate(-50%, -50%);
+  display: inline-block;              /* 🔑 évite la colonne 1 caractère */
+
+  background: #111; color: #fff;
+  font-size: large;
+  line-height: 1.4;
+  padding: 8px 10px; border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  opacity: 0; pointer-events: none; transition: opacity .15s ease;
+
+  /* >>> Évite shrink-to-fit trop étroit */
+  width: fit-content;
+  max-width: min(90vw, 320px);
+  min-width: 250px;
+  /* Wrap propre */
+   white-space: normal;                /* retour à la ligne autorisé */
+  overflow-wrap:  normal;            /* casse si mot trop long */
+  word-break: normal;                 /* ne coupe pas chaque lettre */
+  text-align: left;
+  justify-content: end;
+
+  z-index: 975;
 }
 
 
-.tooltip {
-    position: absolute; left: 50%; transform: translateX(-50%);
-    bottom: calc(100% + 8px); background: #111; color: #fff; font-size: 13px;
-    padding: 8px 10px; border-radius: 6px; white-space: nowrap; z-index: 10;
-    opacity: 0; pointer-events: none; transition: opacity .15s ease;
+/* ===== Ancien tooltip interne (si encore présent), on le neutralise visuellement ===== */
+.bubble .tooltip {
+  position: absolute;
+  left: 50%; top: -8px; transform: translate(-50%, -100%);
+  background: #111; color: #fff; font-size: 13px; line-height: 1.4;
+  padding: 8px 10px; border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  opacity: 0; pointer-events: none; transition: opacity .15s ease;
+  width: fit-content; max-width: min(90vw, 320px);
+  white-space: normal; overflow-wrap: break-word; word-break: normal; text-align: justify;
+  z-index: 860;
 }
-
 .bubble:hover .tooltip { opacity: 1; }
 
+/* ===== Modale ===== */
 .modal-backdrop {
-    position: fixed; inset: 0; background: rgba(0,0,0,.4);
-    display: flex; align-items: center; justify-content: center; z-index: 1000;
+  position: fixed; inset: 0; background: rgba(0,0,0,.4);
+  display: flex; align-items: center; justify-content: center; z-index: 1000;
 }
-
 .modal {
-    background: #fff; border-radius: 12px; max-width: 820px; width: min(92vw, 820px);
-    max-height: 90vh; overflow: auto; padding: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,.2);
+  background: #fff;
+  border-radius: 12px;
+  max-width: 85%; 
+  /* width: min(92vw, 820px); */
+  max-height: 90vh;
+  overflow: auto;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.2);
+  font-size: large;
+  text-align: justify;
 }
-
-.modal header { display:flex; justify-content: space-between; align-items:center; gap: 8px; }
-
+.modal header { display:flex; justify-content: flex-end; align-items:center; gap: 8px; }
 .modal h3 { margin: 0; font-size: 20px; }
-
 .modal .close { border: none; background: transparent; font-size: 24px; cursor: pointer; }
-
 .media img, .media video { max-width: 100%; height: auto; border-radius: 8px; }
-
 .media figure { margin: 10px 0; }
-
 .media figcaption { font-size: 12px; color: #666; }
+
+/* ===== Responsive tweaks (optionnel) ===== */
+@media (max-width: 960px) { .bubble-layer { --gap: 16px; } }
+@media (max-width: 720px) { .bubble-layer { --gap: 12px; } }
+
+header, footer {
+  flex: 0 0 auto; /* header/footer taille naturelle */
+}
+.bubble:hover {
+  background: var(--hover-color, #e04c50);
+}
+.bubble:focus-visible {
+  outline: 3px solid rgba(0,0,0,.25);
+  outline-offset: 2px;
+}
+.bubble:active {
+  filter: brightness(0.95);
+}

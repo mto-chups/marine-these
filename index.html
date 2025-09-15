@@ -27,17 +27,17 @@
 
   </head>
   <body>
-    <header class="nav">
-      <button id="prevBtn" aria-label="Slide précédente">⟵</button>
-      <div id="pos" aria-live="polite"></div>
-      <button id="nextBtn" aria-label="Slide suivante">⟶</button>
-    </header>
-
     <main id="app" role="region" aria-label="Contenu de la slide"></main>
-
+      <div class="command" >
+        <button id="prevBtn" aria-label="Slide précédente">⟵</button>
+        <div id="pos" aria-live="polite"></div>
+        <button id="nextBtn" aria-label="Slide suivante">⟶</button>
+      </div>
     <footer>
+      
       JSON-Slides · TS Vanilla
     </footer>
+    
 
     <script type="module" src="/src/main.ts"></script>
   </body>

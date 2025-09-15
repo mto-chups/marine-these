@@ -2,13 +2,80 @@
   "title": "Démo Bulles",
   "slides": [
     {
-      "id": "slide-1",
+      "id": "slide-1 Staggered",
       "blocks": [
         { "type": "title", "text": "Accompagner les personnes transgenres à l'officine" },
         { "type": "subtitle", "text": "Formation interactive à destination des pharmacien.nes et préparateur.rices en pharmacie" },
         {
           "type": "bubble-block",
           "bubbles": [{
+              "kind": "primary",
+              "id": "p4",
+              "color": "#6a67ce",
+              "title": "Multiples transitions : \n 1 parcours  unique pour chacun.e",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "title", "text": "Un parcours unique"},
+                { "kind": "text", "html": "<p>Il n’existe <u> pas une transition type</u> mais une multitude de parcours de transition possibles. <b>Chaque personne possède des souhaits différents</b> avec une chronologie et une temporalité qui lui sont propres. Certain·es ne réaliseront qu’une transition sociale tandis que d’autres choisiront d’y ajouter une hormonothérapie substitutive. La chirurgie d’affirmation de genre est loin d’être un objectif à atteindre pour tous·tes.</p>" }
+              ],
+              "secondaries": [
+                {
+                  "kind": "secondary",
+                  "id": "s7",
+                  "parentId": "p4",
+                  "title": "Salinité",
+                  "clickable": false,
+                  "tooltip": { "html": "<b><u>Recommandations HAS 2025</u></b> : </br>Les personnes trans peuvent <b>décider elles-mêmes de leurs besoins et de leurs soins.</b></br> Cela repose sur le principe <b><u>d’autodétermination</b></u>, qui signifie qu’elles choisissent librement leur parcours sans qu’on leur impose de contraintes." }
+                }
+              ]
+            },{
+              "kind": "primary",
+              "id": "p2",
+              "title": "Lexique",
+              "clickable": false,
+              "tooltip": { "text": "Connaître le vocabulaire des transidentités permet de créer un climat de confiance et d’éviter toute maladresse susceptible de blesser les personnes transgenres." },
+              "gridPos": { "c": 4, "r": 2 },
+              "secondaries":[
+                {
+                    "kind": "secondary",
+                    "id": "s3",
+                    "parentId": "p2",
+                    "clickable": true,
+                    "title": "Vocabulaire",
+                    "modalContent": [
+                        { "kind": "title", "text": "Quelques mots de vocabulaire"},
+                        { "kind": "text", "html": "<p><b><u>Homme transgenre</u></b> : homme qui a été assigné fille à la naissance. On utilise généralement le pronom « il ».</p>" },
+                        { "kind": "text", "html": "<p><b><u>Personne transmasculine</u></b> : englobe les hommes trans mais aussi les personnes non-binaires qui s’engagent dans un parcours de masculinisation.</p>" },
+                        { "kind": "text", "html": "<p><b><u>Femme transgenre :</u></b> femme qui a été assignée garçon à la naissance. On utilise généralement le pronom « elle ».</p>" },
+                        { "kind": "text", "html": "<p><b><u>Personne transféminine :</b></u> englobe les femmes trans mais aussi les personnes non-binaires qui s’engagent dans un parcours de féminisation.</p>" },
+                        { "kind": "text", "html": "<p><b><u>Personne non binaire</b></u> : personne qui ne s’inscrit pas dans la norme binaire, c'est à dire qui n’est ni exclusivement un homme, ni exclusivement une femme. Ses pronoms sont à sa décision, même si le pronom neutre « iel » est couramment utilisé en France.</p>" },
+                        { "kind": "text", "html": "<p><b><u>Cisgenre</b></u> : personne qui vit dans le genre qui leur a été assigné à la naissance. Mot contraire de transgenre. </p>" },
+                        { "kind": "text", "html": "<p><b><u>Dysphorie de genre</b></u> : sensation d’inconfort et de détresse résultant de son assignation de genre à la naissance. </p>" },
+                        { "kind": "text", "html": "<p><b><u>Incongruence de genre</b></u> : désalignement entre le genre ressenti et le sexe assigné à la naissance sans souffrance</p>" },
+                        { "kind": "text", "html": "<p>On les regroupe sous le terme : <b><u>Transidentités.</u></b></p>" }
+                      ]
+                },
+                {
+                    "kind": "secondary",
+                    "id": "s4",
+                    "parentId": "p2",
+                    "title": "Termes à bannir",
+                    "clickable": true,
+                    "modalContent":[
+                        { "kind": "title", "text": "Termes à bannir"},
+                        { "kind": "text", "html": "<p><b><u>Transsexuel·le / Transsexualité / Transsexualisme</b></u> : termes inadaptés, confondant identité de genre et sexualité, et fortement pathologisants. Utiliser le terme « transgenre »</br></br> Travesti·e / travelo : personne portant des vêtements du genre opposé, sans lien avec l’identité de genre ; « travelo » est un terme péjoratif à éviter. « Vrai homme / vraie femme » : à éviter, car elle dévalorise l’identité de genre des personnes trans. Utiliser simplement « homme » ou « femme » « Femme qui devient homme » : formulation à éviter, car elle réduit l’identité de la personne à son sexe assigné à la naissance. Préférer « homme trans » ou « personne transmasculine» . « Vous êtes bien réussi » : formulation à éviter, car elle réduit l’identité de la personne à son apparence ou à une conformité aux normes de genre.</p>" }
+                    ]
+                },
+                {
+                    "kind": "secondary",
+                    "id": "s21",
+                    "parentId": "p2",
+                    "title": "3 ème secondaire",
+                    "clickable": false,
+                    "tooltip": { "text": "Voici une 3ème tooltip en tant qu'exemple" }
+                }
+              ]
+            },{
                 "kind": "primary",
                 "id": "p1",
                 "title": "Accueil",
@@ -17,7 +84,6 @@
                   { "kind": "title", "text": "Accueil"},
                   { "kind": "text", "html": "<p>Un accueil bienveillant et respectueux est essentiel</p>" }
                 ],
-                "gridPos": { "c": 2, "r": 2 },
                 "secondaries":[
                     {
                         "kind": "secondary",
@@ -34,40 +100,6 @@
                         "tooltip": { "text": "Mauvaises pratiques" }
                     }
                 ]
-            },
-            {
-              "kind": "primary",
-              "id": "p2",
-              "title": "Lexique",
-              "clickable": false,
-              "tooltip": { "text": "Connaître le vocabulaire des transidentités permet de créer un climat de confiance et d’éviter toute maladresse susceptible de blesser les personnes transgenres." },
-              "gridPos": { "c": 4, "r": 2 },
-              "secondaries":[
-                {
-                    "kind": "secondary",
-                    "id": "s3",
-                    "parentId": "p2",
-                    "clickable": true,
-                    "tooltip": { "text": "Vocabulaire" },
-                    "title": "Vocabulaire",
-                    "modalContent": [
-                        { "kind": "title", "text": "Quelques mots de vocabulaire"},
-                        { "kind": "text", "html": "<p>Homme transgenre : homme qui a été assigné fille à la naissance. On utilise généralement le pronom « il ». Personne transmasculine : englobe les hommes trans mais aussi les personnes non-binaires qui s’engagent dans un parcours de masculinisation.<br>Femme transgenre : femme qui a été assignée garçon à la naissance. On utilise généralement le pronom « elle ».<br>Personne transféminine : englobe les femmes trans mais aussi les personnes non-binaires qui s’engagent dans un parcours de féminisation.<br>On les regroupe sous le terme : Transidentités.</p>" },
-                        { "kind": "text", "html": "<p>Personne non binaire : personne qui ne s’inscrit pas dans la norme binaire, c'est à dire qui n’est ni exclusivement un homme, ni exclusivement une femme. Ses pronoms sont à sa décision, même si le pronom neutre « iel » est couramment utilisé en France. Cisgenre : personne qui vit dans le genre qui leur a été assigné à la naissance. Mot contraire de transgenre.  Dysphorie de genre : sensation d’inconfort et de détresse résultant de son assignation de genre à la naissance. Incongruence de genre : désalignement entre le genre ressenti et le sexe assigné à la naissance sans souffrance</p>" }
-                    ]
-                },
-                {
-                    "kind": "secondary",
-                    "id": "s4",
-                    "parentId": "p2",
-                    "title": "Termes à bannir",
-                    "clickable": true,
-                    "modalContent":[
-                        { "kind": "title", "text": "Termes à bannir"},
-                        { "kind": "text", "html": "<p>Transsexuel·le / Transsexualité / Transsexualisme : termes inadaptés, confondant identité de genre et sexualité, et fortement pathologisants. Utiliser le terme « transgenre » Travesti·e / travelo : personne portant des vêtements du genre opposé, sans lien avec l’identité de genre ; « travelo » est un terme péjoratif à éviter. « Vrai homme / vraie femme » : à éviter, car elle dévalorise l’identité de genre des personnes trans. Utiliser simplement « homme » ou « femme » « Femme qui devient homme » : formulation à éviter, car elle réduit l’identité de la personne à son sexe assigné à la naissance. Préférer « homme trans » ou « personne transmasculine» . « Vous êtes bien réussi » : formulation à éviter, car elle réduit l’identité de la personne à son apparence ou à une conformité aux normes de genre.</p>" }
-                    ]
-                }
-              ]
             },
             {
               "kind": "primary",
@@ -92,44 +124,15 @@
                         "id":"s6",
                         "parentId":"p3",
                         "clickable":false,
-                        "tooltip":{"text":"En 2023, 22 550 personnes en France étaient titulaires d’une ALD pour transidentité. Toutes les personnes trans n’ont pas d’ALD, et les chiffres précis ne sont pas connus."}
+                        "tooltip":{"html":"En 2023, <u><b>22 550 personnes</b></u> en France étaient <b>titulaires d’une ALD pour transidentité.</b></br></br>Toutes les personnes trans n’ont pas d’ALD, et <b>les chiffres précis ne sont pas connus.</b>"}
                     }
                 ]
             },
             {
               "kind": "primary",
-              "id": "p4",
-              "title": "Multiples transitions : \n 1 parcours  unique pour chacun.e",
-              "clickable": true,
-              "modalContent": [
-                { "kind": "title", "text": "Un parcours unique"},
-                { "kind": "text", "html": "<p>Il n’existe <u> pas une transition type </u> mais une multitude de parcours de transition possibles. <b>Chaque personne possède des souhaits différents</b> avec une chronologie et une temporalité qui lui sont propres. Certain·es ne réaliseront qu’une transition sociale tandis que d’autres choisiront d’y ajouter une hormonothérapie substitutive. La chirurgie d’affirmation de genre est loin d’être un objectif à atteindre pour tous·tes.</p>" }
-              ],
-              "secondaries": [
-                {
-                  "kind": "secondary",
-                  "id": "s7",
-                  "parentId": "p4",
-                  "title": "Salinité",
-                  "clickable": true,
-                  "tooltip": { "text": "Plus d’infos sur la salinité" },
-                  "modalContent": [
-                    { "kind": "text", "html": "<p>La salinité moyenne est d’environ 35 g/L.</p>" }
-                  ]
-                },
-                {
-                  "kind": "secondary",
-                  "id": "s8",
-                  "parentId": "p4",
-                  "clickable": false,
-                  "tooltip": { "text": "Courts courants de surface..." }
-                }
-              ]
-            },
-            {
-              "kind": "primary",
               "id": "p5",
               "title": "Transition sociale",
+              "color": "#1aafd0",
               "clickable": true,
               "modalContent": [
                 { "kind": "title", "text": "Transition sociale"},
@@ -139,6 +142,7 @@
             {
               "kind": "primary",
               "id": "p6",
+              "color": "#1aafd0",
               "title": "Transition chirurgicale",
               "clickable": true,
               "modalContent": [
@@ -165,6 +169,7 @@
             {
                 "kind": "primary",
                 "id": "p7",
+                "color": "#1aafd0",
                 "title": "Transition administrative et juridique",
                 "clickable": true,
                 "modalContent":[
@@ -182,20 +187,15 @@
                             { "kind":"title", "text":"Et la carte vitale ?"},
                             { "kind":"text", "html":"<p>Après un changement de sexe à l’état civil, deux cas sont possibles pour le numéro de sécurité sociale : soit le tribunal transmet directement la modification à l’INSEE, qui ajuste automatiquement le NIR (numéro d’inscription au répertoire), soit la personne doit en faire la demande elle-même. Dans les deux cas, un nouveau compte Ameli est créé et une nouvelle carte Vitale peut être demandée. Un nouveau numéro est crée en remplaçant le premier chiffre (inversion entre le 1 et le 2)</p>"}
                         ]
-                    },
-                    {
-                        "kind":"secondary",
-                        "id":"s12",
-                        "parentId":"p7",
-                        "clickable": false,
-                        "tooltip": { "text": "A définir" }
                     }
                 ]
             }
 
             
           ]
-        }
+        },
+        { "type": "subtitle", "text": "Réalisée par Marine GIET dans le cadre de la thèse sur l'accompagnement des personnes trans en officine" }
+
       ]
     },
     {
