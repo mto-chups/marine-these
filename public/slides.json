@@ -183,20 +183,21 @@
     {
       "id": "slide-2 Staggered",
       "blocks": [
-        { "type": "title", "text": "Bulles & modales" },
+        { "type": "title", "text": "Hormonothérapie féminisante" },
         {
           "type": "bubble-block",
           "bubbles": [
             {
               "kind": "primary",
               "id": "p1",
-              "title": "Qu’est-ce qu’un océan ?",
+              "title": "Objectids",
               "clickable": true,
-              "tooltip": { "text": "Définition courte" },
               "modalContent": [
-                { "kind": "text", "html": "<p>Un océan est une vaste étendue d’eau salée...</p>" },
-                { "kind": "image", "src": "https://picsum.photos/800/300", "alt": "Océan", "caption": "Photo illustrative" },
-                { "kind": "video", "src": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4", "controls": true }
+                { "kind": "text", "html": "<h2>Objectifs des traitements</h2>" },
+                { "kind": "text", "html": "<p>L’accompagnement hormonal féminisant a pour objectif de <b>favoriser</b> le développement des <b>caractères sexuels secondaires féminins</b> tout en <b>modulant</b> certains <b>caractères masculins.</b></p>"},
+                { "kind": "text", "html": "<p>Les <b>protocoles sont nombreux</b> et peuvent être adaptés à chaque patient·e selon ses besoins, sa tolérance et d’éventuelles contre-indications. </p>"},
+                { "kind": "text", "html": "<p>Les <u><b>œstrogènes</b></u> sont utilisés pour <b><u>stimuler les caractères féminins</b></u>, mais leur prise seule n’est parfois pas suffisante.</p>"},
+                { "kind": "text", "html": "<p>Dans ce cas, des <u><b>anti-androgènes</b></u> peuvent être ajoutés pour <u><b>freiner la production et les effets de la testostérone</b></u>, permettant ainsi un meilleur équilibre des effets recherchés.</p>"}
               ],
               "secondaries": [
                 {
@@ -223,12 +224,289 @@
             {
               "kind": "primary",
               "id": "p2",
-              "title": "Biodiversité",
-              "clickable": false,
-              "tooltip": { "text": "Vie marine, récifs, etc." }
+              "title": "Œstrogènes",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Œstrogènes</h2>" },
+                { "kind": "text", "html": "<p>Les œstrogènes (=estrogènes) sont des hormones sexuelles féminines appartenant au groupe des stéroïdes. L’estradiol, ou 17β-estradiol, est la forme d’œstrogène retrouvée lors de l’instauration d’une œstrogénothérapie.</p>" },
+                { "kind": "text", "html": "<p>Ils permettent le développement des caractères sexuels secondaires féminins par fixation sur les récepteurs aux œstrogènes. De plus, les œstrogènes possèdent un effet anti-androgénique. Ils exercent un rétrocontrôle négatif sur l’axe hypothalamo-hypophyso-gonadique en inhibant la sécrétion de GnRH. Cette inhibition entraîne une diminution des hormones LH et FSH et une diminution de production de testostérone.</p>" }
+              ],
+              "secondaries":[
+                {
+                  "kind": "secondary",
+                  "id": "s2",
+                  "parentId": "p2",
+                  "title": "Dispositifs transdermiques",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Dispositifs transdermiques</h2>"},
+                    { "kind": "text", "html": "<p><u><b>Noms commerciaux</b></u> : Dermestril ® / Thais ® / Femstep ® / Thaissept ®</p>"},
+                    { "kind": "text", "html": "<p><u><b>Posologie</b></u> : 100 µg par jour (maximum 400µg par jour)</p>"},
+                    { "kind": "text", "html": "<p><u><b>Conseils associés</b></u> : </p>"},
+                    { "kind": "text", "html": "<table><thead><tr><td>Noms commerciaux</td><td>Temps d'application</td></tr></thead><tr><td>Dermestril ® Thais ®</td><td>à renouveler tous les 3 à 4 jours</td></tr><tr><td>Femstep ® Thaissept ®</td><td>à renouveler tous les 7 jours</td></tr></table>"}
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s3",
+                  "parentId": "p2",
+                  "title": "Gels transdermiques",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Gels transdermiques</h2>"},
+                    { "kind": "text", "html": "<p><u><b>Noms commerciaux</b></u> : Oestrodose 0,06 %® /  Estrava 1%®</p>"},
+                    { "kind": "text", "html": "<p><u><b>Posologie</b></u> : 1,5 – 3 mg par jour (maximum 6 mg par jour)</p>"},
+                    { "kind": "text", "html": "<p><u><b>Conseils associés</b></u> :"},
+                    { "kind": "text", "html": "<table><thead><tr><td>Spécialité</td><td>Nombre de pression</td><td>Quantité de gel</td><td>Quantité d'estradiol</td><td>Posologie</td></tr></thead><tr><td>Oestrodose 0,06 % ®</td><td>1 pression</td><td>1,25 g</td><td>0,75 mg</td><td>2 à 4 pressions par jour (max 8 pressions)</td></tr><tr><td>Estrava 1% ®</td><td>1 pression</td><td>0,5 g</td><td>0,5 mg</td><td>3 à 6 pressions par jour (max 12 pressions)</td></tr></table>"}
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s4",
+                  "parentId": "p2",
+                  "title": "Les comprimés d'oestrogènes",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Les comprimés d'oestrogènes</h2>"},
+                    { "kind": "text", "html": "<p><u><b>Noms commerciaux</b></u> :</p>"},
+                    { "kind": "text", "html": "<ul><li><p>- Provames ® (estradiol) : 1 mg et 2 mg</p></li><li><p>- Oromone ® (estradiol) : 1 mg et 2 mg</p></li></ul>"},
+                    { "kind": "text", "html": "<p><u><b>Posologie</b></u> : 2 à 4 mg par jour (maximum 8 mg par jour)</p>"},
+                    { "kind": "text", "html": "<p><u><b>Conseils associés</b></u> :"},
+                    { "kind": "text", "html": "<ul><li><p>- si dose > à 2 mg par jour : diviser la dose en 2 prises.</p></li><li><p>- Prendre les comprimés à heure fixe.</p></li></ul>"},
+                    { "kind": "text", "html": "<u><b>A noter</b></u> : La voie orale n'est pas utilisée en première intention (risque thromboembolique plus élevé que la voie percutanée)"}
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p3",
+              "title": "Anti-androgènes",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Anti-androgènes</h2>" },
+                { "kind": "text", "html": "<p>L’œstrogénothérapie seule peut, dans certains cas, suffire à inhiber la production testiculaire de testostérone à un niveau satisfaisant pour les patient·es.</p>" },
+                { "kind": "text", "html": "<p>Si ce n’est pas le cas, l’association à des anti-androgènes peut être discutée. Une diminution progressive doit être envisagée dès lors que les effets cliniques recherchés sont stabilisés. L’HAS recommande la spironolactone et les agonistes de la GnRH en première intention. Les traitements anti-androgéniques sont à supprimer après orchidectomie</p>" }
+              ],
+              "secondaries":[
+                {
+                  "kind": "secondary",
+                  "id": "s5",
+                  "parentId": "p3",
+                  "title": "Analogues GnRH",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Analogues GnRH</h2>"},
+                    { "kind": "text", "html": "<p><u><b>Mécanisme</b></u> : Ils se lient aux récepteurs hypophysaires de la GnRH, provoquant d’abord une stimulation excessive appelée « effet flare-up ». Cette surstimulation conduit alors à une désensibilisation de ces récepteurs provoquant une baisse de sécrétion de LH et FSH et par conséquent une diminution de la production de testostérone.</p>"},
+                    { "kind": "text", "html": "<p><u><b>Molécules</b></u> : <b>leuproréline</b> (Enantone ® / Zeulide ®) et <b>triptoréline</b> (Décapeptyl ® / Gonapeptyl ® / Salvacyl ® )</p>"},
+                    { "kind": "text", "html": "<p><u><b>Posologie</b></u> : 3,75 mg par mois ou 11,25 tous les trois mois (injectable)</p>"},
+                    { "kind": "text", "html": "<p><u><b>Conseils associés</b></u> : </p>"},
+                    { "kind": "text", "html": "<ul><li>Les injections sont possibles en sous-cutanée ou en intra-musculaire</li><li>L’effet « flare-up » provoque une augmentation temporaire de la testostérone pendant 1 à 2 semaines, pouvant générer dysphorie et incompréhension. Il faut prévenir le·la patient·e et surveiller l’état psychique, car la baisse rapide suivante peut affecter humeur et libido. L’usage concomitant d’un autre anti-androgène peut être discuté pour limiter cet effet.</li><li>Il peut être utile de proposer l’accompagnement par des IDE pour les premières injections.</li><li>Les analogues de GnRH sont sur la liste des produits dopants de l’AMA.</li></ul>"}
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s6",
+                  "parentId": "p3",
+                  "title": "Spironolactone",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Spironolactone</h2>"},
+                    { "kind": "text", "html": "<p><u><b>Mécanisme</b></u> : diurétique épargneur du potassium avec des propriétés anti-androgéniques.</p>"},
+                    { "kind": "text", "html": "<p><u><b>Nom commercial</b></u> : Aldactone ® 25 mg / 50 mg / 75 mg</p>"},
+                    { "kind": "text", "html": "<p><u><b>Posologie</b></u> : 100 à 200 mg par jour</p>"},
+                    { "kind": "text", "html": "<p><u><b>Conseils associés</b></u> : </p>"},
+                    { "kind": "text", "html": "<ul><li>Effet diurétique donc prise matinale</li><li>Surveiller la tension artérielle et la survenue de malaise à cause de son action hypotensive</li><li>Surveillance régulière de la kaliémie et de la fonction rénale</li><li>Sur la liste des produits dopants de l’AMA</li></ul>"}
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s7",
+                  "parentId": "p3",
+                  "title": "Acétate de cyprotérone",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Acétate de cyprotérone</h2>"},
+                    { "kind": "text", "html": "<p><u><b>Mécanisme</b></u> : progestatif avec une action anti-gonadotrope et anti-androgénique permettant de réduire le taux de testostérone.</p>"},
+                    { "kind": "text", "html": "<p><u><b>Nom commercial</b></u> : Androcur ®</p>"},
+                    { "kind": "text", "html": "<p><u><b>Posologie</b></u> : 12,5 à 25 mg par jour</p>"},
+                    { "kind": "text", "html": "<p>En 2ème intention selon l'HAS </p>"},
+                    { "kind": "text", "html": "<p><u><b>Conseils associés</b></u> : </p>"},
+                    { "kind": "text", "html": "<ul><li>MARR : attestation d’information pour informer le·la patient·e du risque augmenté de méningiome pendant ce traitement = à présenter à chaque délivrance</li><li> IRM avant initiation</li><li>Surveillance hépatique (hépatotoxique)</li></ul>"}
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s8",
+                  "parentId": "p3",
+                  "title": "Bicalutamide",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Acétate de cyprotérone</h2>"},
+                    { "kind": "text", "html": "<p><u><b>Mécanisme</b></u> : anti-androgène non stéroïdien.</p>"},
+                    { "kind": "text", "html": "<p><u><b>Nom commercial</b></u> : Casodex ®</p>"},
+                    { "kind": "text", "html": "<p><u><b>Posologie</b></u> : : 50 mg par jour</p>"},
+                    { "kind": "text", "html": "<p>En 2ème intention selon l'HAS (manque d'évaluation et hépatotoxique)</p>"},
+                    { "kind": "text", "html": "<p><u><b>Conseils associés</b></u> : </p>"},
+                    { "kind": "text", "html": "<ul><li>Prise à heure fixe</li><li> IRM avant initiation</li><li>Surveillance hépatique</li></ul>"}
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s9",
+                  "parentId": "p3",
+                  "title": "Finastéride",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Finastéride</h2>"},
+                    { "kind": "text", "html": "<p><u><b>Mécanisme</b></u> : inhibiteur de 5α-réductase. Inhibe la conversion de testostérone en dihydrotestostérone.</p>"},
+                    { "kind": "text", "html": "<p>Son utilisation lors des transitions de genre a été peu étudié et son utilité est controversée.</p>"}
+                    ]
+                }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p4",
+              "title": "Progestérone",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Progestérone</h2>" },
+                { "kind": "text", "html": "<p>L’utilisation de progestérone est également débattue. Elle est réputée pour améliorer le développement mammaire, la thymie, et la libido. Mais à ce jour, il n’y a pas de recommandation publiée par la société d’endocrinologie et le WPATH la déconseille en raison du faible nombre d’études cliniques réalisée sur les femmes trans. (43,59) L’HAS s’aligne à ces recommandations de fait des incertitudes sur les risques cardiovasculaires, de cancer du sein, de méningiome et sur l’humeur. La posologie usuelle de la progestérone est de 100 à 200 mg par jour.</p>" }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p5",
+              "title": "Effets attendus",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Effets attendus</h2>" },
+                { "kind": "text", "html": "<p>Ces effets féminisants surviennent de manière différente chez chaque personne à l’image de la puberté chez les adolescent·es.</p>" },
+                { "kind": "text", "html": "<p>Le patrimoine génétique, l’âge et le schéma thérapeutique utilisé sont les principaux facteurs influençant le déroulement de la transition hormonale.</p>" },
+                { "kind": "text", "html": "<p>Ils·Elles devront être prévenu·es de la variabilité inter-individuelle de ces effets et de la temporalité qui y est associée. Les effets de l’hormonothérapie mettent plusieurs années avant d’atteindre leur maximum. La patience sera donc nécessaire pour pouvoir observer les résultats complets.</p>" }
+              ],
+              "secondaries":[
+                {
+                  "kind": "secondary",
+                  "id": "s10",
+                  "parentId": "p5",
+                  "title": "Tableau des effets",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "image", "src": "https://img.genially.com/68b0b29ac9c44a0015b7e0d6/ec6c045f-c494-45ee-8162-d0194d8d30e2.png"},
+                    { "kind": "text", "html": "<p style='text-align: center'>Tableau des effets féminisants chez les femmes transgenres</p>"}
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p6",
+              "title": "Effets indésirables",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Effets indésirables</h2>"},
+                { "kind": "text", "html": "<p>A définir.</p>" }
+              ],
+              "secondaries":[
+                {
+                  "kind": "secondary",
+                  "id": "s11",
+                  "parentId": "p6",
+                  "title": "Risques cardiovasculaires",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Risques cardiovasculaires</h2>"},
+                    { "kind": "text", "html": "<p>Chez les personnes trans âgées de plus de 37 ans, ou présentant des facteurs de risque thromboembolique (IMC élevé, tabagisme, antécédents familiaux), il est recommandé de privilégier en première intention le 17β-estradiol par voie transdermique, en raison de sa possible réduction du risque thromboembolique.</p>"},
+                    { "kind": "text", "html": "<p>Le risque cardiovasculaire est multifactoriel et ne se limite pas aux hormones. Il est influencé par des facteurs environnementaux.</p>"},
+                    { "kind": "text", "html": "<p>Une méta-analyse estime que les personnes transgenres ont un risque de maladie cardiovasculaire 40% fois plus élevé que les personnes cisgenres. (4)</p>"}
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s12",
+                  "parentId": "p6",
+                  "title": "Risques carcinologiques",
+                  "clickable": true,
+                  "modalContent" :[
+                    {"kind": "text", "html": "<h2>Risques carcinologiques</h2>"},
+                    { "kind": "text", "html": "<p>Aucune surveillance carcinologique spécifique n’est recommandée chez les personnes trans.</p>"},
+                    { "kind": "text", "html": "<p>Une étude a montré que le risque de cancer du sein chez les femmes transgenres est 47 fois plus élevé que chez les hommes cisgenres mais reste plus faible que dans la population des femmes cisgenres. (5)</p>"},
+                    { "kind": "text", "html": "<p>Un dépistage du cancer du sein, selon les mêmes modalités que les femmes cisgenres, est donc recommandé. A savoir, une mammographie à partir de 50 ans.</p>"}
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s13",
+                  "parentId": "p6",
+                  "title": "Hyperprolactinémie",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Hyperprolactinémie</h2>"},
+                    { "kind": "text", "html": "<p>L’hyperprolactinémie (augmentation de la prolactine dans le sang) toucherait 20% des femmes trans sous hormonothérapie. (6)</p>" },
+                    { "kind": "text", "html": "<p>Cet effet est particulièrement marqué lorsque l’acétate de cyprotérone est prescrit.</p>" },
+                    { "kind": "text", "html": "<p>L’hyperprolactinémie peut rester asymptomatique ou se révéler par la présence de galactorrhées (écoulement de lait par le mamelon)</p>" }
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s14",
+                  "parentId": "p6",
+                  "title": "Dyslipidémie",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Dyslipidémie</h2>"},
+                    { "kind": "text", "html": "<p>Le taux de HDL cholestérol et de triglycérides semble augmenter chez les femmes trans. Les variations du taux de LDL ne paraissent pas bien connues à ce jour.</p>" },
+                    { "kind": "text", "html": "<p>Une prise de poids est fréquemment observée due à la redistribution des graisses et l’augmentation de la masse grasse. </p>" }
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s15",
+                  "parentId": "p6",
+                  "title": "Risques osseux",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Risques osseux</h2>"},
+                    { "kind": "text", "html": "<p>L’administration de 17β-estradiol à dose efficace ayant un effet neutre sur la densité minérale osseuse, aucune surveillance osseuse spécifique n’est recommandée chez les personnes trans. Une vigilance particulière est toutefois nécessaire en cas de sous-dosage en estradiol.</p>" }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p7",
+              "title": "Suivi",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Suivi</h2>"},
+                { "kind": "text", "html": "<p>Fréquence du suivi clinique : </p>" },
+                { "kind": "text", "html": "<ul><li>Tous les 3 mois la première année d’hormonothérapie.</li><li>1 à 2 consultations par an ensuite.</li></ul>" },
+                { "kind": "text", "html": "<p>Surveillance biologique : (Dosage sérique de testostérone et d’œstradiol)</p>" },
+                { "kind": "text", "html": "<ul><li>Testostérone sérique : < 50 ng/dL.</li><li>Estradiol sérique : < 100 à 200 pg/mL.</li></ul>" },
+                { "kind": "text", "html": "<p>Prélèvement sanguin : </p>" },
+                { "kind": "text", "html": "<ul><li>Soit juste avant la prise suivante d’œstradiol.</li><li>Soit 12 h après la dernière prise.</li></ul>" }
+              ],
+              "secondaries":[
+                {
+                  "kind": "secondary",
+                  "id": "s16",
+                  "parentId": "p7",
+                  "title": "Signes de sous et surdosage",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Signes de sous et surdosage</h2>"},
+                    { "kind": "text", "html": "<p><b>Surdosage</b> : gonflement et douleurs mammaires, sensation de jambes lourdes.</p>"},
+                    { "kind": "text", "html": "<p><b>Sous-dosage</b> : bouffées de chaleur, asthénie.</p>"}
+                  ]
+                }
+              ]
             }
           ]
-        }
+        },
+        { "type": "subtitle", "text": "Réalisée par Marine GIET dans le cadre de la thèse sur l'accompagnement des personnes trans en officine" }
+
       ]
     },
     {
