@@ -142,14 +142,14 @@ function renderBubbleBlock(block: BubbleBlock, slideId?: string): HTMLElement {
 
   // ----- 1) Pattern primaire selon l'ID du slide -----
   const kind = pickPatternKind(slideId ?? ""); // "rosace" | "staggered"
-  const sizePrimary   = 90;   // rayon visuel de la bulle primaire
+  const sizePrimary   = 100;   // rayon visuel de la bulle primaire
   const ringK         = 1.25; // n'agit que pour la rosace (écarte l’anneau)
 
   // positions "centre" des primaires (en pixels, relatif au (0,0))
   const primaryPx = getPrimaryPointsFor(kind, block.bubbles.length, sizePrimary, ringK);
 
   // on translate pour tout mettre en coordonnées positives + padding
-  const { shiftX, shiftY, width, height } = normalize(primaryPx, 60);
+  const { shiftX, shiftY, width, height } = normalize(primaryPx, 30);
    (container as HTMLElement).style.width = `${width}px`;
   (container as HTMLElement).style.height = `${height}px`; 
 
@@ -286,6 +286,9 @@ function renderQuiz(question: string, choices: string[], answerIndex: number): H
 export function renderSlide(slide: Slide, mount: HTMLElement) {
   mount.replaceChildren(...slide.blocks.map(b => renderBlock(b, slide.id)));
   fitBubbleLayer();
+  // re-fit après images/polices
+  window.requestAnimationFrame(fitBubbleLayer);
+  document.fonts?.ready?.then(fitBubbleLayer).catch(()=>{});
 }
 
 function fitBubbleLayer() {
@@ -293,25 +296,34 @@ function fitBubbleLayer() {
   const layer = document.querySelector('.bubble-layer') as HTMLElement | null;
   if (!stage || !layer) return;
 
-  // reset scale pour mesurer la taille "naturelle"
-  layer.style.transform = 'none';
+  // Mesure sans tenir compte du scale actuel
+  layer.style.setProperty('--scale', '1');
 
-  // On mesure la bbox réelle occupée (via getBoundingClientRect sur un clone hors flux, ou scrollWidth/Height)
-  // Ici on se base sur scrollWidth/Height qui marchent car tout est positionné à partir de (0,0) normalisé.
   const contentW = layer.scrollWidth  || layer.getBoundingClientRect().width;
   const contentH = layer.scrollHeight || layer.getBoundingClientRect().height;
 
-  const stageRect = stage.getBoundingClientRect();
-  const pad = 12; // petite marge
-  const availW = Math.max(1, stageRect.width  - pad * 2);
-  const availH = Math.max(1, stageRect.height - pad * 2);
+  const pad = 12;
+  let availW = Math.max(1, stage.clientWidth  - pad * 2);
+  let availH = Math.max(1, stage.clientHeight - pad * 2);
 
-  // scale uniforme
+  if (window.visualViewport) {
+    availW = Math.min(availW, window.visualViewport.width  - pad * 2);
+    availH = Math.min(availH, window.visualViewport.height - pad * 2);
+  }
+
   const sx = availW / contentW;
   const sy = availH / contentH;
-  const scale = Math.min(sx, sy, 1); // ne pas dépasser 1 (option : enlever ", 1" si tu veux agrandir)
 
-  layer.style.transform = `scale(${scale})`;
+  let scale = Math.min(sx, sy);
+
+  // Si on a encore de la place (scale >= 1), on plafonne à 1
+  if (scale >= 1) {
+    scale = 1; // pas de shrink inutile
+  } else {
+    // Quand ça déborde, on applique une petite marge (genre 0.95)
+    scale *= 0.95;
+  }
+  layer.style.setProperty('--scale', scale.toFixed(2));
 }
 
 /** Debounce basique */
@@ -321,6 +333,15 @@ function debounce<T extends (...args:any)=>void>(fn: T, ms = 100) {
     if (t) window.clearTimeout(t);
     t = window.setTimeout(() => fn(...args), ms);
   };
+}
+
+const fitDebounced = debounce(fitBubbleLayer, 100);
+
+window.addEventListener('resize', fitDebounced);
+window.addEventListener('orientationchange', fitDebounced);
+if (window.visualViewport) {
+  window.visualViewport.addEventListener('resize', fitDebounced);
+  window.visualViewport.addEventListener('scroll', fitDebounced); // iOS fait bouger le viewport
 }
 window.addEventListener('resize', debounce(fitBubbleLayer, 100));
 

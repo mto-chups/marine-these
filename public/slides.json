@@ -184,13 +184,14 @@
       "id": "slide-2 Staggered",
       "blocks": [
         { "type": "title", "text": "Hormonothérapie féminisante" },
+        { "type": "subtitle", "text": "Hormonothérapie féminisante" },
         {
           "type": "bubble-block",
           "bubbles": [
             {
               "kind": "primary",
               "id": "p1",
-              "title": "Objectids",
+              "title": "Objectifs",
               "clickable": true,
               "modalContent": [
                 { "kind": "text", "html": "<h2>Objectifs des traitements</h2>" },
@@ -198,27 +199,6 @@
                 { "kind": "text", "html": "<p>Les <b>protocoles sont nombreux</b> et peuvent être adaptés à chaque patient·e selon ses besoins, sa tolérance et d’éventuelles contre-indications. </p>"},
                 { "kind": "text", "html": "<p>Les <u><b>œstrogènes</b></u> sont utilisés pour <b><u>stimuler les caractères féminins</b></u>, mais leur prise seule n’est parfois pas suffisante.</p>"},
                 { "kind": "text", "html": "<p>Dans ce cas, des <u><b>anti-androgènes</b></u> peuvent être ajoutés pour <u><b>freiner la production et les effets de la testostérone</b></u>, permettant ainsi un meilleur équilibre des effets recherchés.</p>"}
-              ],
-              "secondaries": [
-                {
-                  "kind": "secondary",
-                  "id": "s1",
-                  "parentId": "p1",
-                  "title": "Salinité",
-                  "clickable": true,
-                  "tooltip": { "text": "Plus d’infos sur la salinité" },
-                  "modalContent": [
-                    { "kind": "text", "html": "<p>La salinité moyenne est d’environ 35 g/L.</p>" }
-                  ]
-                },
-                {
-                  "kind": "secondary",
-                  "id": "s2",
-                  "parentId": "p1",
-                  "title": "Courants",
-                  "clickable": false,
-                  "tooltip": { "text": "Courts courants de surface..." }
-                }
               ]
             },
             {
@@ -506,11 +486,423 @@
           ]
         },
         { "type": "subtitle", "text": "Réalisée par Marine GIET dans le cadre de la thèse sur l'accompagnement des personnes trans en officine" }
-
       ]
     },
     {
-      "id": "slide-3 NoBubbles",
+      "id": "slide-3 Staggered",
+      "blocks": [
+        { "type": "title", "text": "Hormonothérapie masculinisante" },
+        { "type": "subtitle", "text": "Hormonothérapie masculinisante" },
+        { 
+          "type": "bubble-block",
+          "bubbles": [
+            {
+              "kind": "primary",
+              "id": "p1",
+              "title": "Objectifs",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Objectifs</h2>"},
+                { "kind": "text", "html": "<p>L’hormonothérapie des personnes transmasculines repose principalement sur la testostérone, qui induit le développement des caractères sexuels masculins.</p>"},
+                { "kind": "text", "html": "<p>Après conversion en dihydrotestostérone (DHT) par la 5α-réductase, la testostérone et la DHT pénètrent dans les cellules cibles et se lient aux récepteurs androgéniques intracellulaires. </p>"},
+                { "kind": "text", "html": "<p>Le complexe formé migre ensuite vers le noyau, où il se fixe sur des séquences spécifiques de l’ADN et module la transcription des gènes responsables des caractéristiques phénotypiques masculines.</p>"},
+                { "kind": "text", "html": "<p>A noter que la testostérone figure sur la liste des produits dopants de l’Agence Mondiale Antidopage.</p>"}
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p2",
+              "title": "Testostérone injectable",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Testostérone injectable</h2>"},
+                { "kind": "text", "html": "<p>2 formes :</p>"},
+                { "kind": "text", "html": "<p><b><u>Testostérone énanthate</u></b> (Androtardyl® 250 mg/1ml ) : </p>"},
+                { "kind": "text", "html": "<p>Posologie : 100 à 200 mg toutes les 2 semaines ou 50 à 100 mg toutes les semaines.</p>"},
+                { "kind": "text", "html": "<p>Temps de demi-vie : 7,8 jours</p>"},
+                { "kind": "text", "html": "<p><b><u>Undécanoate de testostérone</u></b>(Nebido ® (NR) ou son générique :</p>"},
+                { "kind": "text", "html": "<p>Testostérone Besins ® 1000mg/4ml) </p>"},
+                { "kind": "text", "html": "<p>Posologie : 1000 mg toutes les 12 semaines</p>"},
+                { "kind": "text", "html": "<p>Temps de demi-vie : 90 jours</p>"}
+              ],
+              "secondaries":[
+                {
+                  "kind": "secondary",
+                  "id": "s2",
+                  "parentId": "p2",
+                  "title": "Techniques d'injection",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Techniques d'injection</h2>"},
+                    { "kind": "text", "html": "<p>1. Se laver soigneusement les mains à l’eau et au savon, ou utiliser une solution hydroalcoolique.</p>"},
+                    { "kind": "text", "html": "<p>2. Disposer l’ensemble du matériel nécessaire sur une surface propre.</p>"},
+                    { "kind": "text", "html": "<p>3. Sortir l’ampoule de testostérone de son emballage, la réchauffer entre les mains ou sous un filet d’eau chaude, puis la secouer d’un geste ferme de haut en bas afin d’éviter que du liquide ne reste bloqué dans la partie supérieure.</p>"},
+                    { "kind": "text", "html": "<p>4. Fixer l’aiguille de prélèvement (rose) sur l’embout de la seringue.</p>"},
+                    { "kind": "text", "html": "<p>5. Casser l’ampoule au niveau du point bleu, en protégeant les doigts.</p>"},
+                    { "kind": "text", "html": "<p>6. Avant d’introduire l’aiguille rose dans l’ampoule, chasser l’air de la seringue en appuyant légèrement sur le piston. Aspirer ensuite lentement le produit.</p>"},
+                    { "kind": "text", "html": "<p>7. Retirer et jeter l’aiguille rose dans la boîte DASRI prévue pour les déchets perforants. Remplacer cette aiguille par une aiguille noire ou verte (intramusculaire) ou orange (sous-cutanée).</p>"},
+                    { "kind": "text", "html": "<p>8. Imbiber une compresse de désinfectant et nettoyer soigneusement la zone choisie pour l’injection.</p>"},
+                    { "kind": "text", "html": "<p>9. Pour une injection intramusculaire dans la fesse, imaginer une croix au centre de la fesse et piquer dans le quadrant supérieur externe. Pour une injection intramusculaire dans la cuisse, viser le bord latéral de celle-ci.</p>"},
+                    { "kind": "text", "html": "<p>10. Pincer légèrement la zone à piquer, puis enfoncer l’aiguille d’un geste franc. Tirer légèrement sur le piston afin de vérifier que l’aiguille n’est pas dans une veine (si du sang remonte, reculer légèrement l’aiguille et refaire le test).</p>"},
+                    { "kind": "text", "html": "<p>11. Pour une injection sous-cutanée, injecter dans l’abdomen ou dans la cuisse. Former un pli cutané en saisissant légèrement la peau et insérer l’aiguille à 45°.</p>"},
+                    { "kind": "text", "html": "<p>12. Injecter lentement le produit.</p>"},
+                    { "kind": "text", "html": "<p>13. Retirer l’aiguille, appliquer un pansement, puis masser doucement la zone d’injection pour limiter la douleur et favoriser la diffusion du produit.</p>"},
+                    { "kind": "text", "html": "<p>14. Jeter immédiatement les aiguilles et l’ampoule usagée dans la boîte de collecte DASRI et activer la fermeture provisoire. Une fois la boîte pleine, la fermer définitivement et la rapporter en pharmacie pour échange.</p>"}
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s3",
+                  "parentId": "p2",
+                  "title": "Matériel d'injection",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Matériel d'injection</h2>"},
+                    { "kind": "text", "html": "<ul> <li>Compresses non stériles</li> <li>Un désinfectant type chlorhexidine</li> <li>Une boite de pansement</li> <li>Aiguille de prélèvement 18G (rose)</li> <li>Si injection intramusculaire : Aiguille d’injection 21G (verte) ou 22G (noire)</li> <li>Si injection sous-cutanée : Aiguille d’injection 25G (orange)</li> <li>En fonction de la quantité à administrer : Seringues de 2 ml ou 5 ml</li> <li>Une boite DASRI</li> </ul>"}
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s4",
+                  "parentId": "p2",
+                  "title": "Conseils aux patients",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1Mvpb3iDxk8?si=EGsXhCdMYHexZhCI\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"},
+                    { "kind": "text", "html": "<p>Vidéo réalisée par le SSU de Lyon pour pratiquer l'auto-injection.</p>"}
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p3",
+              "title": "Testostérone transdermique",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Testostérone transdermique</h2>"},
+                { "kind": "text", "html": "<p>La testostérone est aussi disponible sous forme de gel. Cela permet d’obtenir des résultats plus légers pour les personnes qui le souhaitent.</p>"},
+                { "kind": "text", "html": "<p>La posologie peut varier entre 50 et 100 mg de testostérone par jour.</p>"},
+                { "kind": "text", "html": "<p>A noter que ces formes ne sont pas remboursées par la Sécurité Sociale. </p>"}
+              ],
+              "secondaries": [
+                {
+                  "kind": "secondary",
+                  "id": "s5",
+                  "parentId": "p3",
+                  "title": "Les gels de testostérone",
+                  "clickable": true,
+                  "modalContent" :[
+                    {"kind": "text", "html": "<h2>Les gels de testostérone</h2>"},
+                    { "kind": "text", "html": "<p>Selon les spécialités, la concentration de testostérone n’est pas la même.</p>"},
+                    { "kind": "image", "src": "https://img.genially.com/68b0b29ac9c44a0015b7e0d6/5cf242fb-5933-420f-a6b6-bd4e963068a4.png"},
+                    { "kind": "text", "html": "<p style='text-align:center'>Tableau des différentes spécialités de testostérone transdermique</p>"}
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s6",
+                  "parentId": "p3",
+                  "title": "Conseils associés",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Conseils associés</h2>"},
+                    { "kind": "text", "html": "<p>Amorcer la pompe lors de la première utilisation du flacon :</p>"},
+                    { "kind": "text", "html": "<ul><li>6 pressions pour Fortigel®</li> <li>3 pressions pour Androgel®</li> <li>1 pression pour Testavan®</li></ul>"},
+                    { "kind": "text", "html": "<p>Ces pressions initiales doivent être éliminées car elles peuvent ne pas contenir la dose correcte.</p>"},
+                    { "kind": "text", "html": "<p>Avant chaque application, se laver soigneusement les mains à l’eau et au savon.</p>"},
+                    { "kind": "text", "html": "<p>Appliquer le gel en fine couche sur une peau propre, sèche et saine, généralement au niveau des épaules et des bras, en évitant les parties génitales.</p>"},
+                    { "kind": "text", "html": "<p>Étaler délicatement le gel sans frotter intensément.</p>"},
+                    { "kind": "text", "html": "<p>Laisser sécher la zone traitée pendant 3 à 5 minutes avant de s’habiller.</p>"},
+                    { "kind": "text", "html": "<p>Après l’application, se laver soigneusement les mains pour éviter tout risque de transfert.</p>"},
+                    { "kind": "text", "html": "<p>Porter un vêtement couvrant la zone d’application afin de limiter le risque de transfert à une autre personne.</p>"},
+                    { "kind": "text", "html": "<p>En cas de contact cutané accidentel avec une autre personne, laver immédiatement la zone exposée avec de l’eau et du savon.</p>"},
+                    { "kind": "text", "html": "<p>Attendre au minimum 6 heures avant de prendre une douche ou un bain, afin de garantir une absorption optimale du gel.</p>"}
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p4",
+              "title": "Contraception",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Contraception</h2>"},
+                { "kind": "text", "html": "<p>La supplémentation en testostérone chez les hommes trans n’a pas d’effet contraceptif bien qu’elle réduit considérablement la fertilité.</p>"},
+                { "kind": "text", "html": "<p>En dehors de son usage contraceptif, une contraception peut être désirée dans le but d’arrêter les menstruations parfois source de dysphorie chez certaines personnes. A noter que l’aménorrhée est couramment observée lors de la prise de testostérone mais pas systématique.</p>"},
+                { "kind": "text", "html": "<p></p>"}
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p5",
+              "title": "Effets attendus",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Effets attendus</h2>"},
+                { "kind": "text", "html": "<p>Ces effets féminisants surviennent de manière différente chez chaque personne à l’image de la puberté chez les adolescent·es.</p>" },
+                { "kind": "text", "html": "<p>Le patrimoine génétique, l’âge et le schéma thérapeutique utilisé sont les principaux facteurs influençant le déroulement de la transition hormonale.</p>" },
+                { "kind": "text", "html": "<p>Ils·Elles devront être prévenu·es de la variabilité inter-individuelle de ces effets et de la temporalité qui y est associée. Les effets de l’hormonothérapie mettent plusieurs années avant d’atteindre leur maximum. La patience sera donc nécessaire pour pouvoir observer les résultats complets.</p>" }
+              ],
+              "secondaries":[
+                {
+                  "kind": "secondary",
+                  "id": "s7",
+                  "parentId": "p5",
+                  "title": "Tableau des effets",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "image", "src": "https://img.genially.com/68b0b29ac9c44a0015b7e0d6/0ca8690b-46a1-4782-baa5-be5ce33cca52.png"},
+                    { "kind": "text", "html": "<p style='text-align: center'>Tableau de l'apparition des effets masculinisants</p>"}
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p6",
+              "title": "Effets indésirables",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Effets indésirables</h2>"},
+                { "kind": "text", "html": "<p>A définir.</p>" }
+              ],
+              "secondaries":[
+                {
+                  "kind": "secondary",
+                  "id": "s8",
+                  "parentId": "p6",
+                  "title": "Erythrocytose",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Erythrocytose</h2>"},
+                    { "kind": "text", "html": "<p>L’érythrocytose correspond à une augmentation du nombre de globules rouges se traduisant par une augmentation de l’hématocrite et de l’hémoglobine.</p>"},
+                    { "kind": "text", "html": "<p>Les personnes utilisatrices de testostérone ont un risque majoré d'erythrocytose avec un hématocrite supérieur à 50%.</p>"},
+                    { "kind": "text", "html": "<p>Ce risque impose une surveillance régulière de la NFS.</p>"}
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s9",
+                  "parentId": "p6",
+                  "title": "Risques cardiovasculaires",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Risques cardiovasculaires</h2>"},
+                    { "kind": "text", "html": "<p>Certaines études ont pu démontrer un risque cardiovasculaire majoré par rapport aux femmes cisgenres. (7)(8)</p>"},
+                    { "kind": "text", "html": "<p>C'est pourquoi  l'HAS recommande la même surveillance cardiologique que les hommes cisgenres.</p>"}
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s10",
+                  "parentId": "p6",
+                  "title": "Risques carcinologiques",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Risques carcinologiques</h2>"},
+                    { "kind": "text", "html": "<p>Bien que le risque de cancer du sein est diminué, il n'est pas inexistant. Il est important d’éduquer à l’autopalpation, y compris après mastectomie.</p>"},
+                    { "kind": "text", "html": "<p>Un suivi gynécologique régulier reste indispensable pour les hommes trans ayant conservé ovaires et utérus, avec participation au dépistage organisé du cancer du col à partir de 25 ans. L’adhésion à ce dépistage est moindre dans cette population ce qui entraîne des diagnostics tardifs.</p>"}
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s11",
+                  "parentId": "p6",
+                  "title": "Alopécie androgénique",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Alopécie androgénique</h2>"},
+                    { "kind": "text", "html": "<p>Une alopécie androgénique peut survenir après l’initiation de la testostérone. Dans ce cas, si la personne souhaite remédier à cet effet, il faudra envisager de diminuer la posologie de la testostérone. Dans certains cas, les inhibiteurs de la 5 alpha réductase peuvent être prescrits, mais ils ne sont pas recommandés systématiquement.</p>"}
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p7",
+              "title": "Suivi",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Suivi</h2>"},
+                { "kind": "text", "html": "<p><u><b>Fréquence des consultations</b></u> : Tous les 3 mois la première année. Puis 1 à 2 fois par an.</p>" },
+                { "kind": "text", "html": "<p><u><b>Surveillance biologique</u></b> : Testostérone sérique : à mesurer tous les 3 mois jusqu’à stabilisation dans les valeurs masculines.</p>" },
+                { "kind": "text", "html": "<ul><li>Androtardyl® (énanthate) : dosage entre deux injections (cible : 400–700 ng/dL).</li> <li>Nebido® (undécanoate) : dosage juste avant l’injection suivante ; si < 400 ng/dL, ajuster la dose.</li> <li>Formes transdermiques : dosage au plus tôt après 1 semaine d’application quotidienne (≥ 2 h après l’application).</li></ul>" },
+                { "kind": "text", "html": "<p><b><u>Surveillance</u></b> : </p>" },
+                { "kind": "text", "html": "<ul><li>Hématocrite et hémoglobine : tous les 3 mois la première année, puis 1–2 fois/an.</li> <li>Poids</li> <li>Pression artérielle</li> <li>Lipides : contrôles réguliers</li> <li>Surveillance osseuse : Dépistage de l’ostéoporose si : arrêt du traitement (même temporaire),mauvaise observance,facteurs de risque de perte osseuse</li></ul>" }
+              ],
+              "secondaries":[
+                {
+                  "kind": "secondary",
+                  "id": "s12",
+                  "parentId": "p7",
+                  "title": "Signes de sous et surdosage",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Signes de sous et surdosage</h2>"},
+                    { "kind": "text", "html": "<p><b><u>Surdosage</u></b> :</p>"},
+                    { "kind": "text", "html": "<ul> <li>Rétention d’eau</li> <li>Bouffées de chaleur</li> <li>Fourmillements dans les mains ou les pieds</li> <li>Douleurs articulaires ou musculaires</li> <li>Sensation de nervosité ou une agitation excessive</li></ul>"},
+                    { "kind": "text", "html": "<p><b><u>Sous-dosage</u></b> :</p>"},
+                    { "kind": "text", "html": "<ul><li>Fatigue intense, notamment en fin de cycle</li></ul>"}
+
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        { "type": "subtitle", "text": "Réalisée par Marine GIET dans le cadre de la thèse sur l'accompagnement des personnes trans en officine" }
+      ]
+    },
+    {
+      "id": "slide-4 Staggered",
+      "blocks": [
+        { "type": "title", "text": "Accompagner les personnes transgenres à l'officine" },
+        { "type": "subtitle", "text": "Accompagner les personnes transgenres à l'officine" },
+        { "type": "bubble-block", 
+          "bubbles": [
+            {
+              "kind": "primary",
+              "id": "p1",
+              "tooltip": {"text": "Questions fréquentes"},
+              "title": "Questions fréquentes",
+              "clickable": false
+            },
+            {
+              "kind": "primary",
+              "id": "p2",
+              "title": "Hors AMM",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Hors AMM et remboursement</h2>"},
+                { "kind": "text", "html": "<p>Prescription hors AMM : en théorie, elle ne permet pas le remboursement des traitements.</p>"},
+                { "kind": "text", "html": "<p>Pratique constatée :</p>"},
+                { "kind": "text", "html": "<p>- Selon l’IGAS (2012), peu de difficultés de remboursement de l’hormonothérapie pour les personnes trans. Tolérance des CPAM et absence de contrôle croisé entre traitement et numéro de Sécurité sociale.</p>"},
+                { "kind": "text", "html": "<p>- Rapport du ministère de la Santé (2022) : Hors AMM = théoriquement non remboursé. En réalité, traitements remboursés via le dispositif ALD.</p>"},
+                { "kind": "text", "html": "<p>ALD 31 « hors liste » : permet une prise en charge à 100 % des soins liés à la transidentité.</p>"}
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p3",
+              "title": "Prévention",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Prévention</h2>"},
+                { "kind": "text", "html": "<p>Rôle clé du pharmacien : prévention grâce à accessibilité et présence territoriale. Outil principal : bilan prévention (pris en charge par l’Assurance Maladie, rémunéré 30 €)Sujets possibles :</p>"},
+                { "kind": "text", "html": "<ul><li>Le bien-être mental et social</li> <li>IST : prévention (préservatifs, PrEP), dépistage régulier, information adaptée.</li> <li>Contraception (si souhait du/de la patient·e).</li> <li>Vérification de la couverture vaccinale et rappels nécessaires.</li> <li>Habitudes de vie : activité physique, alcool, tabac, drogues.</li> <li>Dépistages recommandés : Cancer du col de l’utérus dès 25 ans. Cancers du sein et colorectal dès 50 ans.</li></ul>" }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p4",
+              "title": "Situations possibles à l'officine",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Situations possibles à l'officine</h2>"},
+                { "kind": "text", "html": "<ul><li>TROD cystite possible chez les hommes trans.</li> <li>Contraceptifs hormonaux chez les hommes trans. (Rappel : la testostérone n’a pas d’effet contraceptif). Demande spontanée de contraceptif d’urgence.</li> <li>Traitement gynécologique (Ex : ovule d’éconazole) pour des hommes trans.</li> <li>Inhibiteur de PDE-5 (ex : sildénafil) chez des femmes trans</li></ul>"}
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p5",
+              "title": "Conservation des gamètes",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Conservation des gamètes</h2>"},
+                { "kind": "text", "html": "<p>Les traitements hormonaux peuvent réduire la fertilité. Une conservation des gamètes peut donc être proposée aux personnes qui le souhaitent. Elle doit se faire de <b>préférence avant le début du traitement, mais reste parfois possible en cours de traitement.</b> La loi (article L2141-11 du Code de Santé Publique) garantit ce droit pour toute personne exposée à un traitement risquant d’altérer sa fertilité. Cette préservation est <b>prise en charge à 100 % par la Sécurité sociale.</b>"}
+              ],
+              "secondaries": [
+                {
+                  "kind": "secondary",
+                  "id": "s6",
+                  "parentId": "p5",
+                  "title": "Préservation de la fertilité dans une transition de genre",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Préservation de la fertilité dans une transition de genre</h2>"},
+                    { "kind": "text", "html": "<a style='color: green' target='_blank' href='https://www.chu-nantes.fr/preservation-de-la-fertilite-dans-une-transition-de-genre'>Lien vers le site du CHU de Nantes</a>"}
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p6",
+              "title": "Sources",
+              "clickable": true,
+              "modalContent": [
+                { "kind": "text", "html": "<h2>Sources</h2>"},
+                { "kind": "text", "html": "<p>A définir</p>"}
+              ]
+            },
+            {
+              "kind": "primary",
+              "id": "p7",
+              "title": "Vers qui orienter ?",
+              "clickable": false,
+              "tooltip": {"text": "Vers qui orienter ?"},
+              "secondaries": [
+                { "kind": "secondary",
+                  "id": "s1",
+                  "parentId": "p7",
+                  "title": "Associations",
+                  "tooltip": {"text": "Quelques associations LGBT en Pays de la Loire"},
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Quelques associations LGBT</h2>"},
+                    { "kind": "text", "html": "<h3>En Pays de la Loire</h3>"},
+                    { "kind": "text", "html": "<p><u><b>La Gom’53 – Laval (Mayenne)</b></u></p>"},
+                    { "kind": "text", "html": "<p>📌 4 rue Marceau, 53000 Laval</p>"},
+                    { "kind": "text", "html": "<p>📧 assolagom53@gmail.com</p>"},
+                    { "kind": "text", "html": "<p>🕕 Mardi 18h–21h ; dernier dimanche du mois (personnes trans)</p>"},
+                    { "kind": "text", "html": "<p><u><b>Centre LGBTQI+ Vendée – La Roche-sur-Yon</b></u></p>"},
+                    { "kind": "text", "html": "<p>📌 71 boulevard Aristide Briand, 85000 La Roche-sur-Yon</p>"},
+                    { "kind": "text", "html": "<p>📧 centrelgbt85@gmail.com</p>"},
+                    { "kind": "text", "html": "<p>🕙 Samedi (semaines paires) 10h–12h ; mercredi (semaines impaires) 14h–18h</p>"},
+                    { "kind": "text", "html": "<p><u><b>Quazar – Angers (Maine-et-Loire)</b></u></p>"},
+                    { "kind": "text", "html": "<p>📌 15 rue de Jérusalem, 49100 Angers</p>"},
+                    { "kind": "text", "html": "<p>📧 team-trans-inter@quazar.fr</p>"},
+                    { "kind": "text", "html": "<p>📞 02 41 88 87 49</p>"},
+                    { "kind": "text", "html": "<p>🕑 14h – 19h</p>"},
+                    { "kind": "text", "html": "<p><u><b>Nosig – Nantes (Loire-Atlantique)</b></u></p>"},
+                    { "kind": "text", "html": "<p>📌 7 Rue Magdeleine, 44200 Nantes</p>"},
+                    { "kind": "text", "html": "<p>📧 trans-et-inter@nosig.fr</p>"},
+                    { "kind": "text", "html": "<p>📞 02 40 37 96 37</p>"},
+                    { "kind": "text", "html": "<p>🕑 Mardi–jeudi 14h–19h ; vendredi 14h–18h ; samedi 9h–13h</p>"},
+                    { "kind": "text", "html": "<p><u><b>Homogène’72 – Le Mans (Sarthe)</b></u></p>"},
+                    { "kind": "text", "html": "<p>📌 26 avenue du Général-de-Gaulle, 72000 Le Mans</p>"},
+                    { "kind": "text", "html": "<p>📧 homogene72.asso.lgbt@gmail.com</p>"},
+                    { "kind": "text", "html": "<p>📞 09 51 44 66 00</p>"},
+                    { "kind": "text", "html": "<p>🕕 Mercredi 18h–21h ; mardi soir (sur inscription)</p>"}
+                  ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s2",
+                  "parentId": "p7",
+                  "title": "CHU",
+                  "tooltip": {"html": "<p><b>Les CHU de Nantes et d'Angers</b> disposent d'équipes pluridisciplinaire afin d'accueillir les demandes de transidentité.</p> <p><b>Certains médecins généralistes</b> sont formés à initier l'hormonothérapie et en assurer le suivi.</p>"},
+                  "clickable": false
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s3",
+                  "parentId": "p7",
+                  "clickable": false,
+                  "title": "Association le refuge",
+                  "tooltip": {"html": "<p><b>Association Le Refuge</b> : aide les jeunes LGBT+ de moins de 25 ans rejetés par leur famille. Ligne d’écoute au 06 31 59 69 50 (tous les jours 8h–00h) et orientation vers des hébergements d’urgence.</p>"}
+                }
+              ]
+            }
+          ]
+        },
+        { "type": "subtitle", "text": "Réalisée par Marine GIET dans le cadre de la thèse sur l'accompagnement des personnes trans en officine" }
+      ]
+    },
+    {
+      "id": "slide-3",
       "blocks": [
         { "type": "title", "text": "Quiz" },
         { 
