@@ -136,104 +136,92 @@ function renderBubble(b: Bubble, abs = false): HTMLElement {
   return btn;
 }
 
-
+const DESIGN = { WIDTH: 1200, HEIGHT: 700 };
 function renderBubbleBlock(block: BubbleBlock, slideId?: string): HTMLElement {
   const container = el("section", { class: "bubble-layer" });
 
-  // ----- 1) Pattern primaire selon l'ID du slide -----
-  const kind = pickPatternKind(slideId ?? ""); // "rosace" | "staggered"
-  const sizePrimary   = 100;   // rayon visuel de la bulle primaire
-  const ringK         = 1.25; // n'agit que pour la rosace (écarte l’anneau)
+  const kind = pickPatternKind(slideId ?? "");
+  const sizePrimary = 90;
+  const ringK = 1.25;
 
-  // positions "centre" des primaires (en pixels, relatif au (0,0))
-  const primaryPx = getPrimaryPointsFor(kind, block.bubbles.length, sizePrimary, ringK);
+  // Points centrés autour de (0,0) (si ton getPrimaryPointsFor renvoie comme avant)
+  const primaryPts = getPrimaryPointsFor(kind, block.bubbles.length, sizePrimary, ringK);
 
-  // on translate pour tout mettre en coordonnées positives + padding
-  const { shiftX, shiftY, width, height } = normalize(primaryPx, 30);
-   (container as HTMLElement).style.width = `${width}px`;
-  (container as HTMLElement).style.height = `${height}px`; 
+  // On récupère la bbox du pattern courant
+  const minX = Math.min(...primaryPts.map(p => p.x));
+  const maxX = Math.max(...primaryPts.map(p => p.x));
+  const minY = Math.min(...primaryPts.map(p => p.y));
+  const maxY = Math.max(...primaryPts.map(p => p.y));
+  const contentW = maxX - minX;
+  const contentH = maxY - minY;
 
-  // ----- 2) Paramètres secondaires -----
-  const sizeSecondary = 30;   // rayon visuel d’un "+"
-  const margin        = 6;    // espace entre primaire et secondaire
-  const baseDist      = sizePrimary + sizeSecondary + margin; // centre->centre de base
-  const tooltipFactor = 1.6;  // tooltip plus loin que le "+"
+  // On **centre le pattern** dans la toile DESIGN avec une petite marge
+  const shiftX = (DESIGN.WIDTH  - contentW) / 2 - minX;
+  const shiftY = (DESIGN.HEIGHT - contentH) / 2 - minY;
+
+  // ----- Secondaires
+  const sizeSecondary = 30;
+  const margin = 6;
+  const baseDist = sizePrimary + sizeSecondary + margin;
+  const tooltipFactor = 1.6;
   const secTemplate = pickSecPolarTemplate(kind);
 
-  // ----- 3) Rendu -----
   block.bubbles.forEach((primary, i) => {
-    const pPt = primaryPx[i];
-    if (!pPt) return;
+    const p = primaryPts[i];
+    if (!p) return;
 
-    // Holder global positionné au centre de la primaire
     const holder = el("div", { class: "bubble-holder" }) as HTMLDivElement;
-    holder.style.left = `${pPt.x + shiftX}px`;
-    holder.style.top  = `${pPt.y + shiftY}px`;
+    holder.style.left = `${p.x + shiftX}px`;
+    holder.style.top  = `${p.y + shiftY}px`;
 
-    // Repère local centré
     const node = el("div", { class: "bubble-node" });
     const pEl = renderBubble(primary, true);
     pEl.classList.add("bubble-abs");
     node.appendChild(pEl);
 
-    // ----- Secondaires en polaire -----
-    const defs: ReadonlyArray<SecPolar> = secTemplate[i] ?? [];
+    const defs = secTemplate[i] ?? [];
     const secs = primary.secondaries ?? [];
     const MAX_SECONDARIES = 4;
     const count = Math.min(MAX_SECONDARIES, defs.length, secs.length);
 
     for (let k = 0; k < count; k++) {
-      const slot = defs[k];
-      const sec  = secs[k];
-      if (!slot || !sec) continue;
+      const slot = defs[k]; const sec = secs[k]; if (!slot || !sec) continue;
+      const rad = (slot.angle * Math.PI) / 180;
+      const dist = baseDist * (slot.distance ?? 1);
 
-      const angle = slot.angle;
-      const distance = slot.distance ?? 1;
-
-      const rad  = (angle * Math.PI) / 180;
-      const dist = baseDist * distance;
-
-      // position du "+"
       const dx = Math.cos(rad) * dist;
-      const dy = Math.sin(rad) * dist * -1; // Y CSS vers le bas
+      const dy = -Math.sin(rad) * dist;
 
-      const secWrap = el("div", { class: "sec-wrap" }) as HTMLDivElement;
-      secWrap.style.left = `${dx}px`;
-      secWrap.style.top  = `${dy}px`;
+      const wrap = el("div", { class: "sec-wrap" }) as HTMLDivElement;
+      wrap.style.left = `${dx}px`;
+      wrap.style.top  = `${dy}px`;
 
-      const secBtn = renderBubble(sec, true);
-      secBtn.classList.add("bubble-abs");
-      secWrap.appendChild(secBtn);
+      const btn = renderBubble(sec, true);
+      btn.classList.add("bubble-abs");
+      wrap.appendChild(btn);
 
-      // tooltip secondaire sur le même angle, plus loin
       const tipText = sec.tooltip?.text;
       const tipHtml = sec.tooltip?.html;
       if (tipText || tipHtml) {
         const tipDist = dist * tooltipFactor;
         const tdx = Math.cos(rad) * (tipDist - dist);
-        const tdy = Math.sin(rad) * (tipDist - dist) * -1;
-
+        const tdy = -Math.sin(rad) * (tipDist - dist);
         const tipEl = el("div", { class: "tooltip-abs", role: "tooltip" }) as HTMLDivElement;
-        if (tipHtml) {
-          tipEl.innerHTML = tipHtml;  // ⚠️ dompurify si besoin
-        } else {
-          tipEl.textContent = tipText!;
-        }
-        tipEl.style.left = `${tdx}px`;
-        tipEl.style.top  = `${tdy}px`;
-        secWrap.appendChild(tipEl);
+        if (tipHtml) tipEl.innerHTML = tipHtml; else tipEl.textContent = tipText!;
+        tipEl.style.left = `${tdx}px`; tipEl.style.top = `${tdy}px`;
+        wrap.appendChild(tipEl);
       }
-
-      node.appendChild(secWrap);
+      node.appendChild(wrap);
     }
 
     holder.appendChild(node);
     container.appendChild(holder);
   });
 
-  (container as HTMLElement).style.minHeight = `${height}px`;
+  // IMPORTANT : ne mets plus minHeight/width dynamiques.
   return container;
 }
+
 
 
 /* ---------- Rendu slide global ---------- */
@@ -306,6 +294,7 @@ function fitBubbleLayer() {
   let availW = Math.max(1, stage.clientWidth  - pad * 2);
   let availH = Math.max(1, stage.clientHeight - pad * 2);
 
+  // Sur mobile, on tient compte de la visualViewport (utile quand le clavier est ouvert)
   if (window.visualViewport) {
     availW = Math.min(availW, window.visualViewport.width  - pad * 2);
     availH = Math.min(availH, window.visualViewport.height - pad * 2);
@@ -316,6 +305,13 @@ function fitBubbleLayer() {
 
   let scale = Math.min(sx, sy);
 
+  if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    console.log("with visualViewport")
+    scale += 0.13
+  }else {
+    console.log("no visualViewport")
+    scale += 0.3
+  }
   // Si on a encore de la place (scale >= 1), on plafonne à 1
   if (scale >= 1) {
     scale = 1; // pas de shrink inutile

@@ -3,19 +3,14 @@
   <head>
     
     <meta charset="utf-8" />
-    <meta http-equiv="Content-Security-Policy"
-    content="
-        default-src 'self';
-        img-src
-        'self'
-        https://img.genially.com
-        https://i.ytimg.com
-        blob:;
-        frame-src
-        https://www.youtube.com;
-        style-src 'self' 'unsafe-inline';
-        script-src 'self';
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      img-src 'self' https://img.genially.com https://i.ytimg.com blob:;
+      frame-src https://www.youtube.com;
+      style-src 'self' 'unsafe-inline';
+      script-src 'self' 'nonce-dephase';
     ">
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Parcour de formation des pharmaciens</title>
@@ -31,11 +26,150 @@
         <div id="pos" aria-live="polite"></div>
         <button id="nextBtn" aria-label="Slide suivante">⟶</button>
       </div>
-    <footer style="align-items: center;margin:20px auto  auto  auto;">
-      <a href="mentionLegal" style="color: rgba(29, 29, 29);">Mentions légales</a>
-    </footer>
-    
+      <footer style="align-items: center; margin:20px auto;">
+        <a href="#" id="openModal" style="color: rgba(29, 29, 29);">Mentions légales</a>
+      </footer>
+
+      <div class="modalCGU" id="modalCGU">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="container">
+          <header>
+            <h1>Mentions légales & Licence</h1>
+            <p class="subtitle">Projet : <strong>marine-these</strong> — Thèse en pharmacie — © <span id="year"></span> Marine Giet</p>
+          </header>
+
+          <section id="editeur">
+            <h2>Éditeur du site</h2>
+            <p>
+              Ce site est édité par : <strong>Marine Giet</strong><br />
+              Email : <a href="mailto:[[adresse@email.example]]">[[adresse@email.example]]</a>
+            </p>
+            <p class="small">
+              Le présent site est publié à titre non professionnel dans le cadre d’une thèse en pharmacie.
+            </p>
+          </section>
+
+          <section id="objet">
+            <h2>Objet du site</h2>
+            <p>
+              Présentation et diffusion des contenus du projet <em>marine-these</em> (documents, textes, visuels, code source et ressources associées).
+            </p>
+          </section>
+
+          <section id="propriete-intellectuelle">
+            <h2>Propriété intellectuelle & Licence</h2>
+            <p>
+              Sauf mention contraire, l’ensemble des contenus de ce site est protégé par le droit d’auteur au bénéfice de <strong>Marine Giet</strong>.
+            </p>
+
+            <p>
+              Les contenus sont mis à disposition selon la licence
+              <strong>Creative Commons Attribution – Pas de Modification 4.0 International (CC BY-ND 4.0)</strong>.
+              Vous êtes autorisé·e à <em>partager</em> l’œuvre, à condition de respecter simultanément ces conditions :
+            </p>
+            <ul>
+              <li><strong>Attribution (BY)</strong> : citez l’autrice « Marine Giet », indiquez la source et un lien vers la licence.</li>
+              <li><strong>Pas de modification (ND)</strong> : aucune adaptation, transformation, ou remix n’est autorisé.</li>
+            </ul>
+            <p>
+              Texte légal et résumé : <a href="https://creativecommons.org/licenses/by-nd/4.0/">creativecommons.org/licenses/by-nd/4.0/</a>
+            </p>
+            <p class="small">
+              <span class="mono">© Marine Giet — « Formation des pharmaciens» — CC BY-ND 4.0 — source : https://lelien.com</span>
+            </p>
+          </section>
+
+          <section id="hebergeur">
+            <h2>Hébergeur</h2>
+            <p>
+              <strong>Cloudflare</strong> cloudflare.com
+            </p>
+          </section>
+
+          <section id="donnees">
+            <h2>Données personnelles (RGPD)</h2>
+            <p>
+              <strong>Aucune collecte de données personnelles n’est effectuée via ce site.</strong> Aucun formulaire et aucun traqueur de mesure d’audience nécessitant consentement ne sont utilisés.
+            </p>
+            <p class="small">
+              En cas d’évolution future (formulaire, newsletter, analytics…), une politique de confidentialité conforme au RGPD sera ajoutée et les consentements requis seront recueillis préalablement.
+            </p>
+          </section>
+
+          <section id="cookies">
+            <h2>Cookies</h2>
+            <p>
+              <strong>Aucun cookie non essentiel n’est déposé.</strong> Le site fonctionne sans cookies de mesure d’audience ni de publicité.
+            </p>
+          </section>
+
+          <section id="responsabilite">
+            <h2>Responsabilité</h2>
+            <p>
+              Les informations publiées le sont à titre informatif. Malgré les soins apportés à leur exactitude,
+              l’éditrice ne saurait être tenue pour responsable des erreurs ou de l’usage qui en serait fait.
+              L’accès au site peut être interrompu pour maintenance ou cas de force majeure.
+            </p>
+          </section>
+
+          <section id="contact">
+            <h2>Contact</h2>
+            <p>
+              Pour toute question relative au site ou aux contenus : <a href="mailto:[[adresse@email.example]]">[[adresse@email.example]]</a>
+            </p>
+          </section>
+
+          <section id="droit">
+            <h2>Droit applicable</h2>
+            <p>
+              Le présent site est soumis au droit français. En cas de litige, les tribunaux d'Angers seront seuls compétents.
+            </p>
+          </section>
+
+          <footer>
+            <p>© <span id="year2"></span> Marine Giet — Licence : <a rel="license" href="https://creativecommons.org/licenses/by-nd/4.0/">CC BY-ND 4.0</a></p>
+            <p class="small">Dernière mise à jour : <time>Octobre 2025</time></p>
+          </footer>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="/src/main.ts"></script>
+    <script nonce="dephase">
+      function phaseBubbles() {
+        const nodes = document.querySelectorAll('.bubble.secondary');
+        nodes.forEach((el, i) => el.style.setProperty('--phase', i+i/4*i));
+        console.log('[phaseBubbles] phased:', nodes.length);
+      }
+
+      document.addEventListener('DOMContentLoaded', phaseBubbles);
+      window.addEventListener('load', phaseBubbles);
+      const mo = new MutationObserver(phaseBubbles);
+      mo.observe(document.body, { childList: true, subtree: true });
+
+      const modal = document.getElementById("modalCGU");
+    const btn = document.getElementById("openModal");
+    const closeBtn = document.querySelector(".modalCGU .close");
+
+    // ouvrir
+    btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    modal.style.display = "flex";
+    });
+
+    // fermer avec X
+    closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+    });
+
+    // fermer en cliquant en dehors
+    window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+    });
+    </script>
+
   </body>
 </html>
