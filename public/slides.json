@@ -4,18 +4,18 @@
     {
       "id": "slide-1 Staggered",
       "blocks": [
-        { "type": "title", "text": "Accompagner les personnes transgenres à l'officine" },
-        { "type": "subtitle", "text": "Formation interactive à destination des pharmacien.nes et préparateur.rices en pharmacie" },
+        { "type": "title", "text": "ACCOMPAGNER LES PERSONNES TRANSGENRES À L'OFFICINE" },
+        { "type": "subtitle", "text": "Formation interactive à destination des pharmacien·nes et préparateur·rices en pharmacie" },
         {
           "type": "bubble-block",
           "bubbles": [{
               "kind": "primary",
               "id": "p4",
               "color": "#6a67ce",
-              "title": "Multiples transitions : \n 1 parcours  unique pour chacun.e",
+              "title": "Parcours individualisé",
               "clickable": true,
               "modalContent": [
-                { "kind": "text", "html": "<h2>Un parcours unique</h2>"},
+                { "kind": "text", "html": "<h2>Un parcours personnalisé</h2>"},
                 { "kind": "text", "html": "<p>Il n’existe <u> pas une transition type</u> mais une multitude de parcours de transition possibles. <b>Chaque personne possède des souhaits différents</b> avec une chronologie et une temporalité qui lui sont propres. Certain·es ne réaliseront qu’une transition sociale tandis que d’autres choisiront d’y ajouter une hormonothérapie substitutive. La chirurgie d’affirmation de genre est loin d’être un objectif à atteindre pour tous·tes.</p>" }
               ],
               "secondaries": [
@@ -48,11 +48,11 @@
                         { "kind": "text", "html": "<p><b><u>Personne transmasculine</u></b> : englobe les hommes trans mais aussi les personnes non-binaires qui s’engagent dans un parcours de masculinisation.</p>" },
                         { "kind": "text", "html": "<p><b><u>Femme transgenre :</u></b> femme qui a été assignée garçon à la naissance. On utilise généralement le pronom « elle ».</p>" },
                         { "kind": "text", "html": "<p><b><u>Personne transféminine :</b></u> englobe les femmes trans mais aussi les personnes non-binaires qui s’engagent dans un parcours de féminisation.</p>" },
+                        { "kind": "text", "html": "<p><b><u>Transidentités / transitude :</b></u>  fait d'être d'un - ou plusieurs - genre différent de celui qui a été assigné à la naissance.</p>" },
                         { "kind": "text", "html": "<p><b><u>Personne non binaire</b></u> : personne qui ne s’inscrit pas dans la norme binaire, c'est à dire qui n’est ni exclusivement un homme, ni exclusivement une femme. Ses pronoms sont à sa décision, même si le pronom neutre « iel » est couramment utilisé en France.</p>" },
-                        { "kind": "text", "html": "<p><b><u>Cisgenre</b></u> : personne qui vit dans le genre qui leur a été assigné à la naissance. Mot contraire de transgenre. </p>" },
-                        { "kind": "text", "html": "<p><b><u>Dysphorie de genre</b></u> : sensation d’inconfort et de détresse résultant de son assignation de genre à la naissance. </p>" },
-                        { "kind": "text", "html": "<p><b><u>Incongruence de genre</b></u> : désalignement entre le genre ressenti et le sexe assigné à la naissance sans souffrance</p>" },
-                        { "kind": "text", "html": "<p>On les regroupe sous le terme : <b><u>Transidentités.</u></b></p>" }
+                        { "kind": "text", "html": "<p><b><u>Cisgenre</b></u> : personne dont le genre est identique à celui qui lui a été assigné à la naissance. Mot contraire de transgenre. </p>" },
+                        { "kind": "text", "html": "<p><b><u>Transgenre</b></u> : personne dont le genre diffère de celui qui lui a été assigné à la naissance. </p>" },
+                        { "kind": "text", "html": "<p><b><u>Dysphorie</b></u> : sensation d’inconfort et de détresse résultant de son assignation de genre à la naissance. </p>" }
                       ]
                 },
                 {
@@ -78,22 +78,41 @@
                 "clickable": true,
                 "modalContent": [
                   { "kind": "title", "text": "Accueil"},
-                  { "kind": "text", "html": "<p>Un accueil bienveillant et respectueux est essentiel</p>" }
+                  { "kind": "text", "html": "<p>• Échanger avec discrétion et si besoin proposer un lieu de confidentialité.</p>" },
+                  { "kind": "text", "html": "<p>• La transidentité d'un.e patient.e ne doit jamais être divulguée.</p>" },
+                  { "kind": "text", "html": "<p>• Importance d’une écoute active et bienveillante pour instaurer un climat de confiance. Proscrire les questions intrusives non nécessaires à la prise en charge. Ne pas aborder les chirurgies génitales si elles ne concernent pas directement l’ordonnance.</p>" },
+                  { "kind": "text", "html": "<p>• Adopter une posture neutre, sans exprimer de jugement. Toutes les discriminations relatives à l’identité de genre constituent un délit pouvant être puni de 3 ans d’emprisonnement et de 45 000 € d’amende selon la gravité des faits selon l’article 225-2 du code pénal.</p>" },
+                  { "kind": "text", "html": "<p>• En cas d’erreur (mauvais prénom ou genre), présenter ses excuses et corriger immédiatement.</p>" }
+
+
                 ],
                 "secondaries":[
                     {
                         "kind": "secondary",
                         "id": "s1",
                         "parentId": "p1",
-                        "clickable": false,
-                        "tooltip": { "text": "Bonnes pratiques" }
+                        "clickable": true,
+                        "title": "Premier contact",
+                        "modalContent": [
+                            { "kind": "title", "text": "Premier contact"},
+                            { "kind": "text", "html": "<p>• Risque : usage d’un genre inapproprié (« Bonjour Monsieur/Madame »).</p>" },
+                            { "kind": "text", "html": "<p>• Privilégier un « Bonjour » neutre, applicable à tou·tes les patient·es.</p>" }
+                          ]
                     },
                     {
                         "kind": "secondary",
                         "id": "s2",
                         "parentId": "p3",
-                        "clickable": false,
-                        "tooltip": { "text": "Mauvaises pratiques" }
+                        "clickable": true,
+                        "title": "Comment reconnaître les situations ?",
+                        "modalContent": [
+                            { "kind": "title", "text": "Comment reconnaître les situations ?"},
+                            { "kind": "text", "html": "<p>• Discordance entre le prénom noté sur la carte vitale et celui noté sur l'ordonnance.</p>" },
+                            { "kind": "text", "html": "<p>• Discordance entre le numéro de sécurité social et le genre mentionné sur l'ordonnance.</p>" },
+                            { "kind": "text", "html": "<p>• Prescription de médicaments utilisés en transition de genre.</p>" },
+                            { "kind": "text", "html": "<p>• Prescription d'ovule pour un homme ou de médicament contre l'hypertrophie bégnine de la prostate pour une femme.</p>" },
+                            { "kind": "text", "html": "<p><b>Ce qu'il faut faire :</b> demander le prénom d'usage et le pronom utilisé + le noter dans le dossier si discordance administrative.</p>" }
+                          ]
                     }
                 ]
             },
@@ -176,15 +195,15 @@
             
           ]
         },
-        { "type": "subtitle", "text": "Réalisée par Marine GIET dans le cadre de la thèse sur l'accompagnement des personnes trans en officine" }
+        { "type": "subtitle", "text": "Réalisée par Marine GIET dans le cadre d’une thèse pour le Diplôme d’État de Docteur en Pharmacie intitulée « Accompagnement des personnes transgenres en pharmacie » " }
 
       ]
     },
     {
       "id": "slide-2 Staggered",
       "blocks": [
-        { "type": "title", "text": "Hormonothérapie féminisante" },
-        { "type": "subtitle", "text": "Hormonothérapie féminisante" },
+        { "type": "title", "text": "TRANSITIONS FÉMINISANTES" },
+        { "type": "subtitle", "text": "TRANSITIONS FÉMINISANTES" },
         {
           "type": "bubble-block",
           "bubbles": [
@@ -237,7 +256,8 @@
                     { "kind": "text", "html": "<p><u><b>Noms commerciaux</b></u> : Oestrodose 0,06 %® /  Estrava 1%®</p>"},
                     { "kind": "text", "html": "<p><u><b>Posologie</b></u> : 1,5 – 3 mg par jour (maximum 6 mg par jour)</p>"},
                     { "kind": "text", "html": "<p><u><b>Conseils associés</b></u> :"},
-                    { "kind": "text", "html": "<table><thead><tr><td>Spécialité</td><td>Nombre de pression</td><td>Quantité de gel</td><td>Quantité d'estradiol</td><td>Posologie</td></tr></thead><tr><td>Oestrodose 0,06 % ®</td><td>1 pression</td><td>1,25 g</td><td>0,75 mg</td><td>2 à 4 pressions par jour (max 8 pressions)</td></tr><tr><td>Estrava 1% ®</td><td>1 pression</td><td>0,5 g</td><td>0,5 mg</td><td>3 à 6 pressions par jour (max 12 pressions)</td></tr></table>"}
+                    { "kind": "text", "html": "<ul><li>Appliquer le gel sur peau saine, propre et sèche, idéalement après la toilette.</li><li>Application possible sur : abdomen, cuisses, bras, région lombaire.</li><li>Éviter les bras avant une prise de sang pour ne pas fausser les mesures d’estradiol.</li><li>Éviter la poitrine pour réduire le risque de cancer du sein. Le gel a une action systémique, pas locale ; il ne stimule pas directement le développement mammaire.</li><li>Appliquer sans masser et laisser sécher 2 minutes avant de s’habiller.</li><li>Laver les mains après application pour éviter tout transfert.</li><li>Nettoyer la zone avant tout contact direct avec une autre personne.</li><li>Pour limiter le transfert, appliquer sur une zone recouverte par un vêtement.</li><li>Ne pas laver la zone dans les 3 heures suivant l’application.</li></ul>"},
+                    { "kind": "text", "html": "<table style=\"border-collapse: collapse; width: 100%;\" ><thead><tr><td>Spécialité</td><td>Nombre de pression</td><td>Quantité de gel</td><td>Quantité d'estradiol</td><td>Posologie</td></tr></thead><tr><td>Oestrodose 0,06 % ®</td><td>1 pression</td><td>1,25 g</td><td>0,75 mg</td><td>2 à 4 pressions par jour (max 8 pressions)</td></tr><tr><td>Estrava 1% ®</td><td>1 pression</td><td>0,5 g</td><td>0,5 mg</td><td>3 à 6 pressions par jour (max 12 pressions)</td></tr></table>"}
                   ]
                 },
                 {
@@ -249,10 +269,10 @@
                   "modalContent" :[
                     { "kind": "text", "html": "<h2>Les comprimés d'oestrogènes</h2>"},
                     { "kind": "text", "html": "<p><u><b>Noms commerciaux</b></u> :</p>"},
-                    { "kind": "text", "html": "<ul><li><p>- Provames ® (estradiol) : 1 mg et 2 mg</p></li><li><p>- Oromone ® (estradiol) : 1 mg et 2 mg</p></li></ul>"},
+                    { "kind": "text", "html": "<ul><li><p>Provames ® (estradiol) : 1 mg et 2 mg</p></li><li><p> Oromone ® (estradiol) : 1 mg et 2 mg</p></li></ul>"},
                     { "kind": "text", "html": "<p><u><b>Posologie</b></u> : 2 à 4 mg par jour (maximum 8 mg par jour)</p>"},
                     { "kind": "text", "html": "<p><u><b>Conseils associés</b></u> :"},
-                    { "kind": "text", "html": "<ul><li><p>- si dose > à 2 mg par jour : diviser la dose en 2 prises.</p></li><li><p>- Prendre les comprimés à heure fixe.</p></li></ul>"},
+                    { "kind": "text", "html": "<ul><li><p>Si dose > à 2 mg par jour : diviser la dose en 2 prises.</p></li><li><p> Prendre les comprimés à heure fixe.</p></li></ul>"},
                     { "kind": "text", "html": "<u><b>A noter</b></u> : La voie orale n'est pas utilisée en première intention (risque thromboembolique plus élevé que la voie percutanée)"}
                   ]
                 }
@@ -352,7 +372,9 @@
               "clickable": true,
               "modalContent": [
                 { "kind": "text", "html": "<h2>Progestérone</h2>" },
-                { "kind": "text", "html": "<p>L’utilisation de progestérone est également débattue. Elle est réputée pour améliorer le développement mammaire, la thymie, et la libido. Mais à ce jour, il n’y a pas de recommandation publiée par la société d’endocrinologie et le WPATH la déconseille en raison du faible nombre d’études cliniques réalisée sur les femmes trans. (43,59) L’HAS s’aligne à ces recommandations de fait des incertitudes sur les risques cardiovasculaires, de cancer du sein, de méningiome et sur l’humeur. La posologie usuelle de la progestérone est de 100 à 200 mg par jour.</p>" }
+                { "kind": "text", "html": "<p>L’utilisation de progestérone est débattue. Elle est réputée pour améliorer le développement mammaire, la thymie, et la libido.</p>" },
+                { "kind": "text", "html": "<p>L’HAS ne la recommande pas.</p>" },
+                { "kind": "text", "html": "<p>La posologie usuelle de la progestérone est de 100 à 200 mg par jour. </p>" }
               ]
             },
             {
@@ -364,7 +386,7 @@
                 { "kind": "text", "html": "<h2>Effets attendus</h2>" },
                 { "kind": "text", "html": "<p>Ces effets féminisants surviennent de manière différente chez chaque personne à l’image de la puberté chez les adolescent·es.</p>" },
                 { "kind": "text", "html": "<p>Le patrimoine génétique, l’âge et le schéma thérapeutique utilisé sont les principaux facteurs influençant le déroulement de la transition hormonale.</p>" },
-                { "kind": "text", "html": "<p>Ils·Elles devront être prévenu·es de la variabilité inter-individuelle de ces effets et de la temporalité qui y est associée. Les effets de l’hormonothérapie mettent plusieurs années avant d’atteindre leur maximum. La patience sera donc nécessaire pour pouvoir observer les résultats complets.</p>" }
+                { "kind": "text", "html": "<p>Iels devront être prévenu·es de la variabilité inter-individuelle de ces effets et de la temporalité qui y est associée. Les effets de l’hormonothérapie mettent plusieurs années avant d’atteindre leur maximum. La patience sera donc nécessaire pour pouvoir observer les résultats complets.</p>" }
               ],
               "secondaries":[
                 {
@@ -374,7 +396,7 @@
                   "title": "Tableau des effets",
                   "clickable": true,
                   "modalContent" :[
-                    { "kind": "image", "src": "https://img.genially.com/68b0b29ac9c44a0015b7e0d6/ec6c045f-c494-45ee-8162-d0194d8d30e2.png"},
+                    { "kind": "image", "src": "https://img.genially.com/68b0b29ac9c44a0015b7e0d6/9a1a649f-c987-4735-8171-060eb841e1a3.png", "alt": "Tableau des effets féminisants chez les femmes transgenres"},
                     { "kind": "text", "html": "<p style='text-align: center'>Tableau des effets féminisants chez les femmes transgenres</p>"}
                   ]
                 }
@@ -485,14 +507,14 @@
             }
           ]
         },
-        { "type": "subtitle", "text": "Réalisée par Marine GIET dans le cadre de la thèse sur l'accompagnement des personnes trans en officine" }
+        { "type": "subtitle", "text": "Réalisée par Marine GIET dans le cadre d’une thèse pour le Diplôme d’État de Docteur en Pharmacie intitulée « Accompagnement des personnes transgenres en pharmacie » " }
       ]
     },
     {
       "id": "slide-3 Staggered",
       "blocks": [
-        { "type": "title", "text": "Hormonothérapie masculinisante" },
-        { "type": "subtitle", "text": "Hormonothérapie masculinisante" },
+        { "type": "title", "text": "TRANSITIONS MASCULINISANTES" },
+        { "type": "subtitle", "text": "TRANSITIONS MASCULINISANTES" },
         { 
           "type": "bubble-block",
           "bubbles": [
@@ -517,11 +539,10 @@
               "modalContent": [
                 { "kind": "text", "html": "<h2>Testostérone injectable</h2>"},
                 { "kind": "text", "html": "<p>2 formes :</p>"},
-                { "kind": "text", "html": "<p><b><u>Testostérone énanthate</u></b> (Androtardyl® 250 mg/1ml ) : </p>"},
+                { "kind": "text", "html": "<p><b><u>Testostérone énanthate</u></b> (Androtardyl® 250 mg/1ml ou son générique Testostérone Desma ®) : </p>"},
                 { "kind": "text", "html": "<p>Posologie : 100 à 200 mg toutes les 2 semaines ou 50 à 100 mg toutes les semaines.</p>"},
                 { "kind": "text", "html": "<p>Temps de demi-vie : 7,8 jours</p>"},
-                { "kind": "text", "html": "<p><b><u>Undécanoate de testostérone</u></b>(Nebido ® (NR) ou son générique :</p>"},
-                { "kind": "text", "html": "<p>Testostérone Besins ® 1000mg/4ml) </p>"},
+                { "kind": "text", "html": "<p><b><u>Undécanoate de testostérone</u></b>(Nebido ® (NR) ou son générique : Testostérone Besins ® 1000mg/4ml)</p>"},
                 { "kind": "text", "html": "<p>Posologie : 1000 mg toutes les 12 semaines</p>"},
                 { "kind": "text", "html": "<p>Temps de demi-vie : 90 jours</p>"}
               ],
@@ -558,7 +579,7 @@
                   "clickable": true,
                   "modalContent" :[
                     { "kind": "text", "html": "<h2>Matériel d'injection</h2>"},
-                    { "kind": "text", "html": "<ul> <li>Compresses non stériles</li> <li>Un désinfectant type chlorhexidine</li> <li>Une boite de pansement</li> <li>Aiguille de prélèvement 18G (rose)</li> <li>Si injection intramusculaire : Aiguille d’injection 21G (verte) ou 22G (noire)</li> <li>Si injection sous-cutanée : Aiguille d’injection 25G (orange)</li> <li>En fonction de la quantité à administrer : Seringues de 2 ml ou 5 ml</li> <li>Une boite DASRI</li> </ul>"}
+                    { "kind": "text", "html": "<ul> <li>Compresses non stériles</li> <li>Un désinfectant type chlorhexidine</li> <li>Une boite de pansement</li> <li>Aiguille de prélèvement 18G (rose)</li> <li>Si injection intramusculaire : Aiguille d’injection 21G (verte) ou 22G (noire) ou 23G (bleue)</li> <li>Si injection sous-cutanée : Aiguille d’injection 25G (orange)</li> <li>En fonction de la quantité à administrer : Seringues de 1 ou 2 ml.</li> <li>Une boite DASRI</li> </ul>"}
                   ]
                 },
                 {
@@ -641,9 +662,9 @@
               "clickable": true,
               "modalContent": [
                 { "kind": "text", "html": "<h2>Effets attendus</h2>"},
-                { "kind": "text", "html": "<p>Ces effets féminisants surviennent de manière différente chez chaque personne à l’image de la puberté chez les adolescent·es.</p>" },
+                { "kind": "text", "html": "<p>Ces effets masculinisants surviennent de manière différente chez chaque personne à l’image de la puberté chez les adolescent·es.</p>" },
                 { "kind": "text", "html": "<p>Le patrimoine génétique, l’âge et le schéma thérapeutique utilisé sont les principaux facteurs influençant le déroulement de la transition hormonale.</p>" },
-                { "kind": "text", "html": "<p>Ils·Elles devront être prévenu·es de la variabilité inter-individuelle de ces effets et de la temporalité qui y est associée. Les effets de l’hormonothérapie mettent plusieurs années avant d’atteindre leur maximum. La patience sera donc nécessaire pour pouvoir observer les résultats complets.</p>" }
+                { "kind": "text", "html": "<p>Iels devront être prévenu·es de la variabilité inter-individuelle de ces effets et de la temporalité qui y est associée. Les effets de l’hormonothérapie mettent plusieurs années avant d’atteindre leur maximum. Néanmoins, </p>" }
               ],
               "secondaries":[
                 {
@@ -653,7 +674,7 @@
                   "title": "Tableau des effets",
                   "clickable": true,
                   "modalContent" :[
-                    { "kind": "image", "src": "https://img.genially.com/68b0b29ac9c44a0015b7e0d6/0ca8690b-46a1-4782-baa5-be5ce33cca52.png"},
+                    { "kind": "image", "src": "https://img.genially.com/68b0b29ac9c44a0015b7e0d6/2c94df11-16bd-4e8b-b923-27f53a0808ea.png", "alt": "Tableau de l'apparition des effets masculinisants"},
                     { "kind": "text", "html": "<p style='text-align: center'>Tableau de l'apparition des effets masculinisants</p>"}
                   ]
                 }
@@ -689,7 +710,7 @@
                   "title": "Risques cardiovasculaires",
                   "clickable": true,
                   "modalContent" :[
-                    { "kind": "text", "html": "<h2>Risques cardiovasculaires</h2>"},
+                    { "kind": "text", "html": "<h2>Risque cardiovasculaire</h2>"},
                     { "kind": "text", "html": "<p>Certaines études ont pu démontrer un risque cardiovasculaire majoré par rapport aux femmes cisgenres. (7)(8)</p>"},
                     { "kind": "text", "html": "<p>C'est pourquoi  l'HAS recommande la même surveillance cardiologique que les hommes cisgenres.</p>"}
                   ]
@@ -742,9 +763,9 @@
                   "modalContent" :[
                     { "kind": "text", "html": "<h2>Signes de sous et surdosage</h2>"},
                     { "kind": "text", "html": "<p><b><u>Surdosage</u></b> :</p>"},
-                    { "kind": "text", "html": "<ul> <li>Rétention d’eau</li> <li>Bouffées de chaleur</li> <li>Fourmillements dans les mains ou les pieds</li> <li>Douleurs articulaires ou musculaires</li> <li>Sensation de nervosité ou une agitation excessive</li></ul>"},
+                    { "kind": "text", "html": "<ul> <li>Rétention d’eau.</li> <li>Fourmillements dans les mains ou les pieds.</li> <li>Douleurs articulaires ou musculaires.</li> <li>Sensation de nervosité ou une agitation excessive.</li></ul>"},
                     { "kind": "text", "html": "<p><b><u>Sous-dosage</u></b> :</p>"},
-                    { "kind": "text", "html": "<ul><li>Fatigue intense, notamment en fin de cycle</li></ul>"}
+                    { "kind": "text", "html": "<ul><li>Fatigue intense, notamment en fin de cycle</li><li>Bouffées de chaleur</li></ul>"}
 
                   ]
                 }
@@ -752,14 +773,14 @@
             }
           ]
         },
-        { "type": "subtitle", "text": "Réalisée par Marine GIET dans le cadre de la thèse sur l'accompagnement des personnes trans en officine" }
+        { "type": "subtitle", "text": "Réalisée par Marine GIET dans le cadre d’une thèse pour le Diplôme d’État de Docteur en Pharmacie intitulée « Accompagnement des personnes transgenres en pharmacie » " }
       ]
     },
     {
       "id": "slide-4 Staggered",
       "blocks": [
-        { "type": "title", "text": "Accompagner les personnes transgenres à l'officine" },
-        { "type": "subtitle", "text": "Accompagner les personnes transgenres à l'officine" },
+        { "type": "title", "text": "QUESTIONS FRÉQUENTES" },
+        { "type": "subtitle", "text": "QUESTIONS FRÉQUENTES" },
         { "type": "bubble-block", 
           "bubbles": [
             {
@@ -778,9 +799,9 @@
                 { "kind": "text", "html": "<h2>Hors AMM et remboursement</h2>"},
                 { "kind": "text", "html": "<p>Prescription hors AMM : en théorie, elle ne permet pas le remboursement des traitements.</p>"},
                 { "kind": "text", "html": "<p>Pratique constatée :</p>"},
-                { "kind": "text", "html": "<p>- Selon l’IGAS (2012), peu de difficultés de remboursement de l’hormonothérapie pour les personnes trans. Tolérance des CPAM et absence de contrôle croisé entre traitement et numéro de Sécurité sociale.</p>"},
-                { "kind": "text", "html": "<p>- Rapport du ministère de la Santé (2022) : Hors AMM = théoriquement non remboursé. En réalité, traitements remboursés via le dispositif ALD.</p>"},
-                { "kind": "text", "html": "<p>ALD 31 « hors liste » : permet une prise en charge à 100 % des soins liés à la transidentité.</p>"}
+                { "kind": "text", "html": "<p>• Selon l’IGAS (2012), peu de difficultés de remboursement de l’hormonothérapie pour les personnes trans. Tolérance des CPAM et absence de contrôle croisé entre traitement et numéro de Sécurité sociale.</p>"},
+                { "kind": "text", "html": "<p>• Rapport du ministère de la Santé (2022) : Hors AMM = théoriquement non remboursé. En réalité, traitements remboursés via le dispositif ALD.</p>"},
+                { "kind": "text", "html": "<p>ALD 31 « hors liste » : remboursement des soins liés à la transidentité. L'ALD est possible mais pas obligatoire pour pouvoir bénéficier d'un remboursement des hormones.</p>"}
               ]
             },
             {
@@ -883,7 +904,7 @@
                   "id": "s2",
                   "parentId": "p7",
                   "title": "CHU",
-                  "tooltip": {"html": "<p><b>Les CHU de Nantes et d'Angers</b> disposent d'équipes pluridisciplinaire afin d'accueillir les demandes de transidentité.</p> <p><b>Certains médecins généralistes</b> sont formés à initier l'hormonothérapie et en assurer le suivi.</p>"},
+                  "tooltip": {"html": "<p><b>Certains médecins généralistes</b> sont formés à initier l'hormonothérapie et en assurer le suivi.</p> <p>Des associations comme Fransgenre ou Réseau Santé Trans proposent des listes de médecins qui reçoivent des patient.es trans. Les associations locales peuvent aussi donner des informations à ce sujet.</p>"},
                   "clickable": false
                 },
                 {
@@ -898,7 +919,7 @@
             }
           ]
         },
-        { "type": "subtitle", "text": "Réalisée par Marine GIET dans le cadre de la thèse sur l'accompagnement des personnes trans en officine" }
+        { "type": "subtitle", "text": "Réalisée par Marine GIET dans le cadre d’une thèse pour le Diplôme d’État de Docteur en Pharmacie intitulée « Accompagnement des personnes transgenres en pharmacie » " }
       ]
     },
     {

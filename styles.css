@@ -419,3 +419,22 @@ header, footer {
   font-size: large;
   font-weight: bold;
 }
+
+.modal-content{
+  font-size: large;
+  line-height: 1.5;
+}
+
+td{
+  border: 1px solid black;
+  padding:5px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+thead{
+  text-align: center;
+  font-weight: bold;
+}
