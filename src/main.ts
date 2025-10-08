@@ -3,7 +3,6 @@ import { loadJSON } from "./utils";
 import { parseRoute, toHash } from "./router";
 import { renderSlide } from "./render";
 import { parseDeck, safeParseDeck, type Deck } from "./types";
-import { th } from "zod/v4/locales";
 
 const app = document.getElementById("app")!;
 const pos = document.getElementById("pos")!;
@@ -72,7 +71,10 @@ async function init() {
     return;
   }
 
-  if (!location.hash) location.hash = toHash(0);
+  const isSpaRoot = location.pathname === "/" || location.pathname.endsWith("/index.html");
+  if (!location.hash && isSpaRoot) {
+    location.hash = toHash(0);
+  }
   handleRouteChange();
 
   window.addEventListener("hashchange", handleRouteChange);
