@@ -1,0 +1,5 @@
+# Forcer www (si tu choisis www comme canonique)
+https://pharmacietransgenre.com/* https://www.pharmacietransgenre.com/:splat 301
+
+# Fallback SPA (pour router /slide/0, /ressources, etc.)
+/* /index.html 200

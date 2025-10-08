@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Évite les fragments (#) dans les sitemaps/URLs – ignorés par les moteurs
+# Déclare le sitemap de ton domaine canonique :
+Sitemap: https://www.pharmacietransgenre.com/sitemap.xml
