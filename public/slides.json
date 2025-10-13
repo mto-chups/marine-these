@@ -65,10 +65,21 @@
                         { "kind": "title", "text": "Termes à bannir"},
                         { "kind": "text", "html": "<p><b><u>Transsexuel·le / Transsexualité / Transsexualisme</b></u> : termes inadaptés, confondant identité de genre et sexualité, et fortement pathologisants. Utiliser le terme « transgenre »</br></p>" },
                         { "kind": "text", "html": "<p><b><u>Travesti·e / travelo :</b></u> personne portant des vêtements du genre opposé, sans lien avec l’identité de genre ; « travelo » est un terme péjoratif à éviter.</br></p>"},
-                         { "kind": "text", "html":"<p><b><u>« Vrai homme / vraie femme » :</b></u> à éviter, car elle dévalorise l’identité de genre des personnes trans. Utiliser simplement « homme » ou « femme ».</br></p>"},
-                         { "kind": "text", "html":"<p><b><u>« Femme qui devient homme » :</b></u> formulation à éviter, car elle réduit l’identité de la personne à son sexe assigné à la naissance. Préférer « homme trans » ou « personne transmasculine».</br></p>"},
-                         { "kind": "text", "html":"<p><b><u>« Vous êtes bien réussi » :</b></u> formulation à éviter, car elle réduit l’identité de la personne à son apparence ou à une conformité aux normes de genre.</br></p>"}
+                        { "kind": "text", "html":"<p><b><u>« Vrai homme / vraie femme » :</b></u> à éviter, car elle dévalorise l’identité de genre des personnes trans. Utiliser simplement « homme » ou « femme ».</br></p>"},
+                        { "kind": "text", "html":"<p><b><u>« Femme qui devient homme » :</b></u> formulation à éviter, car elle réduit l’identité de la personne à son sexe assigné à la naissance. Préférer « homme trans » ou « personne transmasculine».</br></p>"},
+                        { "kind": "text", "html":"<p><b><u>« Vous êtes bien réussi » :</b></u> formulation à éviter, car elle réduit l’identité de la personne à son apparence ou à une conformité aux normes de genre.</br></p>"}
                       ]
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s5",
+                  "parentId": "p2",
+                  "title": "Lien vers le planning familial",
+                  "clickable": true,
+                  "modalContent": [
+                    { "kind": "title", "text": "Lexique plus complet sur le planning familial"},
+                    { "kind": "text", "html": "<p> <a href=\"https://www.planning-familial.org/sites/default/files/2020-10/Lexique%20trans.pdf\" title=\"Lien vers une ressource du planning familial.\" target=\"_blank\" rel=\"noopener noreferrer\">Lexique complet du planning familial.</a> (Cliquez pour ouvrir le lien)" }
+                  ]
                 }
               ]
             },{
@@ -121,7 +132,7 @@
               "id": "p3",
               "title": "Quelques chiffres",
               "clickable": false,
-              "tooltip": { "text": "Ces chiffres rappellent que la population trans fait <b>partie intégrante de la société.</b> Pourtant, la transphobie reste omniprésente et leur santé mentale en pâtit, d’autant que les lieux de soins ne sont pas toujours adaptés." },
+              "tooltip": { "html": "Ces chiffres rappellent que la population trans fait <b>partie intégrante de la société.</b> Pourtant, la transphobie reste omniprésente et leur santé mentale en pâtit, d’autant que les lieux de soins ne sont pas toujours adaptés." },
                 "secondaries":[
                     {
                         "kind":"secondary",
@@ -141,7 +152,7 @@
                         "id":"s6",
                         "parentId":"p3",
                         "clickable":false,
-                        "tooltip":{"html":"En 2023, <u><b>22 550 personnes</b></u> en France étaient <b>titulaires d’une ALD pour transidentité.</b></br></br>Toutes les personnes trans n’ont pas d’ALD, et <b>les chiffres précis ne sont pas connus.</b>"}
+                        "tooltip":{"html":"<p>En 2023, <u><b>22 550 personnes</b></u> en France étaient <b>titulaires d’une ALD pour transidentité.</b></br></br>Toutes les personnes trans n’ont pas d’ALD, et <b>les chiffres précis ne sont pas connus.</b> </br></br>Mais 4% de la population française s'identifie comme transgenre ou non binaire selon l'enquête LGBT+ 2023 de l'IPSOS.</p>"}
                     }
                 ]
             },
@@ -175,7 +186,7 @@
                 "clickable": true,
                 "modalContent":[
                     { "kind":"text", "html":"<h2>Transition administrative et juridique</h2>"},
-                    { "kind":"text", "html":"<p>Il est possible de <b>changer son prénom</b> directement à la mairie. Pour <b>modifier la mention de genre</b> à l’état civil, il faut passer par le tribunal judiciaire, qui émettra un <b>nouvel acte de naissance.</b> Les documents officiels, tels que <b>la carte nationale d’identité</b> ou le <b>passeport</b>, peuvent ensuite être refaits.</p>"}
+                    { "kind":"text", "html":"<p>Il est possible de <b>changer son prénom</b> directement à la mairie. Pour <b>modifier la mention de genre</b> à l’état civil, il faut passer par le tribunal judiciaire, qui ordonnera l'émission d'un acte de naissance modifié.</b> Les documents officiels, tels que <b>la carte nationale d’identité</b> ou le <b>passeport</b>, peuvent ensuite être refaits.</p>"}
                 ],
                 "secondaries":[
                     {
@@ -203,7 +214,7 @@
       "id": "slide-2 Staggered",
       "blocks": [
         { "type": "title", "text": "TRANSITIONS FÉMINISANTES" },
-        { "type": "subtitle", "text": "TRANSITIONS FÉMINISANTES" },
+        { "type": "subtitle", "text": "Molécules utilisées, conseils associés, effets et suivi." },
         {
           "type": "bubble-block",
           "bubbles": [
@@ -318,37 +329,26 @@
                     { "kind": "text", "html": "<p><u><b>Conseils associés</b></u> : </p>"},
                     { "kind": "text", "html": "<ul><li>Effet diurétique donc prise matinale</li><li>Surveiller la tension artérielle et la survenue de malaise à cause de son action hypotensive</li><li>Surveillance régulière de la kaliémie et de la fonction rénale</li><li>Sur la liste des produits dopants de l’AMA</li></ul>"}
                   ]
-                },
+                },                
                 {
                   "kind": "secondary",
-                  "id": "s7",
+                  "id": "s10",
                   "parentId": "p3",
-                  "title": "Acétate de cyprotérone",
+                  "title": "Acétate de cyprotérone et bicalutamide",
                   "clickable": true,
                   "modalContent" :[
                     { "kind": "text", "html": "<h2>Acétate de cyprotérone</h2>"},
                     { "kind": "text", "html": "<p><u><b>Mécanisme</b></u> : progestatif avec une action anti-gonadotrope et anti-androgénique permettant de réduire le taux de testostérone.</p>"},
                     { "kind": "text", "html": "<p><u><b>Nom commercial</b></u> : Androcur ®</p>"},
-                    { "kind": "text", "html": "<p><u><b>Posologie</b></u> : 12,5 à 25 mg par jour</p>"},
-                    { "kind": "text", "html": "<p>En 2ème intention selon l'HAS </p>"},
+                    { "kind": "text", "html": "<p><u><b>Posologie</b></u> : 12,5 à 25 mg par jour. En 2ème intention selon l'HAS</p>"},
                     { "kind": "text", "html": "<p><u><b>Conseils associés</b></u> : </p>"},
-                    { "kind": "text", "html": "<ul><li>MARR : attestation d’information pour informer le·la patient·e du risque augmenté de méningiome pendant ce traitement = à présenter à chaque délivrance</li><li> IRM avant initiation</li><li>Surveillance hépatique (hépatotoxique)</li></ul>"}
-                  ]
-                },
-                {
-                  "kind": "secondary",
-                  "id": "s8",
-                  "parentId": "p3",
-                  "title": "Bicalutamide",
-                  "clickable": true,
-                  "modalContent" :[
-                    { "kind": "text", "html": "<h2>Acétate de cyprotérone</h2>"},
+                    { "kind": "text", "html": "<ul><li>MARR : attestation d’information pour informer le·la patient·e du risque augmenté de méningiome pendant ce traitement = à présenter à chaque délivrance.</li> <li>IRM avant initiation.</li><li>Surveillance hépatique. (hépatotoxique)</li></ul>"},
+                    { "kind": "text", "html": "<h2>Bicalutamide</h2>"},
                     { "kind": "text", "html": "<p><u><b>Mécanisme</b></u> : anti-androgène non stéroïdien.</p>"},
                     { "kind": "text", "html": "<p><u><b>Nom commercial</b></u> : Casodex ®</p>"},
-                    { "kind": "text", "html": "<p><u><b>Posologie</b></u> : : 50 mg par jour</p>"},
-                    { "kind": "text", "html": "<p>En 2ème intention selon l'HAS (manque d'évaluation et hépatotoxique)</p>"},
+                    { "kind": "text", "html": "<p><u><b>Posologie</b></u> : 50 mg par jour. En 2ème intention selon l'HAS. (manque d'évaluation et hépatotoxique)</p>"},
                     { "kind": "text", "html": "<p><u><b>Conseils associés</b></u> : </p>"},
-                    { "kind": "text", "html": "<ul><li>Prise à heure fixe</li><li> IRM avant initiation</li><li>Surveillance hépatique</li></ul>"}
+                    { "kind": "text", "html": "<ul><li>Prise à heure fixe.</li> <li>Surveillance hépatique.</li></ul>"}
                   ]
                 },
                 {
@@ -514,7 +514,7 @@
       "id": "slide-3 Staggered",
       "blocks": [
         { "type": "title", "text": "TRANSITIONS MASCULINISANTES" },
-        { "type": "subtitle", "text": "TRANSITIONS MASCULINISANTES" },
+        { "type": "subtitle", "text": "Molécules utilisées, conseils associés, effets et suivi." },
         { 
           "type": "bubble-block",
           "bubbles": [
@@ -542,7 +542,7 @@
                 { "kind": "text", "html": "<p><b><u>Testostérone énanthate</u></b> (Androtardyl® 250 mg/1ml ou son générique Testostérone Desma ®) : </p>"},
                 { "kind": "text", "html": "<p>Posologie : 100 à 200 mg toutes les 2 semaines ou 50 à 100 mg toutes les semaines.</p>"},
                 { "kind": "text", "html": "<p>Temps de demi-vie : 7,8 jours</p>"},
-                { "kind": "text", "html": "<p><b><u>Undécanoate de testostérone</u></b>(Nebido ® (NR) ou son générique : Testostérone Besins ® 1000mg/4ml)</p>"},
+                { "kind": "text", "html": "<p><b><u>Undécanoate de testostérone</u></b>(Nebido ® (Non remboursé) ou son générique (Remboursable) : Testostérone Besins ® 1000mg/4ml)</p>"},
                 { "kind": "text", "html": "<p>Posologie : 1000 mg toutes les 12 semaines</p>"},
                 { "kind": "text", "html": "<p>Temps de demi-vie : 90 jours</p>"}
               ],
@@ -664,7 +664,7 @@
                 { "kind": "text", "html": "<h2>Effets attendus</h2>"},
                 { "kind": "text", "html": "<p>Ces effets masculinisants surviennent de manière différente chez chaque personne à l’image de la puberté chez les adolescent·es.</p>" },
                 { "kind": "text", "html": "<p>Le patrimoine génétique, l’âge et le schéma thérapeutique utilisé sont les principaux facteurs influençant le déroulement de la transition hormonale.</p>" },
-                { "kind": "text", "html": "<p>Iels devront être prévenu·es de la variabilité inter-individuelle de ces effets et de la temporalité qui y est associée. Les effets de l’hormonothérapie mettent plusieurs années avant d’atteindre leur maximum. Néanmoins, </p>" }
+                { "kind": "text", "html": "<p>Iels devront être prévenu·es de la variabilité inter-individuelle de ces effets et de la temporalité qui y est associée. Les effets de l’hormonothérapie mettent plusieurs années avant d’atteindre leur maximum. Néanmoins, les effets arrivent plus rapidement que lors des transition féminisantes.</p>" }
               ],
               "secondaries":[
                 {
@@ -719,12 +719,12 @@
                   "kind": "secondary",
                   "id": "s10",
                   "parentId": "p6",
-                  "title": "Risques carcinologiques",
+                  "title": "Risque carcinologique",
                   "clickable": true,
                   "modalContent" :[
-                    { "kind": "text", "html": "<h2>Risques carcinologiques</h2>"},
-                    { "kind": "text", "html": "<p>Bien que le risque de cancer du sein est diminué, il n'est pas inexistant. Il est important d’éduquer à l’autopalpation, y compris après mastectomie.</p>"},
-                    { "kind": "text", "html": "<p>Un suivi gynécologique régulier reste indispensable pour les hommes trans ayant conservé ovaires et utérus, avec participation au dépistage organisé du cancer du col à partir de 25 ans. L’adhésion à ce dépistage est moindre dans cette population ce qui entraîne des diagnostics tardifs.</p>"}
+                    { "kind": "text", "html": "<h2>Risque carcinologique</h2>"},
+                    { "kind": "text", "html": "<p>Le risque de cancer du sein chez les personnes trans est mal établi à ce jour. La HAS recommande le même suivi que les femmes cis pour tous les hommes trans avec ou sans mastectomie.</p>"},
+                    { "kind": "text", "html": "<p>Un suivi gynécologique régulier reste indispensable pour les hommes trans ayant conservé ovaires et utérus, avec participation au dépistage organisé du cancer du col à partir de 25 ans. L’adhésion à ce dépistage est moindre dans cette population ce qui entraîne des diagnostics tardifs.<p>"}
                   ]
                 },
                 {
@@ -793,15 +793,39 @@
             {
               "kind": "primary",
               "id": "p2",
+              "tooltip": {"text": "Hors AMM : remboursement et responsabilité"},
               "title": "Hors AMM",
-              "clickable": true,
-              "modalContent": [
-                { "kind": "text", "html": "<h2>Hors AMM et remboursement</h2>"},
-                { "kind": "text", "html": "<p>Prescription hors AMM : en théorie, elle ne permet pas le remboursement des traitements.</p>"},
-                { "kind": "text", "html": "<p>Pratique constatée :</p>"},
-                { "kind": "text", "html": "<p>• Selon l’IGAS (2012), peu de difficultés de remboursement de l’hormonothérapie pour les personnes trans. Tolérance des CPAM et absence de contrôle croisé entre traitement et numéro de Sécurité sociale.</p>"},
-                { "kind": "text", "html": "<p>• Rapport du ministère de la Santé (2022) : Hors AMM = théoriquement non remboursé. En réalité, traitements remboursés via le dispositif ALD.</p>"},
-                { "kind": "text", "html": "<p>ALD 31 « hors liste » : remboursement des soins liés à la transidentité. L'ALD est possible mais pas obligatoire pour pouvoir bénéficier d'un remboursement des hormones.</p>"}
+              "clickable": false,
+              "secondaries":[
+                {
+                  "kind": "secondary",
+                  "id": "s1",
+                  "parentId": "p2",
+                  "title": "Hors AMM et remboursement",
+                  "clickable": true,
+                  "modalContent": [
+                    { "kind": "text", "html": "<h2>Hors AMM et remboursement</h2>"},
+                    { "kind": "text", "html": "<p>Prescription hors AMM : en théorie, elle ne permet pas le remboursement des traitements.</p>"},
+                    { "kind": "text", "html": "<p>Pratique constatée :</p>"},
+                    { "kind": "text", "html": "<p>• Selon l’IGAS (2012), peu de difficultés de remboursement de l’hormonothérapie pour les personnes trans. Tolérance des CPAM et absence de contrôle croisé entre traitement et numéro de Sécurité sociale.</p>"},
+                    { "kind": "text", "html": "<p>• Rapport du ministère de la Santé (2022) : Hors AMM = théoriquement non remboursé. En réalité, traitements remboursés via le dispositif ALD.</p>"},
+                    { "kind": "text", "html": "<p>ALD 31 « hors liste » : remboursement des soins liés à la transidentité. L'ALD est possible mais pas obligatoire pour pouvoir bénéficier d'un remboursement des hormones.</p>"}
+                  ]
+                },
+                {
+                  "kind":"secondary",
+                  "id": "s2",
+                  "parentId": "p2",
+                  "title": "Hors AMM et responsabilité",
+                  "clickable": true,
+                  "modalContent": [
+                    { "kind": "text", "html": "<h2>Hors AMM et responsabilité</h2>"},
+                    { "kind": "text", "html": "<p>La dispensation hors AMM est bien légale et reste sous la responsabilité des pharmacien·nes et des prescripteur·rices. Comme pour toute dispensation, la responsabilité civile, pénale et disciplinaire est engagée.</p>"},
+                    { "kind": "text", "html": "<p>C’est pour cela que le CNOP attire l’attention sur ces dispensations : </p>"},
+                    { "kind": "text", "html": "<p><i>« Une prescription hors AMM présente un risque accru qui implique de la part du pharmacien une vigilance renforcée lors de son analyse pharmaceutique. Ces demandes doivent être analysées au cas par cas et un contact avec le prescripteur est fortement conseillé. Si l’intérêt de la santé du patient lui paraît l’exiger, le pharmacien doit refuser la dispensation tout en informant immédiatement le prescripteur de son refus et en le mentionnant sur l’ordonnance ».</i></p>"},
+                    { "kind": "text", "html": "<p>A noter que les prescriptions hors AMM sont loin d’être rares. On estime à 20% le taux des prescriptions hors AMM sur l’ensemble des prescriptions.</p>"}
+                  ]
+                } 
               ]
             },
             {
@@ -855,7 +879,14 @@
               "clickable": true,
               "modalContent": [
                 { "kind": "text", "html": "<h2>Sources</h2>"},
-                { "kind": "text", "html": "<p>A définir</p>"}
+                { "kind": "text", "html": "<p>(1) : Alessandrin A. La transphobie en France : insuffisance du droit et expériences de discrimination: Cahiers du Genre. 30 mars 2016;n° 60 :193‑212</p>"},
+                { "kind":"text", "html": "<p>(2) : Erlangsen A, et al. Transgender Identity and Suicide Attempts and Mortality in Denmark. JAMA. 27 juin 2023;329(24):2145‑53.</p>"},
+                { "kind":"text", "html": "<p>(3) : Cosne M. Santé des personnes transgenres 2021. Étude quantitative explorant la santé, l’accès aux soins et les discriminations vécues par les personnes transgenres en France en 2021.</p>"},
+                { "kind":"text", "html": "<p>4) : Van Zijverden LM, et al. Cardiovascular disease in transgender people: a systematic review and meta-analysis. European Journal of Endocrinology. 1 févr 2024;190(2):S13‑24.</p>"},
+                { "kind":"text", "html": "<p>(5) :Getahun D, et al. Cross-sex Hormones and Acute Cardiovascular Events in Transgender Persons: A Cohort Study. Ann Intern Med. 21 août 2018;169(4):205‑13.</p>"},
+                { "kind":"text", "html": "<p>(6) : Hembree WC, et al. Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 1 nov 2017;102(11):3869‑903.</p>"},
+                { "kind":"text", "html": "<p>(7) : Nota NM, et al. Occurrence of Acute Cardiovascular Events in Transgender Individuals Receiving Hormone Therapy: Results From a Large Cohort Study. Circulation. 12 mars 2019;139(11):1461‑2.</p>"},
+                { "kind":"text", "html": "<p>(8) : Pirtea P, et al. Ovarian, breast, and metabolic changes induced by androgen treatment in transgender men. Fertility and Sterility. oct 2021;116(4):936‑42.</p>"}
               ]
             },
             {
@@ -914,25 +945,24 @@
                   "clickable": false,
                   "title": "Association le refuge",
                   "tooltip": {"html": "<p><b>Association Le Refuge</b> : aide les jeunes LGBT+ de moins de 25 ans rejetés par leur famille. Ligne d’écoute au 06 31 59 69 50 (tous les jours 8h–00h) et orientation vers des hébergements d’urgence.</p>"}
+                },
+                {
+                  "kind": "secondary",
+                  "id": "s1",
+                  "parentId": "p6",
+                  "title": "Fiche ressources à donner aux patient.es",
+                  "clickable": true,
+                  "modalContent" :[
+                    { "kind": "text", "html": "<h2>Fiche ressources à donner aux patient.es</h2>"},
+                    { "kind":"text", "html": "<a href=\"../public/fiche_ressource.pdf\" target=\"_blank\" rel=\"noopener noreferrer\"> <img src=\"../public/img/fiche_ressource.jpg\" alt=\"Ouvrir le rapport PDF\" style=\"display: block; margin: 0 auto; width: 60% !important;\"> </a>"},
+                    { "kind": "text", "html": "<a href=\"../public/fiche_ressource.pdf\" target=\"_blank\"  style=\"display: block; text-align: center; margin-top:2rem;\" rel=\"noopener noreferrer\">Ouvrir le PDF</a>"}
+                  ]
                 }
               ]
             }
           ]
         },
         { "type": "subtitle", "text": "Réalisée par Marine GIET dans le cadre d’une thèse pour le Diplôme d’État de Docteur en Pharmacie intitulée « Accompagnement des personnes transgenres en pharmacie » " }
-      ]
-    },
-    {
-      "id": "slide-3",
-      "blocks": [
-        { "type": "title", "text": "Quiz" },
-        { 
-          "type": "quiz",
-          "question": "Quelle est la couleur du ciel ?",
-          "choices": ["Bleu", "Vert", "Rouge"],
-          "answerIndex": 0
-        },
-        { "type": "text", "html": "<p style=\"text-align:center\">Cliquez sur la bonne réponse</p>" }
       ]
     }
   ]

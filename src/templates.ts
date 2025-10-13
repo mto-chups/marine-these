@@ -105,11 +105,11 @@ export const secPolarRosace7: SecPolarTemplate = {
 export const secPolarStaggered7: SecPolarTemplate = {
   0: [{ angle: 90, distance: 0.75 }, { angle: 110, distance: 0.9}],
   1: [{ angle:   90, distance: 0.9 }, { angle: 120, distance: 0.9 }, { angle: 150, distance: 0.9 }],
-  2: [{ angle:  135, distance: 0.9 }, { angle:  165, distance: 0.9}],
+  2: [{ angle:  135, distance: 0.9 }, { angle:  165, distance: 0.9}, { angle: 195, distance: 0.9 }, { angle: 225, distance: 0.9 }],
   3: [{ angle: 225, distance: 0.9 }, { angle: 255, distance: 0.9 }],
   4: [{ angle: 45, distance: 0.9 }, { angle: 120, distance: 0.9 }],
   5: [{ angle: 315, distance: 0.9 }, { angle: 345, distance: 0.9 },{ angle: 15, distance: 0.9 },{ angle: 45, distance: 0.9 }],
-  6: [{ angle: 340, distance: 0.9 }, { angle: 310, distance: 0.9 }, { angle: 280, distance: 0.9 }],
+  6: [{ angle: 340, distance: 0.9 }, { angle: 310, distance: 0.9 }, { angle: 280, distance: 0.9 }, { angle: 250, distance: 0.9 }],
 } as const;
 
 export function pickSecPolarTemplate(kind: PatternKind): SecPolarTemplate {

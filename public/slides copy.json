@@ -101,6 +101,19 @@
           ]
         }
       ]
+    },
+    {
+      "id": "slide-3",
+      "blocks": [
+        { "type": "title", "text": "Quiz" },
+        { 
+          "type": "quiz",
+          "question": "Quelle est la couleur du ciel ?",
+          "choices": ["Bleu", "Vert", "Rouge"],
+          "answerIndex": 0
+        },
+        { "type": "text", "html": "<p style=\"text-align:center\">Cliquez sur la bonne réponse</p>" }
+      ]
     }
   ]
 }
