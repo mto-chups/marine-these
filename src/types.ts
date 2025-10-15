@@ -122,6 +122,7 @@ export const SecondaryBubbleSchema = BubbleBaseRaw
   .extend({
     kind: z.literal("secondary"),
     parentId: z.string().trim().min(1),
+    modalColumns: z.union([z.literal(1), z.literal(2)]).optional(),
   })
    .superRefine((b, ctx) => {
     bubbleBusinessRules(b, ctx);
@@ -134,6 +135,15 @@ export const SecondaryBubbleSchema = BubbleBaseRaw
           path: ["title"],
         });
       }
+    }
+
+    // ❌ Interdit d'utiliser modalColumns sur une bulle non cliquable
+    if (!b.clickable && b.modalColumns != null) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "Secondary non cliquable : 'modalColumns' n'est pas autorisé.",
+        path: ["modalColumns"],
+      });
     }
   });
 

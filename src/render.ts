@@ -32,16 +32,19 @@ const el = (tag: string, attrs: Record<string, any> = {}, ...children: (Node|str
 
 
 /* ---------- MODALE ---------- */
-function openModal(title: string, media: Media[]) {
+function openModal(title: string, media: Media[], cols: 1 | 2 = 1) {
   const escHandler = (e: KeyboardEvent) => { if (e.key === "Escape") close(); };
   const close = () => {
     document.removeEventListener("keydown", escHandler);
     backdrop.remove();
   };
 
-  const content = el("div", { class: "media" },
+  const content = el(
+    "div",
+    { class: "media" + (cols === 2 ? " cols-2" : "") },
     ...media.map(renderMedia)
   );
+
 
   const modal = el("div", { class: "modal", role: "dialog", "aria-modal": "true" },
     el("header", {},
@@ -119,7 +122,8 @@ function renderBubble(b: Bubble, abs = false): HTMLElement {
 
     // Clic -> modale si clickable
     if (b.clickable && b.modalContent?.length) {
-    wrap.addEventListener("click", () => openModal(b.title ?? ariaLabel, b.modalContent!));
+      const cols: 1 | 2 = 1;
+      wrap.addEventListener("click", () => openModal(b.title ?? ariaLabel, b.modalContent!, cols));
       wrap.style.cursor = "pointer";
     }
 
@@ -130,7 +134,9 @@ function renderBubble(b: Bubble, abs = false): HTMLElement {
   if (abs) btn.classList.add("bubble-abs");
 
   if (b.clickable && b.modalContent?.length) {
-    btn.addEventListener("click", () => openModal(b.title ?? ariaLabel, b.modalContent!));
+    const cols: 1 | 2 =
+      isSecondary && (b as any).modalColumns === 2 ? 2 : 1;
+    btn.addEventListener("click", () => openModal(b.title ?? ariaLabel, b.modalContent!, cols));
   }
 
   return btn;

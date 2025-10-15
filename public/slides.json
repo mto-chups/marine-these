@@ -24,8 +24,12 @@
                   "id": "s7",
                   "parentId": "p4",
                   "title": "Salinité",
-                  "clickable": false,
-                  "tooltip": { "html": "<b><u>Recommandations HAS 2025</u></b> : </br>Les personnes trans peuvent <b>décider elles-mêmes de leurs besoins et de leurs soins.</b></br> Cela repose sur le principe <b><u>d’autodétermination</b></u>, qui signifie qu’elles choisissent librement leur parcours sans qu’on leur impose de contraintes." }
+                  "clickable": true,
+                  "modalContent": [
+                    { "kind": "text", "html": "<h2>Recommandations HAS 2025</h2>"},
+                    { "kind": "text", "html": "<p>Les personnes trans peuvent <b>décider elles-mêmes de leurs besoins et de leurs soins.</b></p>"},
+                    { "kind": "text", "html": "<p>Cela repose sur le principe <b><u>d’autodétermination</b></u>, qui signifie qu’elles choisissent librement leur parcours sans qu’on leur impose de contraintes.</p>"}
+                  ]
                 }
               ]
             },{
@@ -42,6 +46,7 @@
                     "parentId": "p2",
                     "clickable": true,
                     "title": "Vocabulaire",
+                    "modalColumns": 2,
                     "modalContent": [
                         { "kind": "title", "text": "Quelques mots de vocabulaire"},
                         { "kind": "text", "html": "<p><b><u>Homme transgenre</u></b> : homme qui a été assigné fille à la naissance. On utilise généralement le pronom « il ».</p>" },
@@ -131,30 +136,38 @@
               "kind": "primary",
               "id": "p3",
               "title": "Quelques chiffres",
-              "clickable": false,
-              "tooltip": { "html": "Ces chiffres rappellent que la population trans fait <b>partie intégrante de la société.</b> Pourtant, la transphobie reste omniprésente et leur santé mentale en pâtit, d’autant que les lieux de soins ne sont pas toujours adaptés." },
-                "secondaries":[
-                    {
-                        "kind":"secondary",
-                        "id":"s5",
-                        "parentId":"p3",
-                        "title":"Transphobie et santé mentale",
-                        "clickable": true,
-                        "modalContent":[
-                            { "kind": "text", "html": "<h2>Transphobie et santé mentale</h2>"},
-                            { "kind": "text", "html": "<p><b>8 personnes trans sur 10</b> déclarent avoir été victimes de transphobie. (1)</p>"},
-                            { "kind": "text", "html":"<p>Le taux de tentatives de <b>suicide est 7,7 fois plus élevé</b> chez les personnes transgenres que chez les personnes cisgenres. (2)</p>"},
-                            { "kind": "text", "html":"<p>Plus <b>d'une personne sur 2 est victime de transphobie dans des lieux de soins.</b> Conséquence : 35 à 45% déclarent avoir renoncé à un soin ou avoir évité un établissement de santé au cours de l’année écoulée. (3)</p></b"}
-                          ]
-                    },
-                    {
-                        "kind":"secondary",
-                        "id":"s6",
-                        "parentId":"p3",
-                        "clickable":false,
-                        "tooltip":{"html":"<p>En 2023, <u><b>22 550 personnes</b></u> en France étaient <b>titulaires d’une ALD pour transidentité.</b></br></br>Toutes les personnes trans n’ont pas d’ALD, et <b>les chiffres précis ne sont pas connus.</b> </br></br>Mais 4% de la population française s'identifie comme transgenre ou non binaire selon l'enquête LGBT+ 2023 de l'IPSOS.</p>"}
-                    }
-                ]
+              "clickable": true,
+              "modalContent":[
+                {"kind":"text", "html":"<h2>Quelques chiffres</h2>"},
+                {"kind": "text", "html":"Ces chiffres rappellent que la population trans fait <b>partie intégrante de la société.</b> "},
+                { "kind": "text", "html": "<p>Pourtant, la transphobie reste omniprésente et leur santé mentale en pâtit, d’autant que les lieux de soins ne sont pas toujours adaptés.</p>" }
+              ],
+              "secondaries":[
+                  {
+                      "kind":"secondary",
+                      "id":"s5",
+                      "parentId":"p3",
+                      "title":"Transphobie et santé mentale",
+                      "clickable": true,
+                      "modalContent":[
+                          { "kind": "text", "html": "<h2>Transphobie et santé mentale</h2>"},
+                          { "kind": "text", "html": "<p><b>8 personnes trans sur 10</b> déclarent avoir été victimes de transphobie. (1)</p>"},
+                          { "kind": "text", "html":"<p>Le taux de tentatives de <b>suicide est 7,7 fois plus élevé</b> chez les personnes transgenres que chez les personnes cisgenres. (2)</p>"},
+                          { "kind": "text", "html":"<p>Plus <b>d'une personne sur 2 est victime de transphobie dans des lieux de soins.</b> Conséquence : 35 à 45% déclarent avoir renoncé à un soin ou avoir évité un établissement de santé au cours de l’année écoulée. (3)</p></b"}
+                        ]
+                  },
+                  {
+                      "kind":"secondary",
+                      "id":"s6",
+                      "parentId":"p3",
+                      "clickable":true,
+                      "title":"Quelques chiffres",
+                      "modalContent":[
+                        {"kind":"text", "html":"<p>En 2023, <u><b>22 550 personnes</b></u> en France étaient <b>titulaires d’une ALD pour transidentité.</b></br></br>Toutes les personnes trans n’ont pas d’ALD, et <b>les chiffres précis ne sont pas connus.</b> </p>"},
+                        {"kind":"text", "html":"<p>Mais 4% de la population française s'identifie comme transgenre ou non binaire selon l'enquête LGBT+ 2023 de l'IPSOS.</p>"}
+                      ]
+                  }
+              ]
             },
             {
               "kind": "primary",
@@ -336,6 +349,7 @@
                   "parentId": "p3",
                   "title": "Acétate de cyprotérone et bicalutamide",
                   "clickable": true,
+                  "modalColumns": 2,
                   "modalContent" :[
                     { "kind": "text", "html": "<h2>Acétate de cyprotérone</h2>"},
                     { "kind": "text", "html": "<p><u><b>Mécanisme</b></u> : progestatif avec une action anti-gonadotrope et anti-androgénique permettant de réduire le taux de testostérone.</p>"},
@@ -406,11 +420,8 @@
               "kind": "primary",
               "id": "p6",
               "title": "Effets indésirables",
-              "clickable": true,
-              "modalContent": [
-                { "kind": "text", "html": "<h2>Effets indésirables</h2>"},
-                { "kind": "text", "html": "<p>A définir.</p>" }
-              ],
+              "tooltip": { "text": "Effets indésirables"},
+              "clickable": false,
               "secondaries":[
                 {
                   "kind": "secondary",
@@ -552,6 +563,7 @@
                   "id": "s2",
                   "parentId": "p2",
                   "title": "Techniques d'injection",
+                  "modalColumns": 2,
                   "clickable": true,
                   "modalContent" :[
                     { "kind": "text", "html": "<h2>Techniques d'injection</h2>"},
@@ -684,11 +696,8 @@
               "kind": "primary",
               "id": "p6",
               "title": "Effets indésirables",
-              "clickable": true,
-              "modalContent": [
-                { "kind": "text", "html": "<h2>Effets indésirables</h2>"},
-                { "kind": "text", "html": "<p>A définir.</p>" }
-              ],
+              "tooltip": { "text": "Effets indésirables"},
+              "clickable": false,
               "secondaries":[
                 {
                   "kind": "secondary",
@@ -902,6 +911,7 @@
                   "title": "Associations",
                   "tooltip": {"text": "Quelques associations LGBT en Pays de la Loire"},
                   "clickable": true,
+                  "modalColumns": 2,
                   "modalContent" :[
                     { "kind": "text", "html": "<h2>Quelques associations LGBT</h2>"},
                     { "kind": "text", "html": "<h3>En Pays de la Loire</h3>"},
@@ -935,16 +945,22 @@
                   "id": "s2",
                   "parentId": "p7",
                   "title": "CHU",
-                  "tooltip": {"html": "<p><b>Certains médecins généralistes</b> sont formés à initier l'hormonothérapie et en assurer le suivi.</p> <p>Des associations comme Fransgenre ou Réseau Santé Trans proposent des listes de médecins qui reçoivent des patient.es trans. Les associations locales peuvent aussi donner des informations à ce sujet.</p>"},
-                  "clickable": false
+                  "clickable": true,
+                   "modalContent" :[
+                    {"kind":"text", "html":"<h2 style=\"text-align:center !important\">Certains médecins généralistes</h2>"},
+                    {"kind":"text", "html": "<p>Certains sont formés à initier l'hormonothérapie et en assurer le suivi.</p> <p>Des associations comme Fransgenre ou Réseau Santé Trans proposent des listes de médecins qui reçoivent des patient.es trans. Les associations locales peuvent aussi donner des informations à ce sujet.</p>"}
+                  ]
                 },
                 {
                   "kind": "secondary",
                   "id": "s3",
                   "parentId": "p7",
-                  "clickable": false,
+                  "clickable": true,
                   "title": "Association le refuge",
-                  "tooltip": {"html": "<p><b>Association Le Refuge</b> : aide les jeunes LGBT+ de moins de 25 ans rejetés par leur famille. Ligne d’écoute au 06 31 59 69 50 (tous les jours 8h–00h) et orientation vers des hébergements d’urgence.</p>"}
+                  "modalContent" :[
+                    {"kind":"text", "html":"<h2 style=\"text-align:center !important\">Association Le Refuge</h2>"},
+                    {"kind":"text", "html": "<p>Aide les jeunes LGBT+ de moins de 25 ans rejetés par leur famille. Ligne d’écoute au 06 31 59 69 50 (tous les jours 8h–00h) et orientation vers des hébergements d’urgence.</p>"}
+                  ]
                 },
                 {
                   "kind": "secondary",
@@ -953,9 +969,9 @@
                   "title": "Fiche ressources à donner aux patient.es",
                   "clickable": true,
                   "modalContent" :[
-                    { "kind": "text", "html": "<h2>Fiche ressources à donner aux patient.es</h2>"},
+                    { "kind": "text", "html": "<h2 style=\"text-align:center !important\">Fiche ressources à donner aux patient.es</h2>"},
                     { "kind":"text", "html": "<a href=\"../public/fiche_ressource.pdf\" target=\"_blank\" rel=\"noopener noreferrer\"> <img src=\"../public/img/fiche_ressource.jpg\" alt=\"Ouvrir le rapport PDF\" style=\"display: block; margin: 0 auto; width: 60% !important;\"> </a>"},
-                    { "kind": "text", "html": "<a href=\"../public/fiche_ressource.pdf\" target=\"_blank\"  style=\"display: block; text-align: center; margin-top:2rem;\" rel=\"noopener noreferrer\">Ouvrir le PDF</a>"}
+                    { "kind": "text", "html": "<a href=\"../public/fiche_ressource.pdf\" target=\"_blank\"  style=\"display: block; text-align: center; margin-top:2rem;color: green;\" rel=\"noopener noreferrer\" >Ouvrir le PDF</a>"}
                   ]
                 }
               ]
