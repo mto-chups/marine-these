@@ -235,6 +235,15 @@ function renderBlock(b: Block, slideId?:string): HTMLElement {
   switch (b.type) {
     case "title": return el("h1", {}, b.text);
     case "subtitle": return el("h2", {}, b.text);
+    case "link": {
+      return el("a", {
+        href: b.file, // ton lien fonctionne, on le garde
+        target: "_blank", // ouvre dans un nouvel onglet
+        rel: "noopener noreferrer",
+        style: "color: inherit; text-decoration: none; cursor: pointer;",
+        title: "Consulter la thèse"
+      }, b.text);
+    }
     case "text": {
       const div = el("div");
       if (b.html) div.innerHTML = b.html; else div.textContent = b.markdown ?? "";

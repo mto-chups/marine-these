@@ -4,7 +4,7 @@
     <!-- SEO -->
      <!-- SEO de base -->
     <title>Prise en charge des personnes transgenres en officine</title>
-    <meta name="description" content="Formation pour pharmaciens et étudiants : parcours de soins, conseils, traitements et accueil bienveillant des personnes transgenres.">
+    <meta name="description" content="Formation pour pharmaciens et étudiants : parcours de soins, conseils, traitements et accueil des personnes transgenres / trans.">
 
     <link rel="canonical" href="https://www.pharmacietransgenre.com/">
     <link rel="alternate" hreflang="fr" href="https://www.pharmacietransgenre.com/">
@@ -15,7 +15,7 @@
     <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Pharmacie & Transidentités – Formation">
-    <meta property="og:title" content="Prise en charge des personnes transgenres en officine">
+    <meta property="og:title" content="Prise en charge des personnes transgenres / trans en officine / pharmacie">
     <meta property="og:description" content="Formation pour pharmaciens et étudiants : accueil, traitements, accompagnement.">
     <meta property="og:url" content="https://www.pharmacietransgenre.com/">
     <meta property="og:image" content="https://www.pharmacietransgenre.com/images/og-cover.jpg">
@@ -26,8 +26,9 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
-      img-src 'self' https://img.genially.com https://i.ytimg.com blob:;
-      frame-src https://www.youtube.com;
+      img-src 'self' data: blob: https://img.genially.com https://i.ytimg.com;
+      frame-src 'self' blob: https://www.youtube.com;
+      object-src 'self' blob:;
       style-src 'self' 'unsafe-inline';
       script-src 'self' 'nonce-dephase';
     ">
@@ -36,6 +37,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type="text/css">
       @import url("./styles.css");
+      #app > a[title="Consulter la thèse"],
+      #app > h2 a[title="Consulter la thèse"] {
+        position: relative;
+        z-index: 1200;
+        text-align: center;
+      }
     </style>
 
   </head>

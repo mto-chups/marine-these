@@ -189,6 +189,13 @@ export const SubTitleBlockSchema = z.object({
   text: z.string().trim().min(1),
 });
 
+export const LinkTextSchema = z.object({
+  type: z.literal("link"),
+  text: z.string().trim().min(1),
+  file: z.string().trim().optional(),
+});
+
+
 export const TextBlockSchema = z.object({
   type: z.literal("text"),
   html: z.string().trim().min(1).optional(),
@@ -240,6 +247,7 @@ export const BlockSchema = z.discriminatedUnion("type", [
   ImageBlockSchema,
   QuizBlockSchema,
   BubbleBlockSchema,
+  LinkTextSchema,
 ]);
 
 export type Block = z.infer<typeof BlockSchema>;
