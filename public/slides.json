@@ -27,8 +27,7 @@
                   "clickable": true,
                   "modalContent": [
                     { "kind": "text", "html": "<h2>Recommandations HAS 2025</h2>"},
-                    { "kind": "text", "html": "<p>Les personnes trans peuvent <b>décider elles-mêmes de leurs besoins et de leurs soins.</b></p>"},
-                    { "kind": "text", "html": "<p>Cela repose sur le principe <b><u>d’autodétermination</b></u>, qui signifie qu’elles choisissent librement leur parcours sans qu’on leur impose de contraintes.</p>"}
+                    { "kind": "text", "html": "<p>Les recommandations 2025 de la HAS adoptent une approche centrée sur le principe <b>d’autodétermination</b>. Elles reconnaissent la capacité des personnes trans à exprimer leurs besoins et à consentir librement aux soins proposés. (9)</p>"}
                   ]
                 }
               ]
@@ -53,7 +52,7 @@
                         { "kind": "text", "html": "<p><b><u>Personne transmasculine</u></b> : englobe les hommes trans mais aussi les personnes non-binaires qui s’engagent dans un parcours de masculinisation.</p>" },
                         { "kind": "text", "html": "<p><b><u>Femme transgenre :</u></b> femme qui a été assignée garçon à la naissance. On utilise généralement le pronom « elle ».</p>" },
                         { "kind": "text", "html": "<p><b><u>Personne transféminine :</b></u> englobe les femmes trans mais aussi les personnes non-binaires qui s’engagent dans un parcours de féminisation.</p>" },
-                        { "kind": "text", "html": "<p><b><u>Transidentités / transitude :</b></u>  fait d'être d'un - ou plusieurs - genre différent de celui qui a été assigné à la naissance.</p>" },
+                        { "kind": "text", "html": "<p><b><u>Transidentités / transitude :</b></u>  fait d'être d'un  genre différent de celui qui a été assigné à la naissance.</p>" },
                         { "kind": "text", "html": "<p><b><u>Personne non binaire</b></u> : personne qui ne s’inscrit pas dans la norme binaire, c'est à dire qui n’est ni exclusivement un homme, ni exclusivement une femme. Ses pronoms sont à sa décision, même si le pronom neutre « iel » est couramment utilisé en France.</p>" },
                         { "kind": "text", "html": "<p><b><u>Cisgenre</b></u> : personne dont le genre est identique à celui qui lui a été assigné à la naissance. Mot contraire de transgenre. </p>" },
                         { "kind": "text", "html": "<p><b><u>Transgenre</b></u> : personne dont le genre diffère de celui qui lui a été assigné à la naissance. </p>" },
@@ -126,7 +125,6 @@
                             { "kind": "text", "html": "<p>• Discordance entre le prénom noté sur la carte vitale et celui noté sur l'ordonnance.</p>" },
                             { "kind": "text", "html": "<p>• Discordance entre le numéro de sécurité social et le genre mentionné sur l'ordonnance.</p>" },
                             { "kind": "text", "html": "<p>• Prescription de médicaments utilisés en transition de genre.</p>" },
-                            { "kind": "text", "html": "<p>• Prescription d'ovule pour un homme ou de médicament contre l'hypertrophie bégnine de la prostate pour une femme.</p>" },
                             { "kind": "text", "html": "<p><b>Ce qu'il faut faire :</b> demander le prénom d'usage et le pronom utilisé + le noter dans le dossier si discordance administrative.</p>" }
                           ]
                     }
@@ -266,6 +264,7 @@
                     { "kind": "text", "html": "<p><u><b>Noms commerciaux</b></u> : Dermestril ® / Thais ® / Femstep ® / Thaissept ®</p>"},
                     { "kind": "text", "html": "<p><u><b>Posologie</b></u> : 100 µg par jour (maximum 400µg par jour)</p>"},
                     { "kind": "text", "html": "<p><u><b>Conseils associés</b></u> : </p>"},
+                    { "kind": "text", "html": "<ul><li>Appliquer sur <b>peau propre, sèche et saine</b> : abdomen, hanches, fesses, bras, ou région lombaire.</li> <li><b>Éviter :</b> seins, muqueuses, zones irritées, lésées ou soumises à frottements importants.</li> <li><b>Varier le site</b> à chaque application pour prévenir les irritations.</li> <li><b>Appuyer fermement</b> sur toute la surface et les bords du patch pour assurer l’adhésion.</li> <li><b>Éviter l’exposition au soleil</b> sur le patch (l’estradiol est sensible aux UV).</li> <li><b>Durée d’application</b> variable selon la marque ; informer le patient lors de la dispensation.</li> <li>Si <b>retrait accidentel du patch</b> : il faut utiliser un dispositif neuf qui sera retiré à la date initialement prévue.</li> <li>En cas <b>d'oubli de remplacement</b>, un nouveau dispositif transdermique doit être appliqué dès que possible.</li></ul>"},
                     { "kind": "text", "html": "<table><thead><tr><td>Noms commerciaux</td><td>Temps d'application</td></tr></thead><tr><td>Dermestril ® Thais ®</td><td>à renouveler tous les 3 à 4 jours</td></tr><tr><td>Femstep ® Thaissept ®</td><td>à renouveler tous les 7 jours</td></tr></table>"}
                   ]
                 },
@@ -374,7 +373,7 @@
                   "modalContent" :[
                     { "kind": "text", "html": "<h2>Finastéride</h2>"},
                     { "kind": "text", "html": "<p><u><b>Mécanisme</b></u> : inhibiteur de 5α-réductase. Inhibe la conversion de testostérone en dihydrotestostérone.</p>"},
-                    { "kind": "text", "html": "<p>Son utilisation lors des transitions de genre a été peu étudié et son utilité est controversée.</p>"}
+                    { "kind": "text", "html": "<p>Son utilisation lors des transitions de genre a été peu étudiée et son utilité est controversée.</p>"}
                     ]
                 }
               ]
@@ -662,7 +661,7 @@
               "clickable": true,
               "modalContent": [
                 { "kind": "text", "html": "<h2>Contraception</h2>"},
-                { "kind": "text", "html": "<p>La supplémentation en testostérone chez les hommes trans n’a pas d’effet contraceptif bien qu’elle réduit considérablement la fertilité.</p>"},
+                { "kind": "text", "html": "<p>La supplémentation en testostérone chez les hommes trans n’a pas d’effet contraceptif bien qu’elle réduise considérablement la fertilité.</p>"},
                 { "kind": "text", "html": "<p>En dehors de son usage contraceptif, une contraception peut être désirée dans le but d’arrêter les menstruations parfois source de dysphorie chez certaines personnes. A noter que l’aménorrhée est couramment observée lors de la prise de testostérone mais pas systématique.</p>"},
                 { "kind": "text", "html": "<p></p>"}
               ]
@@ -676,7 +675,7 @@
                 { "kind": "text", "html": "<h2>Effets attendus</h2>"},
                 { "kind": "text", "html": "<p>Ces effets masculinisants surviennent de manière différente chez chaque personne à l’image de la puberté chez les adolescent·es.</p>" },
                 { "kind": "text", "html": "<p>Le patrimoine génétique, l’âge et le schéma thérapeutique utilisé sont les principaux facteurs influençant le déroulement de la transition hormonale.</p>" },
-                { "kind": "text", "html": "<p>Iels devront être prévenu·es de la variabilité inter-individuelle de ces effets et de la temporalité qui y est associée. Les effets de l’hormonothérapie mettent plusieurs années avant d’atteindre leur maximum. Néanmoins, les effets arrivent plus rapidement que lors des transition féminisantes.</p>" }
+                { "kind": "text", "html": "<p>Iels devront être prévenu·es de la variabilité inter-individuelle de ces effets et de la temporalité qui y est associée. Les effets de l’hormonothérapie mettent plusieurs années avant d’atteindre leur maximum. Néanmoins, les effets apparaissent généralement plus rapidement que lors des transitions féminisantes.</p>" }
               ],
               "secondaries":[
                 {
@@ -895,7 +894,8 @@
                 { "kind":"text", "html": "<p>(5) :Getahun D, et al. Cross-sex Hormones and Acute Cardiovascular Events in Transgender Persons: A Cohort Study. Ann Intern Med. 21 août 2018;169(4):205‑13.</p>"},
                 { "kind":"text", "html": "<p>(6) : Hembree WC, et al. Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline. J Clin Endocrinol Metab. 1 nov 2017;102(11):3869‑903.</p>"},
                 { "kind":"text", "html": "<p>(7) : Nota NM, et al. Occurrence of Acute Cardiovascular Events in Transgender Individuals Receiving Hormone Therapy: Results From a Large Cohort Study. Circulation. 12 mars 2019;139(11):1461‑2.</p>"},
-                { "kind":"text", "html": "<p>(8) : Pirtea P, et al. Ovarian, breast, and metabolic changes induced by androgen treatment in transgender men. Fertility and Sterility. oct 2021;116(4):936‑42.</p>"}
+                { "kind":"text", "html": "<p>(8) : Pirtea P, et al. Ovarian, breast, and metabolic changes induced by androgen treatment in transgender men. Fertility and Sterility. oct 2021;116(4):936‑42.</p>"},
+                { "kind":"text", "html": "<p>(9) : HAS. Transidentité : prise en charge de l’adulte; juillet 2025.</p>"}
               ]
             },
             {
