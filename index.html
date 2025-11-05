@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <!-- SEO -->
-     <!-- SEO de base -->
     <title>Prise en charge des personnes transgenres en officine</title>
     <meta name="description" content="Formation pour pharmaciens et étudiants : parcours de soins, conseils, traitements et accueil des personnes transgenres / trans.">
 
@@ -12,7 +10,6 @@
     <meta http-equiv="Content-Language" content="fr">
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="/images/pharmacy.png" />
-    <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Pharmacie & Transidentités – Formation">
     <meta property="og:title" content="Prise en charge des personnes transgenres / trans en officine / pharmacie">
@@ -20,9 +17,6 @@
     <meta property="og:url" content="https://www.pharmacietransgenre.com/">
     <meta property="og:image" content="https://www.pharmacietransgenre.com/images/og-cover.jpg">
     <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Préconnect éventuel (si tu utilises des polices hébergées ailleurs) -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <meta charset="utf-8" />
     <meta http-equiv="Content-Security-Policy" content="
       default-src 'self';
@@ -144,7 +138,7 @@
           <section id="contact">
             <h2>Contact</h2>
             <p>
-              Pour toute question relative au site ou aux contenus : <a href="mailto:[[adresse@email.example]]">[[adresse@email.example]]</a>
+              Pour toute question relative au site ou aux contenus : <a href="mailto:marinegiet2@gmail.com">marinegiet2@gmail.com</a>
             </p>
           </section>
 
@@ -173,8 +167,25 @@
 
       document.addEventListener('DOMContentLoaded', phaseBubbles);
       window.addEventListener('load', phaseBubbles);
-      const mo = new MutationObserver(phaseBubbles);
+      const mo = new MutationObserver((mutations) => {
+        phaseBubbles();
+        for (const mutation of mutations) {
+          mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === 1) {
+              node.querySelectorAll?.('.bubble, .bubble-holder').forEach((el) => {
+                const duration = (0.6 + (Math.random() - 0.5) * 0.5).toFixed(2);
+                el.style.animation = 'none';
+                void el.offsetWidth;
+                el.style.animation = `fadeInBubble ${duration}s ease forwards`;
+              });
+            }
+          });
+        }
+      });
+
       mo.observe(document.body, { childList: true, subtree: true });
+
+
 
       const modal = document.getElementById("modalCGU");
     const btn = document.getElementById("openModal");

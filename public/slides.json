@@ -233,6 +233,7 @@
               "kind": "primary",
               "id": "p1",
               "title": "Objectifs",
+              "color": "#6a67ce",
               "clickable": true,
               "modalContent": [
                 { "kind": "text", "html": "<h2>Objectifs des traitements</h2>" },
@@ -394,6 +395,7 @@
               "kind": "primary",
               "id": "p5",
               "title": "Effets attendus",
+              "color": "#1aafd0",
               "clickable": true,
               "modalContent": [
                 { "kind": "text", "html": "<h2>Effets attendus</h2>" },
@@ -421,6 +423,7 @@
               "title": "Effets indésirables",
               "tooltip": { "text": "Effets indésirables"},
               "clickable": false,
+              "color": "#1aafd0",
               "secondaries":[
                 {
                   "kind": "secondary",
@@ -490,6 +493,7 @@
               "kind": "primary",
               "id": "p7",
               "title": "Suivi",
+              "color": "#1aafd0",
               "clickable": true,
               "modalContent": [
                 { "kind": "text", "html": "<h2>Suivi</h2>"},
@@ -532,6 +536,7 @@
               "kind": "primary",
               "id": "p1",
               "title": "Objectifs",
+              "color": "#6a67ce",
               "clickable": true,
               "modalContent": [
                 { "kind": "text", "html": "<h2>Objectifs</h2>"},
@@ -670,6 +675,7 @@
               "kind": "primary",
               "id": "p5",
               "title": "Effets attendus",
+              "color": "#1aafd0",
               "clickable": true,
               "modalContent": [
                 { "kind": "text", "html": "<h2>Effets attendus</h2>"},
@@ -694,6 +700,7 @@
             {
               "kind": "primary",
               "id": "p6",
+              "color": "#1aafd0",
               "title": "Effets indésirables",
               "tooltip": { "text": "Effets indésirables"},
               "clickable": false,
@@ -751,6 +758,7 @@
             {
               "kind": "primary",
               "id": "p7",
+              "color": "#1aafd0",
               "title": "Suivi",
               "clickable": true,
               "modalContent": [
@@ -788,12 +796,13 @@
       "id": "slide-4 Staggered",
       "blocks": [
         { "type": "title", "text": "QUESTIONS FRÉQUENTES" },
-        { "type": "subtitle", "text": "QUESTIONS FRÉQUENTES" },
+        { "type": "subtitle", "text": "Remboursement, cas concrets et orientation des patient.es" },
         { "type": "bubble-block", 
           "bubbles": [
             {
               "kind": "primary",
               "id": "p1",
+              "color": "#6a67ce",
               "tooltip": {"text": "Questions fréquentes"},
               "title": "Questions fréquentes",
               "clickable": false
@@ -862,6 +871,7 @@
               "id": "p5",
               "title": "Conservation des gamètes",
               "clickable": true,
+              "color":"#1aafd0",
               "modalContent": [
                 { "kind": "text", "html": "<h2>Conservation des gamètes</h2>"},
                 { "kind": "text", "html": "<p>Les traitements hormonaux peuvent réduire la fertilité. Une conservation des gamètes peut donc être proposée aux personnes qui le souhaitent. Elle doit se faire de <b>préférence avant le début du traitement, mais reste parfois possible en cours de traitement.</b> La loi (article L2141-11 du Code de Santé Publique) garantit ce droit pour toute personne exposée à un traitement risquant d’altérer sa fertilité. Cette préservation est <b>prise en charge à 100 % par la Sécurité sociale.</b>"}
@@ -883,6 +893,7 @@
             {
               "kind": "primary",
               "id": "p6",
+              "color":"#1aafd0",
               "title": "Sources",
               "clickable": true,
               "modalContent": [
@@ -901,6 +912,7 @@
             {
               "kind": "primary",
               "id": "p7",
+              "color":"#1aafd0",
               "title": "Vers qui orienter ?",
               "clickable": false,
               "tooltip": {"text": "Vers qui orienter ?"},
