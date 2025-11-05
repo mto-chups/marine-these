@@ -421,7 +421,6 @@
               "kind": "primary",
               "id": "p6",
               "title": "Effets indésirables",
-              "tooltip": { "text": "Effets indésirables"},
               "clickable": false,
               "color": "#1aafd0",
               "secondaries":[
@@ -702,7 +701,6 @@
               "id": "p6",
               "color": "#1aafd0",
               "title": "Effets indésirables",
-              "tooltip": { "text": "Effets indésirables"},
               "clickable": false,
               "secondaries":[
                 {
@@ -803,14 +801,12 @@
               "kind": "primary",
               "id": "p1",
               "color": "#6a67ce",
-              "tooltip": {"text": "Questions fréquentes"},
               "title": "Questions fréquentes",
               "clickable": false
             },
             {
               "kind": "primary",
               "id": "p2",
-              "tooltip": {"text": "Hors AMM : remboursement et responsabilité"},
               "title": "Hors AMM",
               "clickable": false,
               "secondaries":[
@@ -915,13 +911,11 @@
               "color":"#1aafd0",
               "title": "Vers qui orienter ?",
               "clickable": false,
-              "tooltip": {"text": "Vers qui orienter ?"},
               "secondaries": [
                 { "kind": "secondary",
                   "id": "s1",
                   "parentId": "p7",
                   "title": "Associations",
-                  "tooltip": {"text": "Quelques associations LGBT en Pays de la Loire"},
                   "clickable": true,
                   "modalColumns": 2,
                   "modalContent" :[

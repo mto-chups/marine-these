@@ -98,17 +98,7 @@ const bubbleBusinessRules = (b: BubbleBaseRaw, ctx: z.RefinementCtx) => {
         path: ["modalContent"],
       });
     }
-  } else {
-    const hasTooltipText = Boolean(b.tooltip?.text && b.tooltip.text.trim().length > 0 || b.tooltip?.html && b.tooltip.html.trim().length > 0);
-    if (!hasTooltipText) {
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        message: "Bulle non cliquable: 'tooltip.text' est requis (contenu au survol).",
-        path: ["tooltip", "text"],
-      });
-    }
-  }
-};
+  }};
 
 // On garde BubbleBaseSchema si tu veux le réutiliser tel quel
 export const BubbleBaseSchema = BubbleBaseRaw.superRefine(bubbleBusinessRules);

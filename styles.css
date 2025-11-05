@@ -54,6 +54,7 @@ body {
   font-weight: 600;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   transition: background 0.2s ease, transform 0.15s ease;
+  z-index: 10;
 }
 
 /* Hover */
