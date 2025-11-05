@@ -401,6 +401,20 @@ header, footer {
   background: #fee2e2 !important;
 }
 
+/* ===== Animation d'apparition ===== */
+@keyframes fadeInBubble {
+  from { opacity: 0; }
+  to   { opacity: 1;  }
+}
+.fade-in {
+  animation: fadeInBubble .6s ease forwards;
+}
+
+/* Respecte l’accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { animation: none !important; }
+}
+
 
 /** -------------------------------- */
 /** CGU */
