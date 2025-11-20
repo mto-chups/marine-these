@@ -976,8 +976,8 @@
                   "clickable": true,
                   "modalContent" :[
                     { "kind": "text", "html": " <h2 style=\"text-align:center !important\">Fiche ressources à donner aux patient.es</h2>"},
-                    { "kind":"text", "html": "<a href=\"matheochupin.fr/medias/fiche_ressource_patient.pdf\" target=\"_blank\" rel=\"noopener noreferrer\"> <img src=\"matheochupin.fr/medias/fiche_ressource_patient.jpg\" alt=\"Ouvrir le rapport PDF\" style=\"display: block; margin: 0 auto; width: 60% !important;\"> </a>"},
-                    { "kind": "text", "html": "<a href=\"matheochupin.fr/medias/fiche_ressource_patient.pdf\" target=\"_blank\"  style=\"display: block; text-align: center; margin-top:2rem;color: green;\" rel=\"noopener noreferrer\" >Ouvrir le PDF</a>"}
+                    { "kind":"text", "html": "<a href=\"https://matheochupin.fr/medias/fiche_ressource_patient.pdf\" target=\"_blank\" rel=\"noopener noreferrer\"> <img src=\"https://matheochupin.fr/medias/fiche_ressource_patient.jpg\" alt=\"Ouvrir le rapport PDF\" style=\"display: block; margin: 0 auto; width: 60% !important;\"> </a>"},
+                    { "kind": "text", "html": "<a href=\"https://matheochupin.fr/medias/fiche_ressource_patient.pdf\" target=\"_blank\"  style=\"display: block; text-align: center; margin-top:2rem;color: green;\" rel=\"noopener noreferrer\" >Ouvrir le PDF</a>"}
                   ]
                 }
               ]
